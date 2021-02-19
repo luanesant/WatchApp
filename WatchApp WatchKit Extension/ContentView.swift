@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var secondScreenShown = false
+
     var body: some View {
         VStack{
             Image(systemName: "heart").padding(.bottom, 50)
@@ -16,7 +18,11 @@ struct ContentView: View {
             ForEach (0..<2) {item in
                 switch item {
                 case 0:
-                    TableViewButton(iconImage: "lungs.fill", buttonTitle: "Breath")
+                    HStack{
+                        TableViewButton(iconImage: "lungs.fill", buttonTitle: "Breath")
+                        NavigationLink("",destination: TimeToBreathView())
+                            
+                    }
                 case 1:
                     TableViewButton(iconImage: "eyebrow", buttonTitle: "5 senses")
                 default:
@@ -26,6 +32,8 @@ struct ContentView: View {
             }
         }
     }
+    
+  
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -33,10 +41,10 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
 struct TableViewButton: View {
     var iconImage: String
     var buttonTitle: String
+    
     
     var body: some View {
         HStack{
