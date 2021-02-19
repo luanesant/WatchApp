@@ -12,26 +12,6 @@ struct ContentView: View {
 
     var body: some View {
         HomeView()
-        VStack{
-            Image(systemName: "heart").padding(.bottom, 50)
-            
-        List {
-            ForEach (0..<2) {item in
-                switch item {
-                case 0:
-                    HStack{
-                        TableViewButton(iconImage: "lungs.fill", buttonTitle: "Breath")
-                        NavigationLink("",destination: TimeToBreathView())
-                            
-                    }
-                case 1:
-                    TableViewButton(iconImage: "eyebrow", buttonTitle: "5 senses")
-                default:
-                    TableViewButton(iconImage: "", buttonTitle: "")
-                }
-                }
-            }
-        }
     }
     
   
