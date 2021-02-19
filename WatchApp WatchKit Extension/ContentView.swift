@@ -13,23 +13,15 @@ struct ContentView: View {
             Image(systemName: "heart").padding(.bottom, 50)
             
         List {
-            ForEach (0..<1){
-                item in
-                HStack{
-                    Image(systemName: "lungs.fill")
-                        .padding(.trailing, 20)
-                        Text("Respiração")
-                            .multilineTextAlignment(.center)
+            ForEach (0..<2) {item in
+                switch item {
+                case 0:
+                    TableViewButton(iconImage: "lungs.fill", buttonTitle: "Breath")
+                case 1:
+                    TableViewButton(iconImage: "eyebrow", buttonTitle: "5 senses")
+                default:
+                    TableViewButton(iconImage: "", buttonTitle: "")
                 }
-                ForEach (0..<1){
-                    item in
-                       HStack{
-                        Image(systemName: "eyebrow")
-                            .padding(.trailing,23)
-                            Text("5 sentidos")
-                                .multilineTextAlignment(.center)
-                        }
-                    }
                 }
             }
         }
@@ -39,5 +31,19 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct TableViewButton: View {
+    var iconImage: String
+    var buttonTitle: String
+    
+    var body: some View {
+        HStack{
+            Image(systemName: iconImage)
+                .padding(.trailing, 20)
+                Text(buttonTitle)
+                    .multilineTextAlignment(.center)
+        }
     }
 }
