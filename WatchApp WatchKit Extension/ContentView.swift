@@ -9,14 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(systemName: "heart")
-        List(0..<2) { item in
-                    
+        VStack{
+            Image(systemName: "heart").padding(.bottom, 50)
+            
+        List {
+            ForEach (0..<1){
+                item in
                     VStack(alignment: .leading) {
                         Text("Respiração Guiada")
-                        Text("5 Sentidos").font(.subheadline)
-                    }
                 }
+                ForEach (0..<1){
+                    item in
+                        VStack(alignment: .leading) {
+                            Text("5 sentidos")
+                        }}
+            }
+                       // Text("5 Sentidos").font(.subheadline)
+                  
+                }
+        }
+        
     }
 }
 
