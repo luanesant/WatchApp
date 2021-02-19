@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        Image(systemName: "heart")
+        List(0..<2) { item in
+                    
+                    VStack(alignment: .leading) {
+                        Text("Respiração Guiada")
+                        Text("5 Sentidos").font(.subheadline)
+                    }
+                }
     }
 }
 
