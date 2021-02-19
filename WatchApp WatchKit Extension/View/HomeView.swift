@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIKit
-import WatchKit
 
 struct HomeView: View {
     
@@ -17,26 +16,28 @@ struct HomeView: View {
         VStack{
             Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
             
-                List(){
+                List{
                 ForEach (0..<2) {item in
                     switch item {
                     case 0:
                         HStack{
                             TableViewButton(iconImage: "lungs.fill", buttonTitle: "Breath")
-                            NavigationLink("",destination: TimeToBreathView())
+                            NavigationLink("",destination: FeedBack())
                         }
+                        
                     case 1:
                         TableViewButton(iconImage: "eyebrow", buttonTitle: "5 senses")
                     default:
                         TableViewButton(iconImage: "", buttonTitle: "")
                     }
                     
-                }.frame(height: 50.0).hidden()//.listRowBackground(Color.pink)
+                }.frame(height: 50.0)//.listRowBackground(Color.pink)
                     
                     
-                }.clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 1200), style: .circular)).frame(height: 120, alignment: .center)
-           
-        }
+                }.clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 1200), style: .circular)).listStyle(CarouselListStyle()).onAppear{
+                    
+                }
+        }//.listStyle(CarouselListStyle())
     }
 }
 

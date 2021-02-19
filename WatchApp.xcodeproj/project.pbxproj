@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3166804225E067B1008BC9C2 /* FeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166804125E067B1008BC9C2 /* FeedBack.swift */; };
 		5E72801325DFF73900667FC0 /* WatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E72801725DFF73A00667FC0 /* Assets.xcassets */; };
 		5E72801F25DFF73A00667FC0 /* WatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5E72801E25DFF73A00667FC0 /* WatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3166804125E067B1008BC9C2 /* FeedBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBack.swift; sourceTree = "<group>"; };
 		5E72800E25DFF73900667FC0 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801725DFF73A00667FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */,
 				5E72804E25E003B000667FC0 /* BreathingView.swift */,
 				5E72805325E007F100667FC0 /* HomeView.swift */,
+				3166804125E067B1008BC9C2 /* FeedBack.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3166804225E067B1008BC9C2 /* FeedBack.swift in Sources */,
 				5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */,
 				5E72802825DFF73A00667FC0 /* NotificationController.swift in Sources */,
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
