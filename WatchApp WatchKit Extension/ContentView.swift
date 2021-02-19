@@ -15,20 +15,24 @@ struct ContentView: View {
         List {
             ForEach (0..<1){
                 item in
-                    VStack(alignment: .leading) {
-                        Text("Respiração Guiada")
+                HStack{
+                    Image(systemName: "lungs.fill")
+                        .padding(.trailing, 20)
+                        Text("Respiração")
+                            .multilineTextAlignment(.center)
                 }
                 ForEach (0..<1){
                     item in
-                        VStack(alignment: .leading) {
+                       HStack{
+                        Image(systemName: "eyebrow")
+                            .padding(.trailing,23)
                             Text("5 sentidos")
-                        }}
-            }
-                       // Text("5 Sentidos").font(.subheadline)
-                  
+                                .multilineTextAlignment(.center)
+                        }
+                    }
                 }
+            }
         }
-        
     }
 }
 
