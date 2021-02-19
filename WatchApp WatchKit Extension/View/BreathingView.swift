@@ -9,7 +9,13 @@ import SwiftUI
 
 struct BreathingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Time to breath")
+        NavigationLink(
+            destination: Text("Destination"),
+            label: {
+                Text("Navigate")
+            })
+            .navigationTitle("Title")
     }
 }
 

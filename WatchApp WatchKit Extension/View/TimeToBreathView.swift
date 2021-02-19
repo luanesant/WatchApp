@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct TimeToBreathView: View {
+    @State var secondScreenShown = false
+    @State var timeToBreath = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+//            Text("Time to breath")
+            Picker(selection: $timeToBreath, label: Text("Time to breath")) {
+                Text("1 minute").tag(1)
+                Text("2 minutes").tag(2)
+                Text("3 minutes").tag(3)
+                Text("4 minutes").tag(4)
+                Text("5 minutes").tag(5)
+            }
+            .padding(.vertical)
+            NavigationLink(
+                destination: BreathingView(),
+                isActive: $secondScreenShown,
+                label: {
+                    Text("Start")
+                })
+        }
     }
 }
 
