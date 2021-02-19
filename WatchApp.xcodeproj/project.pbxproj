@@ -19,6 +19,7 @@
 		5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E72803025DFF73B00667FC0 /* Preview Assets.xcassets */; };
 		5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */; };
 		5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72804E25E003B000667FC0 /* BreathingView.swift */; };
+		5E72805425E007F100667FC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72805325E007F100667FC0 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		5E72803325DFF73B00667FC0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToBreathView.swift; sourceTree = "<group>"; };
 		5E72804E25E003B000667FC0 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
+		5E72805325E007F100667FC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */,
 				5E72804E25E003B000667FC0 /* BreathingView.swift */,
+				5E72805325E007F100667FC0 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
 				5E72802625DFF73A00667FC0 /* ContentView.swift in Sources */,
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
+				5E72805425E007F100667FC0 /* HomeView.swift in Sources */,
 				5E72802425DFF73A00667FC0 /* WatchAppApp.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,
 			);

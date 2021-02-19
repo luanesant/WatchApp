@@ -13,7 +13,6 @@ struct TimeToBreathView: View {
     
     var body: some View {
         VStack {
-//            Text("Time to breath")
             Picker(selection: $timeToBreath, label: Text("Time to breath")) {
                 Text("1 minute").tag(1)
                 Text("2 minutes").tag(2)
