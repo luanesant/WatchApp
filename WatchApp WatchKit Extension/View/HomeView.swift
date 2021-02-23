@@ -18,7 +18,7 @@ struct HomeView: View {
             ZStack{
                 VStack{
 
-                NavigationLink(destination: FeedBack(), label: {
+                NavigationLink(destination: TimeToBreathView(), label: {
                     HStack{
                     Image(systemName: "lungs.fill")
                         .padding(.leading,10)//.font(.title)
