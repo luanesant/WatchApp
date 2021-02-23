@@ -32,8 +32,6 @@ struct FiveSensesView: View {
                 
                 if tasksFiveSenses.count - 1 > step {
                     self.step = self.step + 1
-                } else if step == 4 {
-                NavigationLink(
                 }
             })
             .padding(.bottom, 12)
