@@ -22,7 +22,7 @@ struct TimeToBreathView: View {
             }
             .padding(.vertical)
             NavigationLink(
-                destination: BreathingView(),
+                destination: BreathingView(timeToBreath: timeToBreath),
                 isActive: $secondScreenShown,
                 label: {
                     Text("Start")
@@ -36,3 +36,5 @@ struct TimeToBreathView_Previews: PreviewProvider {
         TimeToBreathView()
     }
 }
+
+

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct BreathingView: View {
+    @State var timeToBreath = 1
     var body: some View {
         VStack {
-            Text("Time to breath")
+            Text("Time to breath: ")
+            Text("\(timeToBreath)")
         }
     }
 }
