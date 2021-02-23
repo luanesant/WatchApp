@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
-
+import WatchKit
+import UIKit
 struct BreathingView: View {
     @State var timeToBreath = 1
+ 
     var body: some View {
-        VStack {
-            Text("Time to breath: ")
-            Text("\(timeToBreath)")
-        }
+       
+            VStack {
+                Text("Time to breath: ")
+                Text("\(timeToBreath)")
+            }.colorMultiply(.blue)
+        .navigationBarTitle("Breath")
+        
+        
     }
 }
 

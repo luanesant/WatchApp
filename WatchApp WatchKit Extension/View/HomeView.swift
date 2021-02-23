@@ -12,7 +12,6 @@ struct HomeView: View {
     
     
     var body: some View {
-        
         VStack{
             Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
             ZStack{
@@ -29,7 +28,7 @@ struct HomeView: View {
 
                 }
 
-                ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white)
+                ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white).navigationBarTitle("Harmon")
 
                     NavigationLink(destination: FiveSensesView(), label: {
                     HStack{
@@ -50,6 +49,7 @@ struct HomeView: View {
             }
 
         }
+        
     }
     
 }

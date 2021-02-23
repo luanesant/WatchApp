@@ -10,7 +10,7 @@ import SwiftUI
 struct TimeToBreathView: View {
     @State var secondScreenShown = false
     @State var timeToBreath = 1
-    
+   
     var body: some View {
         VStack {
             Picker(selection: $timeToBreath, label: Text("Time to breath")) {
@@ -26,7 +26,7 @@ struct TimeToBreathView: View {
                 isActive: $secondScreenShown,
                 label: {
                     Text("Start")
-                })
+                }).navigationBarTitle("Breath")
         }
     }
 }

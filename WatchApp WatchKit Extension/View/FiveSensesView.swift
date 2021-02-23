@@ -36,7 +36,7 @@ struct FiveSensesView: View {
             })
             .padding(.bottom, 12)
         }
-        
+        .navigationBarTitle("Fechar")
         .edgesIgnoringSafeArea(.all)
 //        .background(Color.red)
         .sheet(isPresented: $showModalView,content: {
