@@ -31,7 +31,7 @@ struct HomeView: View {
 
                 ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white)
 
-                NavigationLink(destination: Text("hey"), label: {
+                    NavigationLink(destination: FiveSensesView(), label: {
                     HStack{
                         Image(systemName: "eyebrow")
                             .padding(.leading,13)

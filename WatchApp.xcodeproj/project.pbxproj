@@ -85,7 +85,7 @@
 		5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToBreathView.swift; sourceTree = "<group>"; };
 		5E72804E25E003B000667FC0 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		5E72805325E007F100667FC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		C3A2AB5425E370F90030348C /* FiveSensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSensesView.swift; sourceTree = "<group>"; };
+		C3A2AB5425E370F90030348C /* FiveSensesView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FiveSensesView.swift; sourceTree = "<group>"; tabWidth = 10; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
