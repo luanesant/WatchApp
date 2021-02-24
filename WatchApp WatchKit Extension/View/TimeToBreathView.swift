@@ -20,7 +20,7 @@ struct TimeToBreathView: View {
                 Text("3 minutes").tag(3)
                 Text("4 minutes").tag(4)
                 Text("5 minutes").tag(5)
-            }.pickerStyle(WheelPickerStyle()).focusable()
+            }
             .padding(.vertical,0)
             NavigationLink(
                 destination: BreathingView(timeToBreath: timeToBreath),

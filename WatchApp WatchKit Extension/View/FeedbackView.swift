@@ -43,7 +43,7 @@ struct FeedbackView: View {
                             isActive: $goToHome,
                             label: {
                                 Text("Finish")
-                            }).navigationBarBackButtonHidden(true)
+                            }).navigationBarBackButtonHidden(true).navigationBarHidden(true)
         }
     }
     

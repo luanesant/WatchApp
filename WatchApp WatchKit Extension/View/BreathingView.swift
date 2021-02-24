@@ -9,22 +9,34 @@ import SwiftUI
 import WatchKit
 import UIKit
 struct BreathingView: View {
-    @State var timeToBreath = 1
+    @State var timeToBreath: Int
  
     var body: some View {
        
             VStack {
-                Text("Time to breath: ")
-                Text("\(timeToBreath)")
-            }.colorMultiply(.blue)
-        .navigationBarTitle("Breath")
-        
-        
+                if timeToBreath > 0 {
+                    Text("Time to breath: ")
+                    Text("\(timeToBreath)")
+                        .onAppear(){
+                            timeToBreath *= 60
+                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
+                                if timeToBreath > 0 {
+                                    timeToBreath -= 1
+                                }
+                            }
+                        }
+                }
+                else {
+                    FeedbackView()
+                }
+                
+            }
+            .navigationBarTitle("Breath")
     }
 }
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
-        BreathingView()
+        BreathingView(timeToBreath: 1)
     }
 }
