@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct FiveSensesView: View {
-    
     @State var step: Int = 0
-    @State var showModalView = false
+    @State var showModalView = true
+    @State private var goToFeedback = false
     
     let tasksFiveSenses = [
         "Say 5 things you see",
@@ -21,28 +22,40 @@ struct FiveSensesView: View {
     ]
     
     var body: some View {
-      
+   
         VStack {
             Spacer()
-        Progress5Senses(step: step).ignoresSafeArea(edges: .top)
-                
+            Progress5Senses(step: step).ignoresSafeArea(edges: .top)
+            
             Text(tasksFiveSenses[step])
                 .padding(.top, 20)
+            
+            
             Button("Ready", action: {
                 
                 if tasksFiveSenses.count - 1 > step {
                     self.step = self.step + 1
+                } else if tasksFiveSenses.count - 1 == step {
+                    self.goToFeedback = true
                 }
+                
             })
+            .background(NavigationLink(
+                            destination: FeedbackView(),
+                            isActive: $goToFeedback) {
+                            EmptyView()})
             .padding(.bottom, 12)
+            
         }
         .navigationBarTitle("Fechar")
-        .edgesIgnoringSafeArea(.all)
-//        .background(Color.red)
+        
+        //        .edgesIgnoringSafeArea(.all)
+        //        .background(Color.red)
         .sheet(isPresented: $showModalView,content: {
             ModalView()
         })
     }
+    
 }
 
 struct Progress5Senses: View {
@@ -59,14 +72,11 @@ struct Progress5Senses: View {
     var body: some View {
         ZStack
         {
-        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle())
-            .scaleEffect(CGSize(width: 2.1, height: 2.1))
+            ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle())
+                .scaleEffect(CGSize(width: 2.1, height: 2.1))
             VStack {
                 Text("\(step + 1) / 5")
                     .font(.title2)
-                    
-                    
-                    
                 Text(emojisFiveSenses[step])
                     .font(.title2)
             }
@@ -75,7 +85,7 @@ struct Progress5Senses: View {
 }
 
 struct ModalView: View {
-
+    
     var body: some View {
         VStack {
             Text("The technique of the 5 senses will help you focus on what's happening now. Look around and take a deep breath.")
@@ -88,3 +98,4 @@ struct FiveSensesView_Previews: PreviewProvider {
         FiveSensesView(step: 0)
     }
 }
+
