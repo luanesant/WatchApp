@@ -6,27 +6,26 @@
   
 */
 "nameApp" = "Harmon";
-"breathTitle" = "Breath";
-"senses" = "5 senses";
-"feelTitle" = "How do you feel?";
-"emotionBad" = "Bad";
-"emotionGood" = "Good";
-"emotionBetter" = "Better";
-"finishTitle" = "";
-"things5" = "Say 5 things you see";
-"things4" = "Say 4 things you feel";
-"things3" = "Say 3 things you hear";
-"things2" = "Say 2 you smell";
-"things1" = "Say 1 thing you eat";
-"readyTitle" = "Ready";
-"closeTitle" = "Close";
-"descriptionSenses" = "The technique of the 5 senses will help you focus on what's happening now. Look around and take a deep breath.";
-
-"timeTitle" = "Time to breath: ";
-"minute1" = "1 minute";
-"minute2" = "2 minute";
-"minute3" = "3 minute";
-"minute4" = "4 minute";
-"minute5" = "5 minute";
-"titleStart" = "Start";
+"breathTitle" = "Respiração";
+"senses" = "5 sentidos";
+"feelTitle" = "Como você se sente?";
+"emotionBad" = "Mal";
+"emotionGood" = "Normal";
+"emotionBetter" = "Melhor";
+"finishTitle" = "Terminar";
+"things5" = "Diga 5 coisas que você vê?";
+"things4" = "Diga 4 coisas que você sente?";
+"things3" = "Diga 3 coisas que você ouve";
+"things2" = "Diga 2 coisas que vocês tocar?";
+"things1" = "Diga 5 coisas que você come?";
+"readyTitle" = "Pronto";
+"closeTitle" = "Fechar";
+"descriptionSenses" = "A técnica dos 5 sentidos te ajudará a focar no que está acontencendo agora. Olhe ao redor e respire fundo.";
+"timeTitle" = "Tempo de respiração:";
+"minute1" = "1 minuto";
+"minute2" = "2 minutos";
+"minute3" = "3 minutos";
+"minute4" = "4 minutos";
+"minute5" = "5 minutos";
+"titleStart" = "Iniciar";
 
