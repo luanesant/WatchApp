@@ -14,10 +14,10 @@ struct BreathingView: View {
     var body: some View {
        
             VStack {
-                Text("Time to breath: ")
+                Text("timeTile")
                 Text("\(timeToBreath)")
             }.colorMultiply(.blue)
-        .navigationBarTitle("Breath")
+        .navigationBarTitle("breathTitle")
     }
 }
 
