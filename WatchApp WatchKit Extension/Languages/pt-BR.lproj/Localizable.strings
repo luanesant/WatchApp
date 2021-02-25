@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  WatchApp
+
+  Created by Luane dos Santos on 25/02/21.
+  
+*/
+"nameApp" = "Harmon";
+"breathTitle" = "Respiração";
+"senses" = "5 sentidos";
+"feelTitle" = "Como você se sente?";
+"emotionBad" = "Mal";
+"emotionGood" = "Normal";
+"emotionBetter" = "Melhor";
+"finishTitle" = "Terminar";
+"things5" = "Diga 5 coisas que você vê";
+"things4" = "Diga 4 coisas que você sente";
+"things3" = "Diga 3 coisas que você ouve";
+"things2" = "Diga 2 coisas que vocês tocar";
+"things1" = "Diga 5 coisas que você come";
+"readyTitle" = "Pronto";
+"closeTitle" = "Fechar";
+"descriptionSenses" = "A técnica dos 5 sentidos te ajudará a focar no que está acontencendo agora. Olhe ao redor e respire fundo.";
+"timeTitle" = "Tempo de respiração: ";
+"minute1" = "1 minuto";
+"minute2" = "2 minutos";
+"minute3" = "3 minutos";
+"minute4" = "4 minutos";
+"minute5" = "5 minutos";
+"titleStart" = "Iniciar";
+

@@ -22,20 +22,20 @@ struct HomeView: View {
                                 Image(systemName: "lungs.fill")
                                     .padding(.leading,10)//.font(.title)
                                 Spacer()
-                                Text("Breath")
+                                Text("breathTitle")
                                 Spacer()
                             }.foregroundColor(.white)
                             
                         }
                         
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white).navigationBarTitle("Harmon")
+                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white).navigationBarTitle(Translations.Titles.nameApp)
                         
                         NavigationLink(destination: FiveSensesView(), label: {
                             HStack{
                                 Image(systemName: "eyebrow")
                                     .padding(.leading,13)
                                 Spacer()
-                                Text("5 Senses")
+                                Text("senses")
                                 Spacer()
                             }.foregroundColor(.white)
                             

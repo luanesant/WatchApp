@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 313D6C6825E7E0C800D3F314 /* Localizable.strings */; };
+		5E150AED25E800A200D31D5A /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E150AEC25E800A200D31D5A /* Translations.swift */; };
 		5E72801325DFF73900667FC0 /* WatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E72801725DFF73A00667FC0 /* Assets.xcassets */; };
 		5E72801F25DFF73A00667FC0 /* WatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5E72801E25DFF73A00667FC0 /* WatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -67,6 +69,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		313D6C6725E7E0C800D3F314 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		313D6C6C25E7E14500D3F314 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3199052125E7FA3C00CB9AFC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E150AEC25E800A200D31D5A /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		5E72800E25DFF73900667FC0 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801725DFF73A00667FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		313D6C5125E7DFC800D3F314 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				313D6C6825E7E0C800D3F314 /* Localizable.strings */,
+				5E150AEC25E800A200D31D5A /* Translations.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
 		5E72800725DFF73900667FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +145,7 @@
 		5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				313D6C5125E7DFC800D3F314 /* Languages */,
 				5E72804425DFFDC200667FC0 /* Model */,
 				5E72804525DFFDD100667FC0 /* View */,
 				5E72802525DFF73A00667FC0 /* ContentView.swift */,
@@ -255,6 +271,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				"es-419",
 			);
 			mainGroup = 5E72800725DFF73900667FC0;
 			productRefGroup = 5E72800F25DFF73900667FC0 /* Products */;
@@ -289,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
+				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +323,7 @@
 				5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */,
 				5E72802825DFF73A00667FC0 /* NotificationController.swift in Sources */,
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
+				5E150AED25E800A200D31D5A /* Translations.swift in Sources */,
 				5E72802625DFF73A00667FC0 /* ContentView.swift in Sources */,
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
 				5E72805425E007F100667FC0 /* HomeView.swift in Sources */,
@@ -328,11 +348,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		313D6C6825E7E0C800D3F314 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				313D6C6725E7E0C800D3F314 /* en */,
+				313D6C6C25E7E14500D3F314 /* pt-BR */,
+				3199052125E7FA3C00CB9AFC /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5E72803425DFF73B00667FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -393,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

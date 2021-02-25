@@ -14,7 +14,6 @@ struct BreathingView: View {
     @State var timeToBreath: Int
  
     var body: some View {
-       
             VStack {
                 if timeToBreath > 0 {
                     Text("Time to breath: ")
