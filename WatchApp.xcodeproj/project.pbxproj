@@ -70,6 +70,7 @@
 /* Begin PBXFileReference section */
 		313D6C6725E7E0C800D3F314 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		313D6C6C25E7E14500D3F314 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3199052125E7FA3C00CB9AFC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5E72800E25DFF73900667FC0 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E72801725DFF73A00667FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 				en,
 				Base,
 				"pt-BR",
+				"es-419",
 			);
 			mainGroup = 5E72800725DFF73900667FC0;
 			productRefGroup = 5E72800F25DFF73900667FC0 /* Products */;
@@ -348,6 +350,7 @@
 			children = (
 				313D6C6725E7E0C800D3F314 /* en */,
 				313D6C6C25E7E14500D3F314 /* pt-BR */,
+				3199052125E7FA3C00CB9AFC /* es-419 */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
