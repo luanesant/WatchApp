@@ -14,11 +14,11 @@ struct FiveSensesView: View {
     @State private var goToFeedback = false
     
     let tasksFiveSenses = [
-        "Say 5 things you see",
-        "Say 4 things you feel",
-        "Say 3 things you hear",
-        "Say 2 you smell",
-        "Say 1 thing you eat"
+        "things5",
+        "things4",
+        "things3",
+        "things2",
+        "things1"
     ]
     
     var body: some View {
@@ -31,7 +31,7 @@ struct FiveSensesView: View {
                 .padding(.top, 20)
             
             
-            Button("Ready", action: {
+            Button("readyTitle", action: {
                 
                 if tasksFiveSenses.count - 1 > step {
                     self.step = self.step + 1
@@ -44,10 +44,10 @@ struct FiveSensesView: View {
                             destination: FeedbackView(),
                             isActive: $goToFeedback) {
                             EmptyView()})
-            .padding(.bottom, 12)
+            .padding(.bottom, 0)
             
-        }
-        .navigationBarTitle("Fechar")
+        }.scaledToFill()
+        .navigationBarTitle("closeTitle")
         
         //        .edgesIgnoringSafeArea(.all)
         //        .background(Color.red)
@@ -88,7 +88,7 @@ struct ModalView: View {
     
     var body: some View {
         VStack {
-            Text("The technique of the 5 senses will help you focus on what's happening now. Look around and take a deep breath.")
+            Text("descriptionSenses")
         }
     }
 }

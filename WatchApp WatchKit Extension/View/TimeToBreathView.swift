@@ -13,7 +13,7 @@ struct TimeToBreathView: View {
    
     var body: some View {
         VStack {
-            Text("Time to breath").padding([.top, .leading, .bottom],0)
+            Text("Time to breath").padding(.all,0)
             Picker("", selection: $timeToBreath ) {
                 Text("1 minute").tag(1)
                 Text("2 minutes").tag(2)
@@ -21,13 +21,13 @@ struct TimeToBreathView: View {
                 Text("4 minutes").tag(4)
                 Text("5 minutes").tag(5)
             }.pickerStyle(WheelPickerStyle()).focusable()
-            .padding(.vertical,0)
+            .padding(.all,0)
             NavigationLink(
                 destination: BreathingView(timeToBreath: timeToBreath),
                 isActive: $secondScreenShown,
                 label: {
                     Text("Start")
-                }).navigationBarTitle("Breath")
+                }).navigationBarTitle("Breath").padding(.bottom,0)
         }
     }
 }

@@ -18,8 +18,6 @@ struct BreathingView: View {
                 Text("\(timeToBreath)")
             }.colorMultiply(.blue)
         .navigationBarTitle("Breath")
-        
-        
     }
 }
 

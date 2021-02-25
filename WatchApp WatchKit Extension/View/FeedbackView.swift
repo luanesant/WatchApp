@@ -10,24 +10,24 @@ import UIKit
 
 struct FeedbackView: View {
     
-    @State var emotion: String = "Bad"
+    @State var emotion: String = "emotionBad"
     @State var goToHome: Bool = false
     
     var body: some View {
         
         VStack {
-            Text("How do you feel?")
+            Text("feelTitle")
                 .font(.headline)
             ScrollView(.horizontal){
                 HStack (spacing: 30) {
                     FeelView(emoji: "😖", action: {
-                        emotion = "Bad"
+                        emotion = "emotionBad"
                     })
                     FeelView(emoji: "🙂", action: {
-                        emotion = "Good"
+                        emotion = "emotionGood"
                     })
                     FeelView(emoji: "😊", action: {
-                        emotion = "Better"
+                        emotion = "emotionBetter"
                     })
                     
                     //                    Button(action: {
@@ -42,7 +42,7 @@ struct FeedbackView: View {
                             destination: HomeView(),
                             isActive: $goToHome,
                             label: {
-                                Text("Finish")
+                                Text("finishTitle")
                             }).navigationBarBackButtonHidden(true)
         }
     }
@@ -67,6 +67,6 @@ struct FeelView: View {
 
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView(emotion: "better")
+        FeedbackView(emotion: "emotionBetter")
     }
 }
