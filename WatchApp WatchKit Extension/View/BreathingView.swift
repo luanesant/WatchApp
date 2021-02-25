@@ -8,6 +8,8 @@
 import SwiftUI
 import WatchKit
 import UIKit
+import SpriteKit
+
 struct BreathingView: View {
     @State var timeToBreath: Int
  
@@ -29,9 +31,12 @@ struct BreathingView: View {
                 else {
                     FeedbackView()
                 }
-                
+                AnimationView()
+                Text("Inspire")
+                    .font(.caption2)
+                    .bold()
             }
-            .navigationBarTitle("Breath")
+            .navigationBarTitle("Time to Breath")
     }
 }
 
@@ -40,3 +45,36 @@ struct BreathingView_Previews: PreviewProvider {
         BreathingView(timeToBreath: 1)
     }
 }
+
+struct AnimationView: View {
+    var scene: SKScene {
+        let scene = AnimationScene()
+        scene.size = CGSize(width: 200, height: 300)
+        scene.scaleMode = .aspectFit
+        scene.backgroundColor = .clear
+        
+        return scene
+    }
+    var body: some View {
+        ZStack {
+            SpriteView(scene: scene)
+                .frame(width: 200, height: 100)
+                .aspectRatio(contentMode: .fit)
+        }
+    }
+}
+
+class AnimationScene: SKScene {
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        let candle = SKSpriteNode(imageNamed: "candle")
+        candle.scale(to: CGSize(width: 46*2.5, height: 112*2.5))
+        self.addChild(candle)
+        
+        self.anchorPoint = .init(x: 0.5, y: 0.5)
+    }
+}
+
+
+
+
