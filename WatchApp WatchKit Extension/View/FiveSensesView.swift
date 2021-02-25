@@ -15,10 +15,10 @@ struct FiveSensesView: View {
     
     let tasksFiveSenses = [
     Translations.FiveSenesTexts.visionText,
-        "things4",
-        "things3",
-        "things2",
-        "things1"
+    Translations.FiveSenesTexts.senseText,
+    Translations.FiveSenesTexts.hearText,
+    Translations.FiveSenesTexts.touchText,
+    Translations.FiveSenesTexts.eatText
     ]
     
     var body: some View {
@@ -31,7 +31,7 @@ struct FiveSensesView: View {
                 .padding(.top, 20)
             
             
-            Button("readyTitle", action: {
+        Button(Translations.Titles.readyTitle, action: {
                 
                 if tasksFiveSenses.count - 1 > step {
                     self.step = self.step + 1
@@ -47,7 +47,7 @@ struct FiveSensesView: View {
             .padding(.bottom, 0)
             
         }.scaledToFill()
-        .navigationBarTitle("closeTitle")
+        .navigationBarTitle(Translations.Titles.closeTitle)
         
         //        .edgesIgnoringSafeArea(.all)
         //        .background(Color.red)
@@ -88,7 +88,7 @@ struct ModalView: View {
     
     var body: some View {
         VStack {
-            Text("descriptionSenses")
+        Text(Translations.Titles.description)
         }
     }
 }

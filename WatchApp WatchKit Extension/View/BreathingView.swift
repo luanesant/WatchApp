@@ -16,7 +16,7 @@ struct BreathingView: View {
     var body: some View {
             VStack {
                 if timeToBreath > 0 {
-                    Text("Time to breath: ")
+                    Text(Translations.Titles.timeTitle)
                     Text("\(timeToBreath)")
                         .onAppear(){
                             timeToBreath *= 60
@@ -31,11 +31,11 @@ struct BreathingView: View {
                     FeedbackView()
                 }
                 AnimationView()
-                Text("Inspire")
+                Text(Translations.Titles.inspire)
                     .font(.caption2)
                     .bold()
             }
-            .navigationBarTitle("Time to Breath")
+            .navigationBarTitle(Translations.Titles.timeTitle)
     }
 }
 

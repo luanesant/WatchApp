@@ -22,7 +22,7 @@ struct HomeView: View {
                                 Image(systemName: "lungs.fill")
                                     .padding(.leading,10)//.font(.title)
                                 Spacer()
-                                Text("breathTitle")
+                                Text(Translations.Titles.breath)
                                 Spacer()
                             }.foregroundColor(.white)
                             

@@ -5,6 +5,7 @@
   Created by Luane dos Santos on 25/02/21.
   
 */
+
 "nameApp" = "Harmon";
 "breathTitle" = "Respiração";
 "senses" = "5 sentidos";
@@ -28,4 +29,6 @@
 "minute4" = "4 minutos";
 "minute5" = "5 minutos";
 "titleStart" = "Iniciar";
+"inspireTitle"= "Inspire";
+"expireTitle"= "Expire";
 
