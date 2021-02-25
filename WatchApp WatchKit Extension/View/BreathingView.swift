@@ -9,7 +9,7 @@ import SwiftUI
 import WatchKit
 import UIKit
 struct BreathingView: View {
-    @State var timeToBreath = 1
+    @State var timeToBreath: Int
  
     var body: some View {
        
@@ -23,6 +23,6 @@ struct BreathingView: View {
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
-        BreathingView()
+        BreathingView(timeToBreath: 1)
     }
 }
