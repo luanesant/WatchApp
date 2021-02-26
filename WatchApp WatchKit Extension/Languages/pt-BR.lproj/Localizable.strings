@@ -21,7 +21,8 @@
 "things1" = "Diga 5 coisas que você come";
 "readyTitle" = "Pronto";
 "closeTitle" = "Fechar";
-"descriptionSenses" = "A técnica dos 5 sentidos te ajudará a focar no que está acontencendo agora. Olhe ao redor e respire fundo.";
+"fiveSenses" = "5 sentidos";
+"description" = "A técnica dos 5 sentidos te ajudará a focar no que está acontencendo agora. Olhe ao redor e respire fundo.";
 "timeTitle" = "Tempo de respiração: ";
 "minute1" = "1 minuto";
 "minute2" = "2 minutos";

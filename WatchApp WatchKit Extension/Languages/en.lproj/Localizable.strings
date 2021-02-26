@@ -21,7 +21,8 @@
 "things1" = "Say 1 thing you eat";
 "readyTitle" = "Ready";
 "closeTitle" = "Close";
-"descriptionSenses" = "The technique of the 5 senses will help you focus on what's happening now. Look around and take a deep breath.";
+"fiveSenses" = "5 Senses";
+"description" = "The technique of the 5 senses will help you focus on what's happening now. Look around and take a deep breath.";
 
 "timeTitle" = "Time to breath: ";
 "minute1" = "1 minute";
