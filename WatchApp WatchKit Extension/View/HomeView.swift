@@ -11,33 +11,35 @@ struct HomeView: View {
     
     
     var body: some View {
-   
-            VStack{
-                Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
-                ZStack{
-                    VStack{
-                        NavigationLink(destination: TimeToBreathView(), label: {
-                            HomeButton(image: "lungs", text: Translations.Titles.breath)
-                            
-                        }
-                        
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(bgButton).foregroundColor(.white).navigationBarTitle(Translations.Titles.nameApp)
         
-                        
-                        NavigationLink(destination: FiveSensesView(), label: {
-                            HomeButton(image: "eye", text: Translations.Titles.fiveSenses)
-                            
-                        }
-                        
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(bgButton).foregroundColor(.white)
-                       
-                        
-                    }.clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 1200), style: .circular))
-                    Divider()
-                    
+        VStack{
+            Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
+            
+            NavigationLink(destination: TimeToBreathView(),label: {
+               
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(.white)
+                        .opacity(0)
+                        .background(bgButton)
+                        .cornerRadius(20)
+                    HomeButton(image: "lungs", text: Translations.Titles.breath)
                 }
+            })
+            NavigationLink(destination: FiveSensesView(),label: {
                 
-            }.navigationBarBackButtonHidden(true)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(.white)
+                        .opacity(0)
+                        .background(bgButton)
+                        .cornerRadius(20)
+                    HomeButton(image: "eye", text: Translations.Titles.fiveSenses)
+                }
+            })
+                        
+                    }
+                    .buttonStyle(PlainButtonStyle())
     }
 }
 

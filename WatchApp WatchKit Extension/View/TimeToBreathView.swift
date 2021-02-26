@@ -22,12 +22,14 @@ struct TimeToBreathView: View {
                 Text(Translations.Titles.minute5).tag(5)
             }.pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
+            
             NavigationLink(
                 destination: BreathingView(timeToBreath: timeToBreath),
                 isActive: $secondScreenShown,
                 label: {
+                    
                     Text(Translations.Titles.titleStart)
-                }).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
+                }).colorMultiply(.gray).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
         }
     }
 }
