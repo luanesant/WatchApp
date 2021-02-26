@@ -16,32 +16,20 @@ struct HomeView: View {
                 Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
                 ZStack{
                     VStack{
-                        
                         NavigationLink(destination: TimeToBreathView(), label: {
-                            HStack{
-                                Image(systemName: "lungs.fill")
-                                    .padding(.leading,10)//.font(.title)
-                                Spacer()
-                                Text(Translations.Titles.breath)
-                                Spacer()
-                            }.foregroundColor(.white)
+                            HomeButton(image: "lungs", text: Translations.Titles.breath)
                             
                         }
                         
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white).navigationBarTitle(Translations.Titles.nameApp)
+                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(bgButton).foregroundColor(.white).navigationBarTitle(Translations.Titles.nameApp)
+        
                         
                         NavigationLink(destination: FiveSensesView(), label: {
-                            HStack{
-                                Image(systemName: "eyebrow")
-                                    .padding(.leading,13)
-                                Spacer()
-                                Text("senses")
-                                Spacer()
-                            }.foregroundColor(.white)
+                            HomeButton(image: "eye", text: Translations.Titles.fiveSenses)
                             
                         }
                         
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white)
+                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(bgButton).foregroundColor(.white)
                        
                         
                     }.clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 1200), style: .circular))
@@ -53,6 +41,21 @@ struct HomeView: View {
     }
 }
 
+struct HomeButton: View {
+    
+    @State var image: String
+    @State var text: String
+    var body: some View {
+        HStack{
+            Image(image)
+                .padding(.leading,10)//.font(.title)
+            Spacer()
+            Text(text)
+            Spacer()
+        }
+//        .foregroundColor(.white)
+    }
+}
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

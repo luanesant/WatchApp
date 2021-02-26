@@ -20,13 +20,13 @@ struct FeedbackView: View {
                 .font(.headline)
             ScrollView(.horizontal){
                 HStack (spacing: 30) {
-                    FeelView(emoji: "😖", action: {
+                    FeelView(imageEmotion: "bad", action: {
                         emotion = Translations.Titles.emotionBad
                     })
-                    FeelView(emoji: "🙂", action: {
+                    FeelView(imageEmotion: "good", action: {
                         emotion = Translations.Titles.emotionGood
                     })
-                    FeelView(emoji: "😊", action: {
+                    FeelView(imageEmotion: "happy", action: {
                         emotion = Translations.Titles.emotionBetter
                     })
                     
@@ -51,14 +51,16 @@ struct FeedbackView: View {
 
 struct FeelView: View {
     
-    @State var emoji: String
+    @State var imageEmotion: String
     @State var action: ()-> Void
     
     var body: some View {
-    Button(emoji, action: action)
+        Button(action: action) {
+            Image(imageEmotion)
+        }
         .padding(5.0)
         .clipShape(Circle(), style: FillStyle())
-        .scaleEffect(CGSize(width: 2, height: 2))
+//        .scaleEffect(CGSize(width: 2, height: 2))
         .background(Color.clear)
         .buttonStyle(BorderedButtonStyle(tint: .blue))
     

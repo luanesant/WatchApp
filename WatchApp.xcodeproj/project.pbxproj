@@ -22,6 +22,7 @@
 		5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */; };
 		5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72804E25E003B000667FC0 /* BreathingView.swift */; };
 		5E72805425E007F100667FC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72805325E007F100667FC0 /* HomeView.swift */; };
+		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
 		C3A2AB5525E370F90030348C /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2AB5425E370F90030348C /* FiveSensesView.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		5E72804925DFFEE500667FC0 /* TimeToBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToBreathView.swift; sourceTree = "<group>"; };
 		5E72804E25E003B000667FC0 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		5E72805325E007F100667FC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C30013DE25E885C2001F7A11 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		C3A2AB5425E370F90030348C /* FiveSensesView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FiveSensesView.swift; sourceTree = "<group>"; tabWidth = 10; usesTabs = 0; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 				5E72802325DFF73A00667FC0 /* WatchAppApp.swift */,
 				5E72802725DFF73A00667FC0 /* NotificationController.swift */,
 				5E72802B25DFF73A00667FC0 /* ComplicationController.swift */,
+				C30013DE25E885C2001F7A11 /* Shared.swift */,
 				5E72802D25DFF73B00667FC0 /* Assets.xcassets */,
 				5E72803225DFF73B00667FC0 /* Info.plist */,
 				5E72803325DFF73B00667FC0 /* PushNotificationPayload.apns */,
@@ -204,6 +207,8 @@
 				5E72801525DFF73900667FC0 /* PBXTargetDependency */,
 			);
 			name = WatchApp;
+			packageProductDependencies = (
+			);
 			productName = WatchApp;
 			productReference = 5E72800E25DFF73900667FC0 /* WatchApp.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -221,6 +226,8 @@
 				5E72802125DFF73A00667FC0 /* PBXTargetDependency */,
 			);
 			name = "WatchApp WatchKit App";
+			packageProductDependencies = (
+			);
 			productName = "WatchApp WatchKit App";
 			productReference = 5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
@@ -238,6 +245,8 @@
 			dependencies = (
 			);
 			name = "WatchApp WatchKit Extension";
+			packageProductDependencies = (
+			);
 			productName = "WatchApp WatchKit Extension";
 			productReference = 5E72801E25DFF73A00667FC0 /* WatchApp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -275,6 +284,8 @@
 				"es-419",
 			);
 			mainGroup = 5E72800725DFF73900667FC0;
+			packageReferences = (
+			);
 			productRefGroup = 5E72800F25DFF73900667FC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,6 +336,7 @@
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
 				5E150AED25E800A200D31D5A /* Translations.swift in Sources */,
 				5E72802625DFF73A00667FC0 /* ContentView.swift in Sources */,
+				C30013DF25E885C2001F7A11 /* Shared.swift in Sources */,
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
 				5E72805425E007F100667FC0 /* HomeView.swift in Sources */,
 				5E72802425DFF73A00667FC0 /* WatchAppApp.swift in Sources */,

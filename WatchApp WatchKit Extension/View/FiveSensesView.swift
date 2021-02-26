@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
-import UIKit
+import AVFoundation
+
+
 
 struct FiveSensesView: View {
     @State var step: Int = 0
     @State var showModalView = true
     @State private var goToFeedback = false
-    
+
+//@State var audioPlayer: AVAudioPlayer?
+
     let tasksFiveSenses = [
     Translations.FiveSenesTexts.visionText,
     Translations.FiveSenesTexts.senseText,
@@ -40,11 +44,14 @@ struct FiveSensesView: View {
                 }
                 
             })
-            .background(NavigationLink(
-                            destination: FeedbackView(),
-                            isActive: $goToFeedback) {
-                            EmptyView()})
-            .padding(.bottom, 0)
+        .background(NavigationLink(
+                              destination: FeedbackView(),
+                              isActive: $goToFeedback) {
+                              EmptyView()}.background(mainColorBlue))
+        
+        .padding(.bottom, 0)
+        .foregroundColor(.black)
+        
             
         }.scaledToFill()
         .navigationBarTitle(Translations.Titles.fiveSenses)
@@ -54,6 +61,10 @@ struct FiveSensesView: View {
         .sheet(isPresented: $showModalView,content: {
             ModalView()
         })
+//            .onAppear {
+//        let sound = Bundle.main.path(forResource: "dolphin", ofType: "mp3")
+//        self.audioPlayer = try! AVAudioPlayer (contentsOf: URL(fileURLWithPath: sound!))
+        
     }
     
 }
@@ -61,24 +72,25 @@ struct FiveSensesView: View {
 struct Progress5Senses: View {
     var step: Int
     
-    let emojisFiveSenses = [
-        "👁",
-        "🤚🏻",
-        "🎵",
-        "🐽",
-        "😋"
+    let imageFiveSenses = [
+        "senseEye",
+        "senseHand",
+        "senseNote",
+        "senseInhale",
+        "senseApple"
     ]
     
     var body: some View {
         ZStack
         {
-            ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle())
+        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: .yellow))
                 .scaleEffect(CGSize(width: 2.1, height: 2.1))
+            
             VStack {
                 Text("\(step + 1) / 5")
                     .font(.title2)
-                Text(emojisFiveSenses[step])
-                    .font(.title2)
+                Image(imageFiveSenses[step])
+                   
             }
         }
     }
@@ -95,7 +107,7 @@ struct ModalView: View {
 
 struct FiveSensesView_Previews: PreviewProvider {
     static var previews: some View {
-        FiveSensesView(step: 0)
+    FiveSensesView(step: 0)
     }
 }
 
