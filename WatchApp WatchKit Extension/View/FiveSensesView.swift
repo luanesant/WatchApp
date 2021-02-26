@@ -28,35 +28,35 @@ struct FiveSensesView: View {
     var body: some View {
    
         VStack {
-            Spacer()
-            Progress5Senses(step: step).ignoresSafeArea(edges: .top)
-            
-            Text(tasksFiveSenses[step])
-                .padding(.top, 20)
-            
-            
+        VStack{
+        Progress5Senses(step: step).padding(.top,40).padding(.bottom,0)//.fixedSize()
+        
+        }.padding(.all,0).fixedSize(horizontal: true, vertical: true)
+        
+        Text(tasksFiveSenses[step])
+        .padding(.top, 30)//.aspectRatio(contentMode: .fill)
+        
+        
         Button(Translations.Titles.readyTitle, action: {
                 
                 if tasksFiveSenses.count - 1 > step {
                     self.step = self.step + 1
+                
                 } else if tasksFiveSenses.count - 1 == step {
                     self.goToFeedback = true
                 }
                 
-            })
+        }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
         .background(NavigationLink(
                               destination: FeedbackView(),
                               isActive: $goToFeedback) {
-                              EmptyView()}.background(mainColorBlue))
+                              EmptyView()})
         
-        .padding(.bottom, 0)
+        
         .foregroundColor(.black)
-        
-            
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
         
-        //        .edgesIgnoringSafeArea(.all)
         //        .background(Color.red)
         .sheet(isPresented: $showModalView,content: {
             ModalView()
@@ -88,11 +88,15 @@ struct Progress5Senses: View {
             
             VStack {
                 Text("\(step + 1) / 5")
-                    .font(.title2)
-                Image(imageFiveSenses[step])
+                .font(.title3).aspectRatio(contentMode: .fit)
+            Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
                    
             }
-        }
+        
+        
+        }.fixedSize(horizontal: true, vertical: true)
+    
+    
     }
 }
 

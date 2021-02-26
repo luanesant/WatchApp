@@ -13,33 +13,27 @@ struct HomeView: View {
     var body: some View {
         
         VStack{
-            Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
+            Image(systemName: "heart")
+                .padding(.bottom, 20)
+                .padding(.top,0)
+
             
             NavigationLink(destination: TimeToBreathView(),label: {
-               
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.white)
-                        .opacity(0)
-                        .background(bgButton)
-                        .cornerRadius(20)
-                    HomeButton(image: "lungs", text: Translations.Titles.breath)
+
+                HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
                 }
-            }).foregroundColor(.white)
+            )
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
+           
+            
             NavigationLink(destination: FiveSensesView(),label: {
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.white)
-                        .opacity(0)
-                        .background(bgButton)
-                        .cornerRadius(20)
-                    HomeButton(image: "eye", text: Translations.Titles.fiveSenses)
+               
+                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
                 }
-            })
+            )
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                         
-                    }
-                    .buttonStyle(PlainButtonStyle())
+        }
     }
 }
 
