@@ -25,7 +25,7 @@ struct HomeView: View {
                         .cornerRadius(20)
                     HomeButton(image: "lungs", text: Translations.Titles.breath)
                 }
-            })
+            }).foregroundColor(.white)
             NavigationLink(destination: FiveSensesView(),label: {
                 
                 ZStack {

@@ -53,7 +53,7 @@ struct FiveSensesView: View {
         .foregroundColor(.black)
         
             
-        }.scaledToFill()
+        }
         .navigationBarTitle(Translations.Titles.fiveSenses)
         
         //        .edgesIgnoringSafeArea(.all)
