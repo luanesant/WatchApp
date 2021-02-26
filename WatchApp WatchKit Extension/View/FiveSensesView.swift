@@ -28,10 +28,11 @@ struct FiveSensesView: View {
     var body: some View {
    
         VStack {
+        
         VStack{
         Progress5Senses(step: step).padding(.top,40).padding(.bottom,0)//.fixedSize()
         
-        }.padding(.all,0).fixedSize(horizontal: true, vertical: true)
+        }.fixedSize(horizontal: true, vertical: true)
         
         Text(tasksFiveSenses[step])
         .padding(.top, 30)//.aspectRatio(contentMode: .fill)

@@ -38,12 +38,10 @@ struct FeedbackView: View {
                 }.padding().listStyle(CarouselListStyle())
             }
             Text(emotion)
-            NavigationLink(
-                            destination: HomeView(),
-                            isActive: $goToHome,
-                            label: {
-                                Text(Translations.Titles.finishTitle)
-                            }).navigationBarBackButtonHidden(true)
+            Button(Translations.Titles.finishTitle, action:{}).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(.black).background(NavigationLink(
+                            "", destination: HomeView(),
+                            isActive: $goToHome))
         }
     }
     
@@ -62,7 +60,7 @@ struct FeelView: View {
         .clipShape(Circle(), style: FillStyle())
 //        .scaleEffect(CGSize(width: 2, height: 2))
         .background(Color.clear)
-        .buttonStyle(BorderedButtonStyle(tint: .blue))
+       // .buttonStyle(BorderedButtonStyle(tint: .blue))
     
     }
 }
