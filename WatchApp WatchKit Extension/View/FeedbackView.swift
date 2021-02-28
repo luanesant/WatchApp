@@ -29,20 +29,18 @@ struct FeedbackView: View {
                     FeelView(imageEmotion: "happy", action: {
                         emotion = Translations.Titles.emotionBetter
                     })
-                    
-                    //                    Button(action: {
-                    //                    }, label: {
-                    //                        Image(systemName: "return").frame(minWidth: 80, minHeight: 80)//background(Color.gray).clipShape(Circle())
-                    //                    }).clipShape(Circle(), style: FillStyle()).background(Color.clear).buttonStyle(BorderedButtonStyle(tint: .blue))
                 
                 }.padding().listStyle(CarouselListStyle())
             }
             Text(emotion)
-            Button(Translations.Titles.finishTitle, action:{}).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(.black).background(NavigationLink(
+            Button(Translations.Titles.finishTitle, action:{goToHome = true})
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(.black)
+                .background(NavigationLink(
                             "", destination: HomeView(),
                             isActive: $goToHome))
-        }
+
+        }.navigationBarBackButtonHidden(true)
     }
     
 }

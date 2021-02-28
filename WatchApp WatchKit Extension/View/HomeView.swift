@@ -34,6 +34,8 @@ struct HomeView: View {
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                         
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle(Translations.Titles.nameApp)
     }
 }
 
