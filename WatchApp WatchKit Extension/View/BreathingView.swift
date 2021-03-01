@@ -68,16 +68,27 @@ class AnimationScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
-        let candleAssets = [
-            SKTexture(imageNamed: "candle"),
-            SKTexture(imageNamed: "candle2")
-        ]
+        var candleAssets: [SKTexture] = []
         
-        let candle = SKSpriteNode(imageNamed: "candle")
-        candle.scale(to: CGSize(width: 46*2.5, height: 112*2.5))
+        for i in 1...16 {
+            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        for i in 17...30 {
+            candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
+        }
+        
+        
+        
+        let candle = SKSpriteNode(imageNamed: "velaacessa1")
+        candle.scale(to: CGSize(width: 250, height: 350))
         self.addChild(candle)
         
-        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 4), count: 7))
+        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.2), count: 7)) {
+            candle.removeFromParent()
+        }
+        
+        WKInterfaceDevice.current().play(.directionUp)
+        
         
         self.anchorPoint = .init(x: 0.5, y: 0.5)
     }
