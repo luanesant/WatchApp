@@ -9,62 +9,54 @@ import SwiftUI
 import AVFoundation
 
 
-
 struct FiveSensesView: View {
+
     @State var step: Int = 0
     @State var showModalView = true
-    @State private var goToFeedback = false
-
-//@State var audioPlayer: AVAudioPlayer?
-
+    @State var audioPlayer: AVAudioPlayer?
+    
+    
     let tasksFiveSenses = [
-    Translations.FiveSenesTexts.visionText,
-    Translations.FiveSenesTexts.senseText,
-    Translations.FiveSenesTexts.hearText,
-    Translations.FiveSenesTexts.touchText,
-    Translations.FiveSenesTexts.eatText
+        Translations.FiveSenesTexts.visionText,
+        Translations.FiveSenesTexts.senseText,
+        Translations.FiveSenesTexts.hearText,
+        Translations.FiveSenesTexts.touchText,
+        Translations.FiveSenesTexts.eatText
     ]
     
     var body: some View {
-   
+        
         VStack {
-        
-        VStack{
-        Progress5Senses(step: step).padding(.top,40).padding(.bottom,0)//.fixedSize()
-        
-        }.fixedSize(horizontal: true, vertical: true)
-        
-        Text(tasksFiveSenses[step])
-        .padding(.top, 30)//.aspectRatio(contentMode: .fill)
-        
-        
-        Button(Translations.Titles.readyTitle, action: {
-                
-                if tasksFiveSenses.count - 1 > step {
+            
+            Progress5Senses(step: step)
+                .padding(.top,40)
+                .padding(.bottom,0)
+                .fixedSize(horizontal: true, vertical: true)
+            
+            Text(tasksFiveSenses[step])
+                .padding(.top, 30)//.aspectRatio(contentMode: .fill)
+            
+            if tasksFiveSenses.count - 1 > step {
+                Button(Translations.Titles.readyTitle, action: {
                     self.step = self.step + 1
-                
-                } else if tasksFiveSenses.count - 1 == step {
-                    self.goToFeedback = true
+                })
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(Color.black)
+            } else {
+                NavigationLink(destination: FeedbackView()) {
+                    Text("Final")
                 }
-                
-        }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-        .background(NavigationLink(
-                              destination: FeedbackView(),
-                              isActive: $goToFeedback) {
-                              EmptyView()})
-        
-        
-        .foregroundColor(.black)
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(Color.black)
+            }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
-        
-        //        .background(Color.red)
         .sheet(isPresented: $showModalView,content: {
-            ModalView()
+            ModalView(audioPlayer: self.$audioPlayer)
         })
-//            .onAppear {
-//        let sound = Bundle.main.path(forResource: "dolphin", ofType: "mp3")
-//        self.audioPlayer = try! AVAudioPlayer (contentsOf: URL(fileURLWithPath: sound!))
+        .onDisappear {
+            self.audioPlayer?.stop()
+        }
         
     }
     
@@ -84,14 +76,14 @@ struct Progress5Senses: View {
     var body: some View {
         ZStack
         {
-        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: .yellow))
+            ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: .yellow))
                 .scaleEffect(CGSize(width: 2.1, height: 2.1))
             
             VStack {
                 Text("\(step + 1) / 5")
-                .font(.title3).aspectRatio(contentMode: .fit)
-            Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
-                   
+                    .font(.title3).aspectRatio(contentMode: .fit)
+                Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
+                
             }
         
         
@@ -102,17 +94,23 @@ struct Progress5Senses: View {
 }
 
 struct ModalView: View {
-    
+    @Binding var audioPlayer: AVAudioPlayer?
     var body: some View {
         VStack {
-        Text(Translations.Titles.description)
+            Text(Translations.Titles.description)
+        }
+        .onDisappear {
+            guard let sound = Bundle.main.url(forResource: "dolphin", withExtension: "mp3") else{ return }
+            self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
+            self.audioPlayer?.play()
+            self.audioPlayer?.volume = 0.1
         }
     }
 }
 
 struct FiveSensesView_Previews: PreviewProvider {
     static var previews: some View {
-    FiveSensesView(step: 0)
+        FiveSensesView(step: 0)
     }
 }
 

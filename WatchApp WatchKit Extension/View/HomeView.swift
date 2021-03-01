@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct HomeView: View {
     
+    @State var isActive: Bool = false
     
     var body: some View {
         
@@ -18,19 +20,14 @@ struct HomeView: View {
                 .padding(.top,0)
 
             
-            NavigationLink(destination: TimeToBreathView(),label: {
-
+            NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
-                }
-            )
+            }
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
-           
-            
-            NavigationLink(destination: FiveSensesView(),label: {
-               
+
+            NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-                }
-            )
+            }
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                         
         }

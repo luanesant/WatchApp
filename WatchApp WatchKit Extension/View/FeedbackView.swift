@@ -11,7 +11,6 @@ import UIKit
 struct FeedbackView: View {
     
     @State var emotion: String = Translations.Titles.emotionBad
-    @State var goToHome: Bool = false
     
     var body: some View {
         
@@ -33,12 +32,11 @@ struct FeedbackView: View {
                 }.padding().listStyle(CarouselListStyle())
             }
             Text(emotion)
-            Button(Translations.Titles.finishTitle, action:{goToHome = true})
-                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(.black)
-                .background(NavigationLink(
-                            "", destination: HomeView(),
-                            isActive: $goToHome))
+            NavigationLink(destination: HomeView(), label: {
+                Text(Translations.Titles.finishTitle)
+            })
+            .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+            .foregroundColor(.black)
 
         }.navigationBarBackButtonHidden(true)
     }
@@ -56,9 +54,7 @@ struct FeelView: View {
         }
         .padding(5.0)
         .clipShape(Circle(), style: FillStyle())
-//        .scaleEffect(CGSize(width: 2, height: 2))
         .background(Color.clear)
-       // .buttonStyle(BorderedButtonStyle(tint: .blue))
     
     }
 }
