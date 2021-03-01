@@ -27,36 +27,37 @@ struct FiveSensesView: View {
     var body: some View {
         
         VStack {
-            
-            Progress5Senses(step: step)
-                .padding(.top,40)
-                .padding(.bottom,0)
-                .fixedSize(horizontal: true, vertical: true)
-            
-            Text(tasksFiveSenses[step])
-                .padding(.top, 30)//.aspectRatio(contentMode: .fill)
-            
-            if tasksFiveSenses.count - 1 > step {
-                Button(Translations.Titles.readyTitle, action: {
-                    self.step = self.step + 1
-                })
-                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(Color.black)
-            } else {
-                NavigationLink(destination: FeedbackView()) {
-                    Text("Final")
-                }
-                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(Color.black)
+        Progress5Senses(step: step).padding(.top,10)
+//        Progress5Senses(step: step)
+//            .padding(.top,40)
+//            .padding(.bottom,0)
+//            .fixedSize(horizontal: true, vertical: true)
+        
+        Text(tasksFiveSenses[step]).padding(.top,10)
+        //.aspectRatio(contentMode: .fill)
+        
+        
+        if tasksFiveSenses.count - 1 > step {
+            Button(Translations.Titles.readyTitle, action: {
+                self.step = self.step + 1
+            })
+            .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+            .foregroundColor(Color.black).padding(.bottom,0)
+        } else {
+            NavigationLink(destination: FeedbackView()) {
+                Text("Final")
             }
+            .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+            .foregroundColor(Color.black)
+        }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
-        .sheet(isPresented: $showModalView,content: {
-            ModalView(audioPlayer: self.$audioPlayer)
-        })
-        .onDisappear {
-            self.audioPlayer?.stop()
-        }
+//        .sheet(isPresented: $showModalView,content: {
+//            ModalView(audioPlayer: self.$audioPlayer)
+//        })
+//        .onDisappear {
+//            self.audioPlayer?.stop()
+//        }
         
     }
     
@@ -74,23 +75,22 @@ struct Progress5Senses: View {
     ]
     
     var body: some View {
-        ZStack
-        {
-        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: mainColorBlue))
+   
+    ZStack{
+    ProgressView(value:(Double(step + 1) * 0.1)).progressViewStyle(CircularProgressViewStyle(tint: mainColorBlue))
         .scaleEffect(CGSize(width: 2.1, height: 2.1))
-            
-            VStack {
-                Text("\(step + 1) / 5")
+    VStack{
+            Text("\(step + 1) / 5")
                     .font(.title3).aspectRatio(contentMode: .fit)
                 Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
                 
-            }
+    }
+    }
         
-        
-        }.fixedSize(horizontal: true, vertical: true)
     
     
     }
+    
 }
 
 struct ModalView: View {
