@@ -64,16 +64,21 @@ struct AnimationView: View {
 }
 
 class AnimationScene: SKScene {
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
+        
+        let candleAssets = [
+            SKTexture(imageNamed: "candle"),
+            SKTexture(imageNamed: "candle2")
+        ]
+        
         let candle = SKSpriteNode(imageNamed: "candle")
         candle.scale(to: CGSize(width: 46*2.5, height: 112*2.5))
         self.addChild(candle)
         
+        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 4), count: 7))
+        
         self.anchorPoint = .init(x: 0.5, y: 0.5)
     }
 }
-
-
-
-
