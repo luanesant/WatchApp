@@ -76,8 +76,8 @@ struct Progress5Senses: View {
     var body: some View {
         ZStack
         {
-            ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: .yellow))
-                .scaleEffect(CGSize(width: 2.1, height: 2.1))
+        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: mainColorBlue))
+        .scaleEffect(CGSize(width: 2.1, height: 2.1))
             
             VStack {
                 Text("\(step + 1) / 5")

@@ -23,9 +23,10 @@ struct TimeToBreathView: View {
             }.pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
             
-            Button(Translations.Titles.titleStart,action:{}).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(.black).background(NavigationLink(
-                                                                                                "", destination: BreathingView(timeToBreath: timeToBreath),
+            Button(Translations.Titles.titleStart,action:{
+                secondScreenShown = true
+            }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath),
                 isActive: $secondScreenShown))
         }.navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }
