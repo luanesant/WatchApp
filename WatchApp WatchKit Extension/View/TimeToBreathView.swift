@@ -22,13 +22,26 @@ struct TimeToBreathView: View {
                 Text(Translations.Titles.minute5).tag(5)
             }.pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
-            NavigationLink(
-                destination: BreathingView(timeToBreath: timeToBreath),
-                isActive: $secondScreenShown,
-                label: {
-                    Text(Translations.Titles.titleStart)
-                }).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
-        }
+            
+            Button(Translations.Titles.titleStart,action:{
+                secondScreenShown = true
+            }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath),
+                isActive: $secondScreenShown))
+        }.navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
+    }
+}
+
+
+struct TimeButton: View {
+    
+    @State var text: String
+    var body: some View {
+        
+            Text(text)
+         
+        
+//        .foregroundColor(.white)
     }
 }
 

@@ -6,54 +6,58 @@
 //
 
 import SwiftUI
-import UIKit
+import AVFoundation
+
 
 struct FiveSensesView: View {
+
     @State var step: Int = 0
     @State var showModalView = true
-    @State private var goToFeedback = false
+    @State var audioPlayer: AVAudioPlayer?
+    
     
     let tasksFiveSenses = [
-    Translations.FiveSenesTexts.visionText,
-    Translations.FiveSenesTexts.senseText,
-    Translations.FiveSenesTexts.hearText,
-    Translations.FiveSenesTexts.touchText,
-    Translations.FiveSenesTexts.eatText
+        Translations.FiveSenesTexts.visionText,
+        Translations.FiveSenesTexts.senseText,
+        Translations.FiveSenesTexts.hearText,
+        Translations.FiveSenesTexts.touchText,
+        Translations.FiveSenesTexts.eatText
     ]
     
     var body: some View {
-   
+        
         VStack {
-            Spacer()
-            Progress5Senses(step: step).ignoresSafeArea(edges: .top)
+            
+            Progress5Senses(step: step)
+                .padding(.top,40)
+                .padding(.bottom,0)
+                .fixedSize(horizontal: true, vertical: true)
             
             Text(tasksFiveSenses[step])
-                .padding(.top, 20)
+                .padding(.top, 30)//.aspectRatio(contentMode: .fill)
             
-            
-        Button(Translations.Titles.readyTitle, action: {
-                
-                if tasksFiveSenses.count - 1 > step {
+            if tasksFiveSenses.count - 1 > step {
+                Button(Translations.Titles.readyTitle, action: {
                     self.step = self.step + 1
-                } else if tasksFiveSenses.count - 1 == step {
-                    self.goToFeedback = true
+                })
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(Color.black)
+            } else {
+                NavigationLink(destination: FeedbackView()) {
+                    Text("Final")
                 }
-                
-            })
-            .background(NavigationLink(
-                            destination: FeedbackView(),
-                            isActive: $goToFeedback) {
-                            EmptyView()})
-            .padding(.bottom, 0)
-            
-        }.scaledToFill()
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(Color.black)
+            }
+        }
         .navigationBarTitle(Translations.Titles.fiveSenses)
-        
-        //        .edgesIgnoringSafeArea(.all)
-        //        .background(Color.red)
         .sheet(isPresented: $showModalView,content: {
-            ModalView()
+            ModalView(audioPlayer: self.$audioPlayer)
         })
+        .onDisappear {
+            self.audioPlayer?.stop()
+        }
+        
     }
     
 }
@@ -61,34 +65,45 @@ struct FiveSensesView: View {
 struct Progress5Senses: View {
     var step: Int
     
-    let emojisFiveSenses = [
-        "👁",
-        "🤚🏻",
-        "🎵",
-        "🐽",
-        "😋"
+    let imageFiveSenses = [
+        "senseEye",
+        "senseHand",
+        "senseNote",
+        "senseInhale",
+        "senseApple"
     ]
     
     var body: some View {
         ZStack
         {
-            ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle())
-                .scaleEffect(CGSize(width: 2.1, height: 2.1))
+        ProgressView(value:(Double(step + 1) * 0.2)).progressViewStyle(CircularProgressViewStyle(tint: mainColorBlue))
+        .scaleEffect(CGSize(width: 2.1, height: 2.1))
+            
             VStack {
                 Text("\(step + 1) / 5")
-                    .font(.title2)
-                Text(emojisFiveSenses[step])
-                    .font(.title2)
+                    .font(.title3).aspectRatio(contentMode: .fit)
+                Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
+                
             }
-        }
+        
+        
+        }.fixedSize(horizontal: true, vertical: true)
+    
+    
     }
 }
 
 struct ModalView: View {
-    
+    @Binding var audioPlayer: AVAudioPlayer?
     var body: some View {
         VStack {
-        Text(Translations.Titles.description)
+            Text(Translations.Titles.description)
+        }
+        .onDisappear {
+            guard let sound = Bundle.main.url(forResource: "dolphin", withExtension: "mp3") else{ return }
+            self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
+            self.audioPlayer?.play()
+            self.audioPlayer?.volume = 0.1
         }
     }
 }

@@ -6,53 +6,51 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct HomeView: View {
     
+    @State var isActive: Bool = false
     
     var body: some View {
-   
-            VStack{
-                Image(systemName: "heart").padding(.bottom, 20).padding(.top,0)
-                ZStack{
-                    VStack{
+        
+        VStack{
+            Image(systemName: "heart")
+                .padding(.bottom, 20)
+                .padding(.top,0)
+
+            
+            NavigationLink(destination: TimeToBreathView()) {
+                HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
+            }
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
+
+            NavigationLink(destination: FiveSensesView()) {
+                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
+            }
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                         
-                        NavigationLink(destination: TimeToBreathView(), label: {
-                            HStack{
-                                Image(systemName: "lungs.fill")
-                                    .padding(.leading,10)//.font(.title)
-                                Spacer()
-                                Text(Translations.Titles.breath)
-                                Spacer()
-                            }.foregroundColor(.white)
-                            
-                        }
-                        
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white).navigationBarTitle(Translations.Titles.nameApp)
-                        
-                        NavigationLink(destination: FiveSensesView(), label: {
-                            HStack{
-                                Image(systemName: "eyebrow")
-                                    .padding(.leading,13)
-                                Spacer()
-                                Text("senses")
-                                Spacer()
-                            }.foregroundColor(.white)
-                            
-                        }
-                        
-                        ).buttonStyle(PlainButtonStyle()).frame(height: 50.0).clipShape(Rectangle(), style: FillStyle()).background(Color.blue).foregroundColor(.white)
-                       
-                        
-                    }.clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 1200), style: .circular))
-                    Divider()
-                    
-                }
-                
-            }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle(Translations.Titles.nameApp)
     }
 }
 
+struct HomeButton: View {
+    
+    @State var image: String
+    @State var text: String
+    var body: some View {
+        HStack{
+            Image(image)
+                .padding(.leading,10)//.font(.title)
+            Spacer()
+            Text(text)
+            Spacer()
+        }
+//        .foregroundColor(.white)
+    }
+}
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
