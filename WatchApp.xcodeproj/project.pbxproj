@@ -120,6 +120,15 @@
 			path = Languages;
 			sourceTree = "<group>";
 		};
+		5E2349B525ED3358007136D9 /* Musics */ = {
+			isa = PBXGroup;
+			children = (
+				C384991925EC4932008B9D91 /* twoMoons.mp3 */,
+				C384991425EC4929008B9D91 /* dolphin.mp3 */,
+			);
+			path = Musics;
+			sourceTree = "<group>";
+		};
 		5E72800725DFF73900667FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +160,7 @@
 		5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C384991425EC4929008B9D91 /* dolphin.mp3 */,
-				C384991925EC4932008B9D91 /* twoMoons.mp3 */,
+				5E2349B525ED3358007136D9 /* Musics */,
 				313D6C5125E7DFC800D3F314 /* Languages */,
 				5E72804425DFFDC200667FC0 /* Model */,
 				5E72804525DFFDD100667FC0 /* View */,
