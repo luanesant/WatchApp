@@ -29,12 +29,13 @@ struct FiveSensesView: View {
         VStack {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
-            Text(tasksFiveSenses[step]).padding(.top,10)
+            Text(tasksFiveSenses[step]).padding(.top,10).font(.body)
      
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
                     self.step = self.step + 1
                 })
+                .font(.body)
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(Color.black)
             } else {
@@ -92,7 +93,7 @@ private let gradient = AngularGradient(
             
             VStack {
                 Text("\(step + 1) / 5")
-                    .font(.title3).aspectRatio(contentMode: .fit)
+                .font(.title3).aspectRatio(contentMode: .fit).font(.caption2)
                 Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
                 
             }
@@ -109,7 +110,7 @@ struct ModalView: View {
     var body: some View {
         
         VStack {
-            Text(Translations.Titles.description)
+        Text(Translations.Titles.description)
         }
         .onDisappear {
             guard let sound = Bundle.main.url(forResource: "piano2", withExtension: "mp3") else{ return }
