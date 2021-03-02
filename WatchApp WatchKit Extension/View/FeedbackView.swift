@@ -31,9 +31,9 @@ struct FeedbackView: View {
                 
                 }.padding().listStyle(CarouselListStyle())
             }
-            Text(emotion)
+            Text(emotion).font(.subheadline)
             NavigationLink(destination: HomeView(), label: {
-                Text(Translations.Titles.finishTitle)
+                Text(Translations.Titles.finishTitle).font(.body)
             })
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
             .foregroundColor(.black)

@@ -13,13 +13,13 @@ struct TimeToBreathView: View {
    
     var body: some View {
         VStack {
-            Text(Translations.Titles.timeTitle).padding(.all,0)
+            Text(Translations.Titles.timeTitle).padding(.all,0).font(.title3)
             Picker("", selection: $timeToBreath ) {
-                Text(Translations.Titles.minute1).tag(1)
-                Text(Translations.Titles.minute2).tag(2)
-                Text(Translations.Titles.minute3).tag(3)
-                Text(Translations.Titles.minute4).tag(4)
-                Text(Translations.Titles.minute5).tag(5)
+                Text(Translations.Titles.minute1).tag(1).font(.title3)
+                Text(Translations.Titles.minute2).tag(2).font(.title3)
+                Text(Translations.Titles.minute3).tag(3).font(.title3)
+                Text(Translations.Titles.minute4).tag(4).font(.title3)
+                Text(Translations.Titles.minute5).tag(5).font(.title3)
             }.pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
             
@@ -27,7 +27,7 @@ struct TimeToBreathView: View {
                 secondScreenShown = true
             }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath),
-                isActive: $secondScreenShown))
+                                                                   isActive: $secondScreenShown)).font(.body)
         }.padding(.all,0).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }
 }
@@ -38,10 +38,7 @@ struct TimeButton: View {
     @State var text: String
     var body: some View {
         
-            Text(text)
-         
-        
-//        .foregroundColor(.white)
+        Text(text).font(.body)
     }
 }
 
