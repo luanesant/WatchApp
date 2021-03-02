@@ -15,11 +15,10 @@ struct HomeView: View {
     var body: some View {
         
         VStack{
-//            Image(systemName: "heart")
-//                .padding(.bottom, 20)
-//                .padding(.top,0)
+            Image(systemName: "heart")
+                .padding(.bottom, 20)
+                .padding(.top,0)
 
-            Text("SCROLL: \(amount)").focusable(true).digitalCrownRotation($amount, from: 1, through: 5, by: 0.1,sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
             NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
             }
