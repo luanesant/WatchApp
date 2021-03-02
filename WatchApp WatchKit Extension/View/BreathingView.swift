@@ -9,9 +9,11 @@ import SwiftUI
 import WatchKit
 import UIKit
 import SpriteKit
+import AVFoundation
 
 struct BreathingView: View {
     @State var timeToBreath: Int
+    @State var audioPlayer: AVAudioPlayer?
  
     var body: some View {
             VStack {
@@ -36,6 +38,16 @@ struct BreathingView: View {
                     .bold()
             }
             .navigationBarTitle(Translations.Titles.timeTitle)
+            .onAppear {
+                guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
+                self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
+            self.audioPlayer?.numberOfLoops = -1
+                self.audioPlayer?.play()
+                self.audioPlayer?.volume = 0.1
+            }
+            .onDisappear {
+                self.audioPlayer?.stop()
+            }
     }
 }
 
