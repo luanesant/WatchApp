@@ -28,7 +28,7 @@ struct TimeToBreathView: View {
             }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath),
                 isActive: $secondScreenShown))
-        }.navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
+        }.padding(.all,0).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }
 }
 

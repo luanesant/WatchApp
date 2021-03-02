@@ -23,6 +23,8 @@
 		5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72804E25E003B000667FC0 /* BreathingView.swift */; };
 		5E72805425E007F100667FC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72805325E007F100667FC0 /* HomeView.swift */; };
 		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
+		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
+		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
 		C384991525EC4929008B9D91 /* dolphin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C384991425EC4929008B9D91 /* dolphin.mp3 */; };
 		C384991A25EC4932008B9D91 /* twoMoons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C384991925EC4932008B9D91 /* twoMoons.mp3 */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
@@ -94,6 +96,8 @@
 		5E72804E25E003B000667FC0 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		5E72805325E007F100667FC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C30013DE25E885C2001F7A11 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
+		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
 		C384991425EC4929008B9D91 /* dolphin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dolphin.mp3; sourceTree = "<group>"; };
 		C384991925EC4932008B9D91 /* twoMoons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twoMoons.mp3; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -160,7 +164,10 @@
 		5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5E2349B525ED3358007136D9 /* Musics */,
+				C351046E25EDE09100C9D93E /* piano1.mp3 */,
+				C384991425EC4929008B9D91 /* dolphin.mp3 */,
+				C351047325EDE09C00C9D93E /* piano2.mp3 */,
+				C384991925EC4932008B9D91 /* twoMoons.mp3 */,
 				313D6C5125E7DFC800D3F314 /* Languages */,
 				5E72804425DFFDC200667FC0 /* Model */,
 				5E72804525DFFDD100667FC0 /* View */,
@@ -331,10 +338,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */,
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
 				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
 				C384991A25EC4932008B9D91 /* twoMoons.mp3 in Resources */,
+				C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */,
 				C384991525EC4929008B9D91 /* dolphin.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
