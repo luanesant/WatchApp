@@ -23,12 +23,12 @@ struct HomeView: View {
             NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
             }
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
             }
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
                         
         }
         .navigationBarBackButtonHidden(true)
@@ -43,12 +43,11 @@ struct HomeButton: View {
     var body: some View {
         HStack{
             Image(image)
-                .padding(.leading,10)//.font(.title)
+                .padding(.leading,10)
             Spacer()
             Text(text)
             Spacer()
         }
-//        .foregroundColor(.white)
     }
 }
 

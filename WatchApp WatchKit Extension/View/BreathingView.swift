@@ -18,8 +18,8 @@ struct BreathingView: View {
     var body: some View {
             VStack {
                 if timeToBreath > 0 {
-                    Text(Translations.Titles.timeTitle)
-                    Text("\(timeToBreath)")
+                    Text(Translations.Titles.timeTitle).font(.title3)
+                    Text("\(timeToBreath)").font(.caption2)
                         .onAppear(){
                             timeToBreath *= 60
                             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
