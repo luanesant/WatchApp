@@ -19,10 +19,10 @@ struct HomeView: View {
                 .padding(.bottom, 20)
                 .padding(.top,0)
 
+
             NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
-            }
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            }.accessibility(label: Text("Batimentos Cardiacos")).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
