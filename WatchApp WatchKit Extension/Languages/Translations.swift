@@ -41,4 +41,31 @@ class Translations {
         static let eatText = NSLocalizedString("things1", comment: "")
     }
     
+    class VoiceOver{
+        static let breathOver = NSLocalizedString("button1", comment: "")
+        static let sensesOver = NSLocalizedString("button2", comment: "")
+        static let AppOver = NSLocalizedString("nameApp", comment: "")
+        static let heartOver = NSLocalizedString("heartOver", comment: "")
+        static let modalOver = NSLocalizedString("modalOver", comment: "")
+        static let visionOver = NSLocalizedString("visionOver", comment: "")
+        static let eatOver = NSLocalizedString("eatOver", comment: "")
+        static let touchOver = NSLocalizedString("touchOver", comment: "")
+        static let smellOver = NSLocalizedString("smellOver", comment: "")
+        static let hearOver = NSLocalizedString("hearOver", comment: "")
+        static let readyOver = NSLocalizedString("readyOver", comment: "")
+        static let pickerOver = NSLocalizedString("pickerOver", comment: "")
+        static let initOver = NSLocalizedString("initOver", comment: "")
+        static let  contagemOver = NSLocalizedString("contagemOver", comment: "")
+        static let  inspireOver = NSLocalizedString("inspireOver", comment: "")
+        static let  inhaleOver = NSLocalizedString("inhaleOver", comment: "")
+        static let  timeOver = NSLocalizedString("timeOver", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+//        static let  = NSLocalizedString("", comment: "")
+        //accessibility(label: Text(Translations.VoiceOver.breathOver)).accessibility(addTraits: .isButton)
+    }
+    
 }

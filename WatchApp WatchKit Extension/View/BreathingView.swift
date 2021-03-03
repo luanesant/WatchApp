@@ -36,7 +36,7 @@ struct BreathingView: View {
                     .font(.caption2)
                     .bold()
             }
-            .navigationBarTitle(Translations.Titles.timeTitle)
+            .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeOver))
             .onAppear {
                 guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
                 self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)

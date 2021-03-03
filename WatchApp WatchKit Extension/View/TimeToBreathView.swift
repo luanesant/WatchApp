@@ -20,13 +20,13 @@ struct TimeToBreathView: View {
                 Text(Translations.Titles.minute3).tag(3).font(.title3)
                 Text(Translations.Titles.minute4).tag(4).font(.title3)
                 Text(Translations.Titles.minute5).tag(5).font(.title3)
-            }.pickerStyle(WheelPickerStyle()).focusable()
+            }.accessibility(label: Text(Translations.VoiceOver.pickerOver)).accessibility(addTraits: .isButton).pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
             
             Button(Translations.Titles.titleStart,action:{
                 secondScreenShown = true
-            }).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath * 60),
+            }).accessibility(label: Text(Translations.VoiceOver.initOver)).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath),
                                                                    isActive: $secondScreenShown)).font(.body)
         }.padding(.all,0).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }

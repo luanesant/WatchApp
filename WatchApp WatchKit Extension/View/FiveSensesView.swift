@@ -24,31 +24,38 @@ struct FiveSensesView: View {
         Translations.FiveSenesTexts.eatText
     ]
     
+let taskOverSenses = [
+Translations.VoiceOver.visionOver,
+    Translations.VoiceOver.sensesOver,
+    Translations.VoiceOver.hearOver,
+    Translations.VoiceOver.touchOver,
+    Translations.VoiceOver.eatOver
+]
     var body: some View {
         
         VStack {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
-            Text(tasksFiveSenses[step]).padding(.top,10).font(.body)
+        Text(tasksFiveSenses[step]).padding(.top,10).font(.body).accessibility(label: Text(tasksFiveSenses[step]))
      
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
                     self.step = self.step + 1
                 })
                 .font(.body)
-                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200))).accessibility(label: Text(Translations.VoiceOver.readyOver)).accessibility(addTraits: .isButton)
                 .foregroundColor(Color.black)
             } else {
                 NavigationLink(destination: FeedbackView()) {
                     Text(Translations.Titles.readyTitle) 
-                }
+                }.accessibility(label: Text(Translations.VoiceOver.readyOver)).accessibility(addTraits: .isButton)
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(Color.black)
             }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
         .sheet(isPresented: $showModalView, content: {
-        ModalView(audioPlayer: self.$audioPlayer)//.(BorderedButtonStyle(tint: .blue))
+        ModalView(audioPlayer: self.$audioPlayer).accessibility(label: Text(Translations.VoiceOver.modalOver))
         })
         .onDisappear {
             self.audioPlayer?.stop()

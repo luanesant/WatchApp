@@ -17,16 +17,16 @@ struct HomeView: View {
         VStack{
             Image(systemName: "heart")
                 .padding(.bottom, 20)
-                .padding(.top,0)
+                .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
 
 
             NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
-            }.accessibility(label: Text("Batimentos Cardiacos")).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            }.accessibility(label: Text(Translations.VoiceOver.breathOver)).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-            }
+            }.accessibility(label: Text(Translations.VoiceOver.sensesOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
                         
         }
