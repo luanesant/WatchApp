@@ -18,7 +18,7 @@ struct BreathingView: View {
     var body: some View {
             VStack {
                 if timeToBreath > 0 {
-                    Text(Translations.Titles.timeTitle).font(.title3)
+                    Text(Translations.Titles.timeTitle).font(.title3).accessibility(label: Text(Translations.VoiceOver.contagemOver))
                     Text("\(timeToBreath)").font(.caption2)
                         .onAppear(){
                             timeToBreath *= 60
@@ -33,11 +33,11 @@ struct BreathingView: View {
                     FeedbackView()
                 }
                 AnimationView()
-                Text(Translations.Titles.inspire)
-                    .font(.caption2)
-                    .bold()
+                Text(Translations.Titles.inspire).font(.caption2)
+                    .bold().accessibility(label: Text(Translations.VoiceOver.inspireOver))
+                    
             }
-            .navigationBarTitle(Translations.Titles.timeTitle)
+            .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeOver))
             .onAppear {
                 guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
                 self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)

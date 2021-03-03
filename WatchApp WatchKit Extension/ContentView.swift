@@ -11,7 +11,7 @@ struct ContentView: View {
     @State var secondScreenShown = false
 
     var body: some View {
-        HomeView()
+        HomeView().accessibility(label: Text("App Harmon"))
     }
     
   
