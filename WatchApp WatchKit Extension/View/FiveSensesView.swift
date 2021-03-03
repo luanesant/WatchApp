@@ -48,7 +48,7 @@ struct FiveSensesView: View {
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
         .sheet(isPresented: $showModalView, content: {
-            ModalView(audioPlayer: self.$audioPlayer)
+        ModalView(audioPlayer: self.$audioPlayer)//.(BorderedButtonStyle(tint: .blue))
         })
         .onDisappear {
             self.audioPlayer?.stop()
