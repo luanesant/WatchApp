@@ -35,7 +35,7 @@
 "expireTitle"= "Exhale";
 
 
-"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
+//"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
 "button1" = "Breathing technique, with lung image positioned to the left centered on the Watch";
 "button2" = "5 senses technique, with image of an open eye positioned to the left centered on the Watch";
 "readyOver" = "Ready positioned at the bottom of the Clock";
@@ -58,10 +58,8 @@
 "touchImageOver" = "Progress circle, four out of five, with an image of a face turned to the right side inhaling light blue air";
 "visionImageOver" = "Progress circle, five out of five, with light blue apple image";
 "timeBackOver" = "Back Breathing Screen";
-
 "feelFeedBackOver" = "How do you feel?";
-"" = "";
 "goodOver" = "Emotion well with image of a face with a smile without showing teeth in light blue color.";
-"badOver" = "Joyful emotion with image of a face with a wide smile in light blue color.";
-"betterOver" = "Evil emotion with image of a face with narrowed eyes and a downward smile in light blue color.";
+"badOver" = "Sad emotion with image of a face with a wide smile in light blue color.";
+"betterOver" = "Joyful emotion with image of a face with narrowed eyes and a downward smile in light blue color.";
 "finishOver" = "light blue color written finish";
