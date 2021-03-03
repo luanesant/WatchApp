@@ -31,6 +31,14 @@ Translations.VoiceOver.visionOver,
     Translations.VoiceOver.touchOver,
     Translations.VoiceOver.eatOver
 ]
+
+let stepOverSenses = [
+Translations.VoiceOver.visionImageOver,
+    Translations.VoiceOver.sensesImageOver,
+    Translations.VoiceOver.hearImageOver,
+    Translations.VoiceOver.touchImageOver,
+    Translations.VoiceOver.eatImageOver
+]
     var body: some View {
         
         VStack {
@@ -101,7 +109,7 @@ private let gradient = AngularGradient(
             VStack {
                 Text("\(step + 1) / 5")
                 .font(.title3).aspectRatio(contentMode: .fit).font(.caption2)
-                Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit)
+            Image(imageFiveSenses[step]).aspectRatio(contentMode: .fit).accessibility(label: Text(Translations.VoiceOver.imageOver))
                 
             }
         }
