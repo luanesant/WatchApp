@@ -32,13 +32,13 @@ Translations.VoiceOver.visionOver,
     Translations.VoiceOver.eatOver
 ]
 
-let stepOverSenses = [
-Translations.VoiceOver.visionImageOver,
-    Translations.VoiceOver.sensesImageOver,
-    Translations.VoiceOver.hearImageOver,
-    Translations.VoiceOver.touchImageOver,
-    Translations.VoiceOver.eatImageOver
-]
+//let stepOverSenses = [
+//Translations.VoiceOver.visionImageOver,
+//    Translations.VoiceOver.sensesImageOver,
+//    Translations.VoiceOver.hearImageOver,
+//    Translations.VoiceOver.touchImageOver,
+//    Translations.VoiceOver.eatImageOver
+//]
     var body: some View {
         
         VStack {
