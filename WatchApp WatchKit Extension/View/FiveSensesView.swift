@@ -115,11 +115,10 @@ struct ModalView: View {
         .onDisappear {
             guard let sound = Bundle.main.url(forResource: "piano2", withExtension: "mp3") else{ return }
             self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
-        self.audioPlayer?.enableRate = true
         
             self.audioPlayer?.numberOfLoops = -1
             self.audioPlayer?.play()
-        self.audioPlayer?.volume = digitalCrownRotation(.constant(1.0),from: 1, through: 5, by: 0.1,sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true) as! Float
+        self.audioPlayer?.volume = 0.1
             
         }
     }

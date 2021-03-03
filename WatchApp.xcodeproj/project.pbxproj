@@ -25,8 +25,6 @@
 		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
-		C384991525EC4929008B9D91 /* dolphin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C384991425EC4929008B9D91 /* dolphin.mp3 */; };
-		C384991A25EC4932008B9D91 /* twoMoons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C384991925EC4932008B9D91 /* twoMoons.mp3 */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
 		C3A2AB5525E370F90030348C /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2AB5425E370F90030348C /* FiveSensesView.swift */; };
 /* End PBXBuildFile section */
@@ -98,8 +96,6 @@
 		C30013DE25E885C2001F7A11 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
-		C384991425EC4929008B9D91 /* dolphin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dolphin.mp3; sourceTree = "<group>"; };
-		C384991925EC4932008B9D91 /* twoMoons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twoMoons.mp3; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		C3A2AB5425E370F90030348C /* FiveSensesView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FiveSensesView.swift; sourceTree = "<group>"; tabWidth = 10; usesTabs = 0; };
 /* End PBXFileReference section */
@@ -122,15 +118,6 @@
 				5E150AEC25E800A200D31D5A /* Translations.swift */,
 			);
 			path = Languages;
-			sourceTree = "<group>";
-		};
-		5E2349B525ED3358007136D9 /* Musics */ = {
-			isa = PBXGroup;
-			children = (
-				C384991925EC4932008B9D91 /* twoMoons.mp3 */,
-				C384991425EC4929008B9D91 /* dolphin.mp3 */,
-			);
-			path = Musics;
 			sourceTree = "<group>";
 		};
 		5E72800725DFF73900667FC0 = {
@@ -165,9 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C351046E25EDE09100C9D93E /* piano1.mp3 */,
-				C384991425EC4929008B9D91 /* dolphin.mp3 */,
 				C351047325EDE09C00C9D93E /* piano2.mp3 */,
-				C384991925EC4932008B9D91 /* twoMoons.mp3 */,
 				313D6C5125E7DFC800D3F314 /* Languages */,
 				5E72804425DFFDC200667FC0 /* Model */,
 				5E72804525DFFDD100667FC0 /* View */,
@@ -342,9 +327,7 @@
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
 				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
-				C384991A25EC4932008B9D91 /* twoMoons.mp3 in Resources */,
 				C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */,
-				C384991525EC4929008B9D91 /* dolphin.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
