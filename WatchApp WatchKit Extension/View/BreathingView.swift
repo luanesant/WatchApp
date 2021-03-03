@@ -32,7 +32,7 @@ struct BreathingView: View {
                 else {
                     FeedbackView()
                 }
-                AnimationView(timeToBreath: timeToBreath)
+                AnimationView()
                 Text(Translations.Titles.inspire)
                     .font(.caption2)
                     .bold()
@@ -58,10 +58,11 @@ struct BreathingView_Previews: PreviewProvider {
 }
 
 struct AnimationView: View {
-    @State var timeToBreath: Int
+    
+//    @Binding var timeToBreath: Int
     
     var scene: SKScene {
-        let scene = AnimationScene(timeToBreath: timeToBreath)
+        let scene = AnimationScene(timeToBreath: 1)
         scene.scaleMode = .aspectFit
         scene.backgroundColor = .clear
         
@@ -79,20 +80,18 @@ struct AnimationView: View {
 class AnimationScene: SKScene {
     
     var timeToBreath: Int
-    
+
     init(timeToBreath: Int) {
         self.timeToBreath = timeToBreath
         super.init(size: CGSize(width: 200, height: 300))
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        
-        self.anchorPoint = .init(x: 0.5, y: 0.5)
         
         var candleAssets: [SKTexture] = []
         
@@ -104,17 +103,16 @@ class AnimationScene: SKScene {
         }
         
         let candle = SKSpriteNode(imageNamed: "velaacessa1")
-        candle.scale(to: CGSize(width: 300, height: 350))
+        candle.scale(to: CGSize(width: 250, height: 350))
         self.addChild(candle)
         
-        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.2), count: 7*timeToBreath)) {
+        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.2), count: 7)) {
             candle.removeFromParent()
         }
-
-        WKInterfaceDevice.current().play(.directionUp)
-    }
-    
-    func startAnimation() {
         
+        WKInterfaceDevice.current().play(.directionUp)
+        
+        
+        self.anchorPoint = .init(x: 0.5, y: 0.5)
     }
 }

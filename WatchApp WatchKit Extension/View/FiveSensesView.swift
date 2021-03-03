@@ -120,6 +120,11 @@ struct ModalView: View {
             self.audioPlayer?.play()
         self.audioPlayer?.volume = 0.1
             
+        guard Bundle.main.url(forResource: "piano2", withExtension: "mp3") != nil else{ return }
+        self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
+        self.audioPlayer?.numberOfLoops = -1
+        self.audioPlayer?.play()
+        self.audioPlayer?.volume = 0.1
         }
     }
 }
