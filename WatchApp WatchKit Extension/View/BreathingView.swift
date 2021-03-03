@@ -17,23 +17,22 @@ struct BreathingView: View {
  
     var body: some View {
             VStack {
-                if timeToBreath > 0 {
-                    Text(Translations.Titles.timeTitle).font(.title3)
-                    Text("\(timeToBreath)").font(.caption2)
-                        .onAppear(){
-                            timeToBreath *= 60
-                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
-                                if timeToBreath > 0 {
-                                    timeToBreath -= 1
-                                }
-                            }
-                        }
-                }
-                else {
-                    FeedbackView()
-                }
-                AnimationView()
-                Text(Translations.Titles.inspire)
+//                if timeToBreath > 0 {
+//                    Text(Translations.Titles.timeTitle).font(.title3)
+//                    Text("\(timeToBreath)").font(.caption2)
+//                        .onAppear(){
+//                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
+//                                if timeToBreath > 0 {
+//                                    timeToBreath -= 1
+//                                }
+//                            }
+//                        }
+//                }
+//                else {
+//                    FeedbackView()
+//                }
+                AnimationView(isFinished: false, timeToBreath: timeToBreath)
+                Text(Translations.Titles.expire)
                     .font(.caption2)
                     .bold()
             }
@@ -59,7 +58,8 @@ struct BreathingView_Previews: PreviewProvider {
 
 struct AnimationView: View {
     
-//    @Binding var timeToBreath: Int
+    @State var isFinished: Bool
+    var timeToBreath: Int
     
     var scene: SKScene {
         let scene = AnimationScene(timeToBreath: 1)
@@ -68,6 +68,8 @@ struct AnimationView: View {
         
         return scene
     }
+    
+    
     var body: some View {
         ZStack {
             SpriteView(scene: scene)
@@ -95,8 +97,17 @@ class AnimationScene: SKScene {
         
         var candleAssets: [SKTexture] = []
         
-        for i in 1...16 {
+        for i in 3...16 {
             candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        for i in 11...16 {
+            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        for i in 11...16 {
+            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        for i in 17...24 {
+            candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
         }
         for i in 17...30 {
             candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
@@ -106,13 +117,12 @@ class AnimationScene: SKScene {
         candle.scale(to: CGSize(width: 250, height: 350))
         self.addChild(candle)
         
-        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.2), count: 7)) {
-            candle.removeFromParent()
-        }
+        self.anchorPoint = .init(x: 0.5, y: 0.5)
         
         WKInterfaceDevice.current().play(.directionUp)
         
-        
-        self.anchorPoint = .init(x: 0.5, y: 0.5)
+        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.16), count: 7)) {
+            candle.removeFromParent()
+        }
     }
 }
