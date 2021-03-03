@@ -44,7 +44,11 @@ Translations.VoiceOver.visionOver,
         VStack {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
-        Text(tasksFiveSenses[step]).padding(.top,10).font(.body).accessibility(label: Text(tasksFiveSenses[step]))
+        Text(tasksFiveSenses[step])
+        .padding(.top,10)
+        .font(.caption)
+//        frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .accessibility(label: Text(tasksFiveSenses[step]))
      
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
