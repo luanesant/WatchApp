@@ -11,18 +11,23 @@
 "senses" = "5 sentidos";
 "feelTitle" = "Como você se sente?";
 "emotionBad" = "Mal";
-"emotionGood" = "Normal";
-"emotionBetter" = "Melhor";
-"finishTitle" = "Terminar";
-"things5" = "Diga 5 coisas que você vê";
-"things4" = "Diga 4 coisas que você sente";
-"things3" = "Diga 3 coisas que você ouve";
-"things2" = "Diga 2 coisas que vocês tocar";
-"things1" = "Diga 1 coisas que você come";
+
+"emotionGood" = "Bem";
+"emotionHappy" = "Alegre";
+"finishTitle" = "Finalizar";
+"things5" = "5 coisas que você vê";
+"things4" = "4 coisas que você sente";
+"things3" = "3 coisas que você ouve";
+"things2" = "2 coisas que vocês tocar";
+"things1" = "1 coisas que você come";
 "readyTitle" = "Pronto";
 "closeTitle" = "Fechar";
 "fiveSenses" = "5 sentidos";
-"description" = "Esta técnica te ajudará a focar no agora. Olhe ao redor, respire fundo e  responda os passos a seguir.";
+"titleDescription" = "Orientação";
+"description" = "Esta técnica te ajudará a focar no agora. Olhe  ao redor, respire fundo e  responda os passos a seguir.";
+"buttonDescription" = "Não mostrar novamente";
+"buttonCancel" = "Cancelar";
+
 "timeTitle" = "Tempo de respiração: ";
 "minute1" = "1 minuto";
 "minute2" = "2 minutos";
@@ -38,7 +43,7 @@
 "button1" = "Botão de técnica de Respiração, com  imagem de pulmão posicionada a esquerda centralizados no Watch";
 "button2" = "Botão de técnica dos 5 sentidos, com  imagem de um olho aberto posicionada a esquerda centralizados no Watch";
 "readyOver" = "Pronto posicionado na parte inferior do Relógio";
-"modalOver" = "Cancelar posicionado a esquerda superior. A técnica dos cincos sentidos te ajudará a focar no que está acontecendo agora. Imagine algo que te traz tranquilidade e respire fundo.";
+"modalOver" = "Esta técnica te ajudará a focar no agora. Imagine algo que te traz tranquilidade, respire fundo e  responda os passos a seguir.";//rever essa parte do voiceover
 "pickerOver" = "Selecione o tempo: 1 minuto, 2 minutos ou até 5 minutos, posicionado no meio do relógio para realização da respiração.";
 "initOver" = "Iniciar posicionado na parte superior do relógio.";
 "contagemOver" = "Tempo de respiração contagem Iniciada";

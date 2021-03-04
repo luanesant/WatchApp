@@ -42,7 +42,7 @@ struct HomeButton: View {
     var body: some View {
         HStack{
             Image(image)
-                .padding(.leading,10)
+                .padding(.leading,10).font(.body)
             Spacer()
             Text(text)
             Spacer()
