@@ -11,18 +11,23 @@
 "senses" = "5 sentidos";
 "feelTitle" = "¿Cómo te sientes?";
 "emotionBad" = "Malo";
-"emotionGood" = "Mejor";
-"emotionBetter" = "Contento";
+
+"emotionGood" = "Bien";
+"emotionHappy" = "Contento";
 "finishTitle" = "Finalizar";
-"things5" = "Di 5 cosas que ves";
-"things4" = "Di 4 cosas que sientes";
-"things3" = "Di 3 cosas que escuchas";
-"things2" = "Di 2 cosas que tocan";
-"things1" = "Di 1 cosas que comes";
+"things5" = "5 cosas que ves";
+"things4" = "4 cosas que sientes";
+"things3" = "3 cosas que escuchas";
+"things2" = "2 cosas que tocan";
+"things1" = "1 cosas que comes";
 "readyTitle" = "Listo";
 "closeTitle" = "Cerrar";
 "fiveSenses" = "5 sentidos";
-"description" = "Esta técnica te ayudará para centrarse en el ahora. Mirar alrededor, respira hondo y responde los pasos a seguir.";
+"titleDescription" = "Orientación";
+"description" = "Esta técnica te ayudará a concentrarte en el ahora. Mire a su alrededor, respire profundamente y responda los pasos a continuación.";
+"buttonDescription" = "No vuelvas a aparecer";
+"buttonCancel" = "Cancelar";
+
 "timeTitle" = "Tiempo de respiración:";
 "minute1" = "1 minuto";
 "minute2" = "2 minutos";

@@ -26,8 +26,11 @@ struct FeedbackView: View {
                         emotion = Translations.Titles.emotionGood
                     }).accessibility(label: Text(Translations.VoiceOver.goodOver))
                     FeelView(imageEmotion: "happy", action: {
-                        emotion = Translations.Titles.emotionBetter
+
+                        emotion = Translations.Titles.emotionHappy
                     }).accessibility(label: Text(Translations.VoiceOver.betterOver))
+                }
+
                 
                 }.padding().listStyle(CarouselListStyle())
             }
@@ -37,11 +40,10 @@ struct FeedbackView: View {
             }).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
             .foregroundColor(.black)
+            .navigationBarBackButtonHidden(true)//ve se ta certo
 
-        }.navigationBarBackButtonHidden(true)
+        }
     }
-    
-}
 
 struct FeelView: View {
     
@@ -61,6 +63,6 @@ struct FeelView: View {
 
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView(emotion: Translations.Titles.emotionBetter)
+        FeedbackView(emotion: Translations.Titles.emotionHappy)
     }
 }
