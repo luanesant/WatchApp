@@ -12,29 +12,37 @@ import SpriteKit
 import AVFoundation
 
 struct BreathingView: View {
-    @State var timeToBreath: Int
+    @Binding var timeToBreath: Int
     @State var audioPlayer: AVAudioPlayer?
- 
+//    var timeToAnimate: Int
+     
+//    init(timeToBreath: Int) {
+//        self.timeToBreath = timeToBreath * 60
+//        self.timeToAnimate = timeToBreath
+//    }
+    
     var body: some View {
             VStack {
-                if timeToBreath > 0 {
-                    Text(Translations.Titles.timeTitle).font(.title3)
-                    Text("\(timeToBreath)").font(.caption2)
-                        .onAppear(){
-                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
-                                if timeToBreath > 0 {
-                                    timeToBreath -= 1
-                                }
-                            }
-                        }
-                }
-                else {
+//                if timeToBreath > 0 {
+//                    Text(Translations.Titles.timeTitle).font(.title3)
+//                    Text("\(timeToBreath)").font(.caption2)
+//                    AnimationView(timeToBreath: timeToBreath)
+//                    Text(Translations.Titles.inspire)
+//                        .font(.caption2)
+//                        .bold()
+//                }
+//                else {
+//                    FeedbackView()
+//                }
+                if timeToBreath == 0 {
                     FeedbackView()
                 }
-                AnimationView(timeToBreath: timeToBreath)
-                Text(timeToBreath % 8 == 0 ? Translations.Titles.expire : Translations.Titles.inspire)
-                    .font(.caption2)
-                    .bold()
+                else {
+                    Text("\(timeToBreath)").font(.caption2)
+                    AnimationView()
+                    
+                    Text(Translations.Titles.inspire)
+                }
             }
             .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
             .onAppear {
@@ -43,6 +51,13 @@ struct BreathingView: View {
             self.audioPlayer?.numberOfLoops = -1
                 self.audioPlayer?.play()
                 self.audioPlayer?.volume = 0.1
+                
+                timeToBreath *= 60
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
+                    if timeToBreath > 0 {
+                        timeToBreath -= 1
+                    }
+                }
             }
             .onDisappear {
                 self.audioPlayer?.stop()
@@ -52,15 +67,15 @@ struct BreathingView: View {
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
-        BreathingView(timeToBreath: 1)
+        BreathingView(timeToBreath: .constant(1))
     }
 }
 
 struct AnimationView: View {
-    var timeToBreath: Int
+//    @State var timeToBreath: Int
     
     var scene: SKScene {
-        let scene = AnimationScene(timeToBreath: 1)
+        let scene = AnimationScene()
         scene.scaleMode = .aspectFit
         scene.backgroundColor = .clear
         
@@ -79,10 +94,10 @@ struct AnimationView: View {
 
 class AnimationScene: SKScene {
     
-    var timeToBreath: Int
+//    var timeToBreath: Int
 
-    init(timeToBreath: Int) {
-        self.timeToBreath = timeToBreath
+    override init() {
+//        self.timeToBreath = timeToBreath
         super.init(size: CGSize(width: 200, height: 300))
     }
 
@@ -117,9 +132,7 @@ class AnimationScene: SKScene {
         
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         
-        WKInterfaceDevice.current().play(.directionUp)
-        
-        candle.run(.repeat(.animate(with: candleAssets, timePerFrame: 0.16), count: 7)) {
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.16))) {
             candle.removeFromParent()
         }
     }
