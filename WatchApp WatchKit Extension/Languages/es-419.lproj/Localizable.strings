@@ -11,14 +11,14 @@
 "senses" = "5 sentidos";
 "feelTitle" = "¿Cómo te sientes?";
 "emotionBad" = "Malo";
-"emotionGood" = "Normal";
-"emotionBetter" = "Mejor";
+"emotionGood" = "Mejor";
+"emotionBetter" = "Contento";
 "finishTitle" = "Finalizar";
 "things5" = "Di 5 cosas que ves";
 "things4" = "Di 4 cosas que sientes";
 "things3" = "Di 3 cosas que escuchas";
 "things2" = "Di 2 cosas que tocan";
-"things1" = "Di 5 cosas que comes";
+"things1" = "Di 1 cosas que comes";
 "readyTitle" = "Listo";
 "closeTitle" = "Cerrar";
 "fiveSenses" = "5 sentidos";
