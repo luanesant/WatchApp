@@ -35,8 +35,8 @@
 
 
 "heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
-"button1" = "técnica de Respiração, com  imagem de pulmão posicionada a esquerda centralizados no Watch";
-"button2" = "técnica dos 5 sentidos, com  imagem de um olho aberto posicionada a esquerda centralizados no Watch";
+"button1" = "Botão de técnica de Respiração, com  imagem de pulmão posicionada a esquerda centralizados no Watch";
+"button2" = "Botão de técnica dos 5 sentidos, com  imagem de um olho aberto posicionada a esquerda centralizados no Watch";
 "readyOver" = "Pronto posicionado na parte inferior do Relógio";
 "modalOver" = "Cancelar posicionado a esquerda superior. A técnica dos cincos sentidos te ajudará a focar no que está acontecendo agora. Imagine algo que te traz tranquilidade e respire fundo.";
 "pickerOver" = "Selecione o tempo: 1 minuto, 2 minutos ou até 5 minutos, posicionado no meio do relógio para realização da respiração.";
@@ -44,7 +44,7 @@
 "contagemOver" = "Tempo de respiração contagem Iniciada";
 "inspireOver" = "Expire por 4 segundos. Solte o ar dos pulmões";
 "inhaleOver" = "Inspire por 4 segundos. Segure o ar por 1 segundo";
-"timeOver" = "Tela de Respiração";
+"timeOver" = "Tempo de Respiração";
 "visionOver" = "Diga 5 coisas que você imagina";
 "sensesOver" = "Diga 4 coisas que você sente";
 "hearOver" = "Diga 3 coisas que você ouve";
