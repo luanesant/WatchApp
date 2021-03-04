@@ -32,7 +32,7 @@ struct TimeToBreathView: View {
             Button(Translations.Titles.titleStart,action:{
                 secondScreenShown = true
             }).accessibility(label: Text(Translations.VoiceOver.initOver)).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: $timeToBreath),
+                .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath*60),
                                                                    isActive: $secondScreenShown)).font(.body)
         }.padding(.all,0).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }

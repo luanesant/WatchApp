@@ -12,7 +12,7 @@ import SpriteKit
 import AVFoundation
 
 struct BreathingView: View {
-    @Binding var timeToBreath: Int
+    @State var timeToBreath: Int
     @State var audioPlayer: AVAudioPlayer?
 //    var timeToAnimate: Int
      
@@ -52,7 +52,7 @@ struct BreathingView: View {
                 self.audioPlayer?.play()
                 self.audioPlayer?.volume = 0.1
                 
-                timeToBreath *= 60
+//                timeToBreath *= 60
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
                     if timeToBreath > 0 {
                         timeToBreath -= 1
@@ -67,7 +67,7 @@ struct BreathingView: View {
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
-        BreathingView(timeToBreath: .constant(1))
+        BreathingView(timeToBreath: 1)
     }
 }
 
