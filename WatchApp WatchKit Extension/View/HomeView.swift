@@ -36,7 +36,7 @@ struct HomeView: View {
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
             }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+//            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
                         
         }.accessibility(label: Text("App Harmon"))
         .navigationBarBackButtonHidden(true)

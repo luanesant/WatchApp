@@ -17,7 +17,8 @@ class ShowModalSettings: ObservableObject {
     }
     
     init() {
-        self.hideModal = UserDefaults.standard.bool(forKey: "hideModal")
+//        self.hideModal = UserDefaults.standard.bool(forKey: "hideModal")
+        self.hideModal = true
     }
 }
 
@@ -25,7 +26,8 @@ class ShowModalSettings: ObservableObject {
 struct FiveSensesView: View {
     
     @State var step: Int = 0
-    @State var showModalView = ShowModalSettings()
+//    @State var showModalView = ShowModalSettings()
+    @State var showModalView = true
 //    @State var showModalView = !UserDefaults.standard.bool(forKey: "hideModal")
     @State var audioPlayer: AVAudioPlayer?
     
@@ -82,8 +84,8 @@ Translations.VoiceOver.visionOver,
             }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
-        .sheet(isPresented: $showModalView.hideModal, content: {
-            ModalView(audioPlayer: self.$audioPlayer, showModal: $showModalView.hideModal)
+        .sheet(isPresented: $showModalView, content: {
+            ModalView(audioPlayer: self.$audioPlayer, showModal: $showModalView)
                 .navigationBarHidden(true)
                 .accessibility(label: Text(Translations.VoiceOver.modalOver))
         })
@@ -155,20 +157,19 @@ struct ModalView: View {
                     .padding(.bottom,10)
                 Text(Translations.Titles.description)
                     .font(.body)
+                    .multilineTextAlignment(.center)
                     .padding(.bottom, 10)
                 Button(Translations.Titles.buttonDescription, action: {
-                    showModal = true
+                    showModal = false
 //                    UserDefaults.standard.set(true, forKey: "hideModal")
                     self.showModal = false
                 })
                 .font(.body)
                 .foregroundColor(Color.red)
-                .cornerRadius(20)
                 Button(Translations.Titles.buttonCancel, action: {
                     self.showModal = false
                 })
                 .font(.body)
-                .cornerRadius(20)
             }
         }
         .onDisappear {
