@@ -22,14 +22,14 @@ struct HomeView: View {
 
             NavigationLink(destination: TimeToBreathView()) {
                 HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.breathOver)).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            }.accessibility(label: Text(Translations.VoiceOver.breathOver)).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.sensesOver)).accessibility(addTraits: .isButton)
+            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
                         
-        }
+        }.accessibility(label: Text("App Harmon"))
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(Translations.Titles.nameApp)
     }
