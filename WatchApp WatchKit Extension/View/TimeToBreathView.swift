@@ -13,14 +13,14 @@ struct TimeToBreathView: View {
    
     var body: some View {
         VStack {
-            Text(Translations.Titles.timeTitle).padding(.all,0).font(.title3)
+            Text(Translations.Titles.timeTitle).padding(.all,0).font(.title3).accessibility(label: Text(Translations.VoiceOver.timeOver))
             Picker("", selection: $timeToBreath ) {
                 Text(Translations.Titles.minute1).tag(1).font(.title3)
                 Text(Translations.Titles.minute2).tag(2).font(.title3)
                 Text(Translations.Titles.minute3).tag(3).font(.title3)
                 Text(Translations.Titles.minute4).tag(4).font(.title3)
                 Text(Translations.Titles.minute5).tag(5).font(.title3)
-            }.accessibility(label: Text(Translations.VoiceOver.pickerOver)).accessibility(addTraits: .isButton).pickerStyle(WheelPickerStyle()).focusable()
+            }.accessibility(label: Text(Translations.VoiceOver.pickerOver)).pickerStyle(WheelPickerStyle()).focusable()
             .padding(.all,0)
             
             Button(Translations.Titles.titleStart,action:{
