@@ -12,6 +12,7 @@ struct HomeView: View {
     
     @State var isActive: Bool = false
     @State var amount = 0.0
+    @State var changeView = false
     var body: some View {
         
         VStack{
@@ -19,10 +20,18 @@ struct HomeView: View {
                 .padding(.bottom, 20)
                 .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
 
-
-            NavigationLink(destination: TimeToBreathView()) {
-                HomeButton(image: "lungs", text: Translations.Titles.breath).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.breathOver)).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            Button(action: {
+                changeView = true
+            }, label: {
+                HStack{
+                    Image("lungs").padding(.leading,10)
+                    Spacer()
+                    Text(Translations.Titles.breath).foregroundColor(.white)
+                    Spacer()
+                }
+                
+            }).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
+            .accessibility(label: Text(Translations.VoiceOver.breathOver)).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
             NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
@@ -42,7 +51,7 @@ struct HomeButton: View {
     var body: some View {
         HStack{
             Image(image)
-                .padding(.leading,10)
+                .padding(.leading,10).font(.body)
             Spacer()
             Text(text)
             Spacer()

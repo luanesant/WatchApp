@@ -18,7 +18,10 @@ class Translations {
         static let fiveSenses = NSLocalizedString("fiveSenses", comment: "")
         static let timeTitle = NSLocalizedString("timeTitle", comment: "")
         static let titleStart = NSLocalizedString("titleStart", comment: "")
+        static let titleDescription = NSLocalizedString("titleDescription", comment: "")//
         static let description = NSLocalizedString("description", comment: "")
+        static let buttonDescription = NSLocalizedString("buttonDescription", comment: "")
+        static let buttonCancel = NSLocalizedString("buttonCancel", comment: "")
         static let minute1 = NSLocalizedString("minute1", comment: "")
         static let minute2 = NSLocalizedString("minute2", comment: "")
         static let minute3 = NSLocalizedString("minute3", comment: "")
@@ -28,7 +31,7 @@ class Translations {
         static let expire = NSLocalizedString("expireTitle", comment: "")
         static let emotionBad = NSLocalizedString("emotionBad", comment: "")
         static let emotionGood = NSLocalizedString("emotionGood", comment: "")
-        static let emotionBetter = NSLocalizedString("emotionBetter", comment: "")
+        static let emotionHappy = NSLocalizedString("emotionHappy", comment: "")
 
 
 }

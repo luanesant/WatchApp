@@ -26,7 +26,7 @@
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
-		C3A2AB5525E370F90030348C /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2AB5425E370F90030348C /* FiveSensesView.swift */; };
+		C3CCCD1425F09C4700135BDC /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,7 @@
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
-		C3A2AB5425E370F90030348C /* FiveSensesView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FiveSensesView.swift; sourceTree = "<group>"; tabWidth = 10; usesTabs = 0; };
+		C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSensesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +192,7 @@
 				5E72804E25E003B000667FC0 /* BreathingView.swift */,
 				5E72805325E007F100667FC0 /* HomeView.swift */,
 				C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */,
-				C3A2AB5425E370F90030348C /* FiveSensesView.swift */,
+				C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,11 +338,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3A2AB5525E370F90030348C /* FiveSensesView.swift in Sources */,
 				5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */,
 				5E72802825DFF73A00667FC0 /* NotificationController.swift in Sources */,
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
 				5E150AED25E800A200D31D5A /* Translations.swift in Sources */,
+				C3CCCD1425F09C4700135BDC /* FiveSensesView.swift in Sources */,
 				5E72802625DFF73A00667FC0 /* ContentView.swift in Sources */,
 				C30013DF25E885C2001F7A11 /* Shared.swift in Sources */,
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
