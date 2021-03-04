@@ -17,22 +17,22 @@ struct BreathingView: View {
  
     var body: some View {
             VStack {
-//                if timeToBreath > 0 {
-//                    Text(Translations.Titles.timeTitle).font(.title3)
-//                    Text("\(timeToBreath)").font(.caption2)
-//                        .onAppear(){
-//                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
-//                                if timeToBreath > 0 {
-//                                    timeToBreath -= 1
-//                                }
-//                            }
-//                        }
-//                }
-//                else {
-//                    FeedbackView()
-//                }
-                AnimationView(isFinished: false, timeToBreath: timeToBreath)
-                Text(Translations.Titles.expire)
+                if timeToBreath > 0 {
+                    Text(Translations.Titles.timeTitle).font(.title3)
+                    Text("\(timeToBreath)").font(.caption2)
+                        .onAppear(){
+                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
+                                if timeToBreath > 0 {
+                                    timeToBreath -= 1
+                                }
+                            }
+                        }
+                }
+                else {
+                    FeedbackView()
+                }
+                AnimationView(timeToBreath: timeToBreath)
+                Text(timeToBreath % 8 == 0 ? Translations.Titles.expire : Translations.Titles.inspire)
                     .font(.caption2)
                     .bold()
             }
@@ -57,8 +57,6 @@ struct BreathingView_Previews: PreviewProvider {
 }
 
 struct AnimationView: View {
-    
-    @State var isFinished: Bool
     var timeToBreath: Int
     
     var scene: SKScene {
