@@ -33,7 +33,7 @@ struct HomeView: View {
             }).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
             .accessibility(label: Text(Translations.VoiceOver.breathOver)).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
-            NavigationLink(destination: FiveSensesView()) {
+            NavigationLink(destination: FiveSensesView(showModalView: !UserDefaults.standard.bool(forKey: "hideModal"))) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
             }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
 //            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
