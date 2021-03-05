@@ -32,7 +32,8 @@ class Translations {
         static let emotionBad = NSLocalizedString("emotionBad", comment: "")
         static let emotionGood = NSLocalizedString("emotionGood", comment: "")
         static let emotionHappy = NSLocalizedString("emotionHappy", comment: "")
-
+        static let  goTitle = NSLocalizedString("goTitle", comment: "")
+        static let  textModalFeed = NSLocalizedString("textModalFeed", comment: "")
 
 }
     
@@ -74,6 +75,9 @@ class Translations {
         static let  badOver = NSLocalizedString("badOver", comment: "")
         static let  betterOver = NSLocalizedString("betterOver", comment: "")
         static let  finishOver = NSLocalizedString("finish", comment: "")
+        static let  goTitleOver = NSLocalizedString("goTitleOver", comment: "")
+        static let  textModalFeedOver = NSLocalizedString("textModalFeedOver", comment: "")
+        static let  buttonCancelOver = NSLocalizedString("buttonCancelOver", comment: "")
         //accessibility(label: Text(Translations.VoiceOver.breathOver)).accessibility(addTraits: .isButton)
     }
     

@@ -37,6 +37,8 @@
 "titleStart" = "Start";
 "inspireTitle"= "Inhale";
 "expireTitle"= "Exhale";
+"goTitle" = "Lets Go";
+"textModalFeed" = "You want to continue with another Tecnique?";
 
 
 //"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
@@ -67,3 +69,6 @@
 "badOver" = "Sad emotion with image of a face with a wide smile in light blue color.";
 "betterOver" = "Joyful emotion with image of a face with narrowed eyes and a downward smile in light blue color.";
 "finishOver" = "light blue color written finish";
+"goTitleOver" = "Lets Go!";
+"textModalFeedOver" = "You want to continue with another Tecnique?";
+"buttonCancelOver"="Cancel";

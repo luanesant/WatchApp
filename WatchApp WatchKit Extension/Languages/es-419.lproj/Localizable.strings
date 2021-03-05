@@ -37,6 +37,8 @@
 "titleStart" = "Comienzo";
 "inspireTitle"= "Inhalar";
 "expireTitle"= "Exhalar";
+"goTitle" = "Vamos!";
+"textModalFeed" = "¿Quieres continuar con otra técnica?";
 
 //"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
 "button1" = "Técnica de respiración, con la imagen del pulmón colocada a la izquierda centrada en el reloj.";
@@ -66,3 +68,6 @@
 "badOver" = "Emoción triste con imagen de un rostro con una amplia sonrisa en color celeste.";
 "betterOver" = "Emoción alegre con la imagen de un rostro con los ojos entrecerrados y una sonrisa hacia abajo en color celeste.";
 "finishOver" = "acabado escrito en color azul claro";
+"goTitleOver" = "Vamos!";
+"textModalFeedOver" = "¿Quieres continuar con otra técnica?";
+"buttonCancelOver"="Cancelar";

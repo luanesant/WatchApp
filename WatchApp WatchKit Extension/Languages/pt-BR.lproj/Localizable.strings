@@ -25,7 +25,7 @@
 "fiveSenses" = "5 sentidos";
 "titleDescription" = "Orientação";
 "description" = "Esta técnica te ajudará a focar no agora. Olhe  ao redor, respire fundo e  responda os passos a seguir.";
-"description" = "Esta técnica te ajudará a focar no agora. Olhe  ao redor, respire fundo e responda os passos a seguir.";
+//"description" = "Esta técnica te ajudará a focar no agora. Olhe  ao redor, respire fundo e responda os passos a seguir.";
 "buttonDescription" = "Não mostrar novamente";
 "buttonCancel" = "Cancelar";
 
@@ -38,13 +38,16 @@
 "titleStart" = "Iniciar";
 "inspireTitle"= "Inspire";
 "expireTitle"= "Expire";
+"goTitle" = "Vamos lá!";
+"textModalFeed" = "Deseja
+continuar com outra técnica?";
 
 
 "heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
 "button1" = "Botão de técnica de Respiração, com  imagem de pulmão posicionada a esquerda centralizados no Watch";
 "button2" = "Botão de técnica dos 5 sentidos, com  imagem de um olho aberto posicionada a esquerda centralizados no Watch";
 "readyOver" = "Pronto posicionado na parte inferior do Relógio";
-"modalOver" = "Esta técnica te ajudará a focar no agora. Imagine algo que te traz tranquilidade, respire fundo e  responda os passos a seguir.";//rever essa parte do voiceover
+"modalOver" = "Esta técnica te ajudará a focar no agora. Imagine algo que te traz tranquilidade, respire fundo e  responda os passos a seguir.";
 "pickerOver" = "Selecione o tempo: 1 minuto, 2 minutos ou até 5 minutos, posicionado no meio do relógio para realização da respiração.";
 "initOver" = "Iniciar posicionado na parte superior do relógio.";
 "contagemOver" = "Tempo de respiração contagem Iniciada";
@@ -70,3 +73,6 @@
 "badOver" = "Emoção alegre com imagem de um rosto com sorriso largo na cor azul claro.";
 "betterOver" = "Emoção mal com imagem de um rosto com os olhos franzidos e sorriso pra baixos na cor azul claro.";
 "finishOver" = "cor azul claro escrito finalizar";
+"goTitleOver" = "Vamos lá!";
+"textModalFeedOver" = "Deseja continuar com outra técnica?";
+"buttonCancelOver"="Cancelar";
