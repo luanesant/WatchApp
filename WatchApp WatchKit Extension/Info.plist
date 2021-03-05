@@ -22,16 +22,22 @@
 	<string>1</string>
 	<key>CLKComplicationPrincipalClass</key>
 	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.vinicius.WatchApp.watchkitapp</string>
+			<string>com.vinicius.Harmon.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We want to have acces to your health data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We want to have acces to your health data</string>
 	<key>WKWatchOnly</key>
 	<true/>
 </dict>

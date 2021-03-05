@@ -19,6 +19,8 @@ struct HomeView: View {
             Image(systemName: "heart")
                 .padding(.bottom, 20)
                 .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
+            
+//            HeartRateView()
 
             Button(action: {
                 changeView = true
