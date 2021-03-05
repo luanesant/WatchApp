@@ -38,6 +38,9 @@
 "titleStart" = "Iniciar";
 "inspireTitle"= "Inspire";
 "expireTitle"= "Expire";
+"goTitle" = "Vamos lá!";
+"textModalFeed" = "Deseja
+continuar com outra técnica?";
 
 
 "heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
@@ -70,3 +73,5 @@
 "badOver" = "Emoção alegre com imagem de um rosto com sorriso largo na cor azul claro.";
 "betterOver" = "Emoção mal com imagem de um rosto com os olhos franzidos e sorriso pra baixos na cor azul claro.";
 "finishOver" = "cor azul claro escrito finalizar";
+"goTitleOver" = "Vamos lá!";
+"textModalFeedOver" = "Deseja continuar com outra técnica?";
