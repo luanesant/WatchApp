@@ -31,7 +31,13 @@ struct HeartRateView: View {
         autorizeHealthKit()
         DispatchQueue.main.async {
             startHeartRateQuery(quantityTypeIdentifier: .heartRate) { (sample, error) in
-                rate = Int((sample?.quantity.doubleValue(for: heartRateQuantity))!)
+                guard let sample = sample else {
+                    if let error = error {
+                        print(error)
+                    }
+                    return
+                }
+                rate = Int((sample.quantity.doubleValue(for: heartRateQuantity)))
             }
         }
     }
