@@ -24,6 +24,7 @@
 		5E72805425E007F100667FC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72805325E007F100667FC0 /* HomeView.swift */; };
 		5E952C1C25F1E3BA00B4D888 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E952C1B25F1E3BA00B4D888 /* HealthKit.framework */; };
 		5E952C2125F1E41D00B4D888 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E952C2025F1E41D00B4D888 /* HeartRateView.swift */; };
+		5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */; };
 		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
@@ -98,6 +99,7 @@
 		5E952C1925F1E3BA00B4D888 /* WatchApp WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchApp WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		5E952C1B25F1E3BA00B4D888 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		5E952C2025F1E41D00B4D888 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMethods.swift; sourceTree = "<group>"; };
 		C30013DE25E885C2001F7A11 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				5E72803225DFF73B00667FC0 /* Info.plist */,
 				5E72803325DFF73B00667FC0 /* PushNotificationPayload.apns */,
 				5E72802F25DFF73B00667FC0 /* Preview Content */,
+				5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */,
 			);
 			path = "WatchApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				5E72802425DFF73A00667FC0 /* WatchAppApp.swift in Sources */,
 				C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,
+				5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
