@@ -14,6 +14,7 @@ import AVFoundation
 struct BreathingView: View {
     @State var timeToBreath: Int
     @State var audioPlayer: AVAudioPlayer?
+    @State var exhaleIsShowing: Bool = true
 //    var timeToAnimate: Int
      
 //    init(timeToBreath: Int) {
@@ -38,10 +39,9 @@ struct BreathingView: View {
                     FeedbackView()
                 }
                 else {
-                    Text("\(timeToBreath)").font(.caption2)
                     AnimationView()
                     
-                    Text(Translations.Titles.inspire)
+                    Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
                 }
             }
             .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
@@ -50,17 +50,28 @@ struct BreathingView: View {
                 self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
             self.audioPlayer?.numberOfLoops = -1
                 self.audioPlayer?.play()
-                self.audioPlayer?.volume = 0.1
+                self.audioPlayer?.volume = 1.0
                 
-//                timeToBreath *= 60
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
                     if timeToBreath > 0 {
                         timeToBreath -= 1
+                        
+                        if exhaleIsShowing {
+                            WKInterfaceDevice.current().play(.directionUp)
+                        }
+                        else {
+                            WKInterfaceDevice.current().play(.directionDown)
+                        }
+                        
+                        if timeToBreath % 4 == 0 {
+                            exhaleIsShowing.toggle()
+                        }
                     }
                 }
             }
             .onDisappear {
                 self.audioPlayer?.stop()
+                timeToBreath = 0
             }
     }
 }
@@ -86,7 +97,7 @@ struct AnimationView: View {
     var body: some View {
         ZStack {
             SpriteView(scene: scene)
-                .frame(width: 200, height: 100)
+                .frame(width: 200, height: 140)
                 .aspectRatio(contentMode: .fit)
         }
     }
@@ -127,7 +138,7 @@ class AnimationScene: SKScene {
         }
         
         let candle = SKSpriteNode(imageNamed: "velaacessa1")
-        candle.scale(to: CGSize(width: 250, height: 350))
+        candle.scale(to: CGSize(width: 200, height: 280))
         self.addChild(candle)
         
         self.anchorPoint = .init(x: 0.5, y: 0.5)
