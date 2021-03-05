@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 313D6C6825E7E0C800D3F314 /* Localizable.strings */; };
+		3149D63A25F2706600923D8C /* ModalFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149D63925F2706600923D8C /* ModalFeed.swift */; };
 		5E150AED25E800A200D31D5A /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E150AEC25E800A200D31D5A /* Translations.swift */; };
 		5E72801325DFF73900667FC0 /* WatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5E72801225DFF73900667FC0 /* WatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E72801725DFF73A00667FC0 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		313D6C6725E7E0C800D3F314 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		313D6C6C25E7E14500D3F314 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3149D63925F2706600923D8C /* ModalFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeed.swift; sourceTree = "<group>"; };
 		3199052125E7FA3C00CB9AFC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5E150AEC25E800A200D31D5A /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		5E72800E25DFF73900667FC0 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 				C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */,
 				C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */,
 				5E952C2025F1E41D00B4D888 /* HeartRateView.swift */,
+				3149D63925F2706600923D8C /* ModalFeed.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
 				5E72805425E007F100667FC0 /* HomeView.swift in Sources */,
 				5E72802425DFF73A00667FC0 /* WatchAppApp.swift in Sources */,
+				3149D63A25F2706600923D8C /* ModalFeed.swift in Sources */,
 				C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,
 			);

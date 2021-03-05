@@ -8,10 +8,12 @@
 import SwiftUI
 import UIKit
 
+var destine = HomeView()
+
 struct FeedbackView: View {
-    
     @State var emotion: String = Translations.Titles.emotionBad
-    
+    @State var chooseView = false
+    @State var show = false
     var body: some View {
         
         VStack {
@@ -35,15 +37,35 @@ struct FeedbackView: View {
                 }.padding().listStyle(CarouselListStyle())
             }
             Text(emotion).font(.subheadline)
-            NavigationLink(destination: HomeView(), label: {
-                Text(Translations.Titles.finishTitle).font(.body)
-            }).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
+        
+        Button(action: {
+           
+            if emotion == Translations.Titles.emotionBad {
+               show = true
+            }
+            else{
+                
+                chooseView = true
+            }
+            
+        }, label: {
+            Text(Translations.Titles.finishTitle).font(.body)
+        }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
             .foregroundColor(.black)
-            .navigationBarBackButtonHidden(true)//ve se ta certo
+        .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
+            ModalFeed()
+        }//ve se ta certo
 
         }
     }
+
+//struct Change: View {
+//
+//    var body: some View {
+// HomeView()
+//    }
+//}
 
 struct FeelView: View {
     
@@ -63,6 +85,6 @@ struct FeelView: View {
 
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView(emotion: Translations.Titles.emotionHappy)
+        FeedbackView( emotion: Translations.Titles.emotionHappy)
     }
 }
