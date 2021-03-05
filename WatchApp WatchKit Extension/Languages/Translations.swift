@@ -77,6 +77,7 @@ class Translations {
         static let  finishOver = NSLocalizedString("finish", comment: "")
         static let  goTitleOver = NSLocalizedString("goTitleOver", comment: "")
         static let  textModalFeedOver = NSLocalizedString("textModalFeedOver", comment: "")
+        static let  buttonCancelOver = NSLocalizedString("buttonCancelOver", comment: "")
         //accessibility(label: Text(Translations.VoiceOver.breathOver)).accessibility(addTraits: .isButton)
     }
     

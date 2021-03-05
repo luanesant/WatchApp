@@ -14,7 +14,7 @@ struct ModalFeed: View {
         VStack{
             Image("modalrosto").padding([.top, .bottom],0)
      
-            Text(Translations.Titles.textModalFeed)
+            Text(Translations.Titles.textModalFeed).accessibility(label: Text(Translations.VoiceOver.textModalFeedOver))
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
             
@@ -22,7 +22,7 @@ struct ModalFeed: View {
              show = true
             }, label: {
                 Text(Translations.Titles.goTitle).font(.body)
-            }).background(NavigationLink("", destination: TimeToBreathView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
+            }).background(NavigationLink("", destination: TimeToBreathView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.goTitleOver)).accessibility(addTraits: .isButton)
                 .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                 .foregroundColor(.white)
         
@@ -30,7 +30,7 @@ struct ModalFeed: View {
             show = true
         }, label: {
             Text(Translations.Titles.buttonCancel).font(.body)
-        }).padding(.bottom,0).background(NavigationLink("", destination: HomeView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
+        }).padding(.bottom,0).background(NavigationLink("", destination: HomeView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
             .foregroundColor(.red)
             }

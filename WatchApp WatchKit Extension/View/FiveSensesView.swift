@@ -138,22 +138,22 @@ struct ModalView: View {
         
         ScrollView(.vertical){
             VStack {
-                Text(Translations.Titles.titleDescription)
-                    .font(.body).bold()
-                    .padding(.bottom,10)
+                Text(Translations.Titles.titleDescription).font(.body).bold()
+                    .padding(.bottom,10).accessibility(label: Text(Translations.Titles.titleDescription))
+                    
                 Text(Translations.Titles.description)
                     .font(.body)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 10).accessibility(label: Text(Translations.VoiceOver.modalOver))
                 Button(Translations.Titles.buttonDescription, action: {
                     UserDefaults.standard.set(true, forKey: "hideModal")
                     self.showModal = !UserDefaults.standard.bool(forKey: "hideModal")
-                })
+                }).accessibility(label: Text(Translations.Titles.buttonDescription)).accessibility(addTraits: .isButton)
                 .font(.body)
                 .foregroundColor(Color.red)
                 Button(Translations.Titles.buttonCancel, action: {
                     self.showModal = false
-                })
+                }).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
                 .font(.body)
             }
         }
