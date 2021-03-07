@@ -43,7 +43,8 @@
 continuar com outra técnica?";
 
 
-"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
+"bpm" = "BPM";
+"heartImage" = "Coração";
 "button1" = "Botão de técnica de Respiração, com  imagem de pulmão posicionada a esquerda centralizados no Watch";
 "button2" = "Botão de técnica dos 5 sentidos, com  imagem de um olho aberto posicionada a esquerda centralizados no Watch";
 "readyOver" = "Pronto posicionado na parte inferior do Relógio";

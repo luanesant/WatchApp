@@ -19,7 +19,8 @@ struct HeartRateView: View {
     var body: some View {
         VStack{
             Image("heart")
-            Text(rate == 0 ? "... BPM" : "\(rate) BPM")
+                .accessibility(label: Text(Translations.VoiceOver.heartImage))
+            Text(rate == 0 ? "... BPM" : "\(rate) \(Translations.VoiceOver.bpm)")
                 .bold()
         }
         .padding()

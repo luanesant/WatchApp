@@ -40,7 +40,8 @@
 "goTitle" = "Vamos!";
 "textModalFeed" = "¿Quieres continuar con otra técnica?";
 
-//"heartOver" = "Seus Batimentos cardíacos são de 60 BPM";
+"bpm" = "PPM";
+"heartImage" = "Corazón";
 "button1" = "Técnica de respiración, con la imagen del pulmón colocada a la izquierda centrada en el reloj.";
 "button2" = "Técnica de los 5 sentidos, con imagen de un ojo abierto colocado a la izquierda centrado en el reloj";
 "readyOver" = "Listo colocado en la parte inferior del reloj";
