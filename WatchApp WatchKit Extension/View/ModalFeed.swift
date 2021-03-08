@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ModalFeed: View {
     @State var show = false
+    @State var show2 = false
     var body: some View {
         ScrollView{
         VStack{
@@ -27,10 +28,10 @@ struct ModalFeed: View {
                 .foregroundColor(.white)
         
         Button(action: {
-            show = true
+            show2 = true
         }, label: {
             Text(Translations.Titles.buttonCancel).font(.body)
-        }).padding(.bottom,0).background(NavigationLink("", destination: HomeView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
+        }).padding(.bottom,0).background(NavigationLink("", destination: HomeView(),isActive: $show2)).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
             .foregroundColor(.red)
             }
