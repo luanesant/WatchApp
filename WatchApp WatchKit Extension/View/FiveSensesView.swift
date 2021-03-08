@@ -14,7 +14,8 @@ struct FiveSensesView: View {
     @State var audioPlayer: BgMusic?
 //    @State var audioPlayer: AVAudioPlayer?
     @ObservedObject var modal: ModalViewState = .init()
-    
+//    @State var rotate = 0.0
+//    var gire = ""
     let tasksFiveSenses = [
         Translations.FiveSenesTexts.visionText,
         Translations.FiveSenesTexts.senseText,
@@ -33,8 +34,8 @@ struct FiveSensesView: View {
 
     
     var body: some View {
-        HStack{
-            RoundedRectangle(cornerRadius: 30).fill(Color.red).frame(width: 10, height: 100).padding(.leading, 40.0)
+    
+        
         VStack {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
@@ -44,6 +45,8 @@ struct FiveSensesView: View {
                 .offset(y: -8)
                 .font(.system(.body, design: .rounded))
                 .accessibility(label: Text(tasksFiveSenses[step]))
+          
+//            gire = Text("\(rotate)").focusable(true).digitalCrownRotation( $rotate, from: 0.0, through: 1.0, by: 0.1, isContinuous: false, isHapticFeedbackEnabled: true) as! String
             
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
@@ -65,8 +68,8 @@ struct FiveSensesView: View {
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(Color.black)
             }
-            }
-        }
+            
+        }.background(Color.clear)
         .navigationBarTitle(Translations.Titles.fiveSenses)
         .sheet(isPresented: $modal.isShowModal, content: {
             ModalView(audioPlayer: self.$audioPlayer, showModal: $modal.isShowModal)

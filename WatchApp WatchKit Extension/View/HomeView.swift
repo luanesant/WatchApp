@@ -28,24 +28,19 @@ struct HomeView: View {
             }, label: {
                 HStack{
                     Image("lungs").padding(.leading, 10)
-                    Text(Translations.Titles.breath).foregroundColor(.white).font(.system(.body, design: .rounded))
+                    Text(Translations.Titles.breath).foregroundColor(.white).font(.system(.body, design: .rounded)).padding(.leading, 14.0)
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.breathOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.system(.body, design: .rounded))
 
-            NavigationLink(destination: FiveSensesView()) {
-                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white).font(.system(.body, design: .rounded))
-            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))           .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.system(.body, design: .rounded))
-                        
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
             
             Button(action: {
                 changeView2 = true
             }, label: {
                 HStack{
                     Image("eye").padding(.leading,10)
-                    Text(Translations.Titles.fiveSenses).foregroundColor(.white)
+                    Text(Translations.Titles.fiveSenses).foregroundColor(.white).padding(.leading, 14.0)
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: FiveSensesView(), isActive: $changeView2))
