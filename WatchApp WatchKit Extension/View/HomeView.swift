@@ -16,31 +16,26 @@ struct HomeView: View {
     var body: some View {
         
         VStack{
-            Image(systemName: "heart")
-                .padding(.bottom, 20)
-                .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
-            
             HeartRateView()
 
             Button(action: {
                 changeView = true
             }, label: {
                 HStack{
-                    Image("lungs").padding(.leading,10)
-                    Spacer()
-                    Text(Translations.Titles.breath).foregroundColor(.white)
+                    Image("lungs").padding(.leading, 10)
+                    Text(Translations.Titles.breath).foregroundColor(.white).font(.system(.body, design: .rounded))
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.breathOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.system(.body, design: .rounded))
 
             NavigationLink(destination: FiveSensesView()) {
-                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))           .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white).font(.system(.body, design: .rounded))
+            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))           .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.system(.body, design: .rounded))
                         
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle(Translations.Titles.nameApp)
+        .navigationBarTitle(Translations.Titles.nameApp).font(.system(.body, design: .rounded))
     }
 }
 
@@ -51,7 +46,7 @@ struct HomeButton: View {
     var body: some View {
         HStack{
             Image(image)
-                .padding(.leading,10).font(.body)
+                .padding(.leading,10).font(.system(.body, design: .rounded))
             Spacer()
             Text(text)
             Spacer()

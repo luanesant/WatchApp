@@ -21,6 +21,7 @@ struct HeartRateView: View {
             Image("heart")
                 .accessibility(label: Text(Translations.VoiceOver.heartImage))
             Text(rate == 0 ? "... BPM" : "\(rate) \(Translations.VoiceOver.bpm)")
+                .font(.system(.body, design: .rounded))
                 .bold()
         }
         .padding()
