@@ -14,77 +14,91 @@ struct FeedbackView: View {
     @State var emotion: String = Translations.Titles.emotionBad
     @State var chooseView = false
     @State var show = false
+    @State var currentEmotion = "bad"
+    @State var emotions = [
+        "bad", "good", "happy"
+    ]
+    @State var emotionsLabel = [
+        Translations.Titles.emotionBad,
+        Translations.Titles.emotionGood,
+        Translations.Titles.emotionHappy
+    ]
+    @State var emotionsVoice = [
+        Translations.VoiceOver.badOver,
+        Translations.VoiceOver.goodOver,
+        Translations.VoiceOver.betterOver
+    ]
+    
     var body: some View {
         
         VStack {
-            Text(Translations.Titles.feelTitle).accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
+            Text(Translations.Titles.feelTitle)
+                .offset(y: 16)
+                .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.headline)
-            ScrollView(.horizontal){
-                HStack (spacing: 30) {
-                    FeelView(imageEmotion: "bad", action: {
-                        emotion = Translations.Titles.emotionBad
-                    }).accessibility(label: Text(Translations.VoiceOver.badOver))
-                    FeelView(imageEmotion: "good", action: {
-                        emotion = Translations.Titles.emotionGood
-                    }).accessibility(label: Text(Translations.VoiceOver.goodOver))
-                    FeelView(imageEmotion: "happy", action: {
-
-                        emotion = Translations.Titles.emotionHappy
-                    }).accessibility(label: Text(Translations.VoiceOver.betterOver))
+            List {
+                ForEach((0...2), id: \.self) { i in
+                    FeelView(imageEmotion: emotions[i], action: {
+                        currentEmotion = emotions[i]
+                        emotion = emotionsLabel[i]
+                    }, currentEmotion: $currentEmotion)
+                    .accessibility(label: Text(emotionsVoice[i]))
                 }
-
-                
-                }.padding().listStyle(CarouselListStyle())
+                .listRowBackground(Color.clear)
+                .padding(.all, 10)
             }
-            Text(emotion).font(.subheadline)
-        
-        Button(action: {
-           
-            if emotion == Translations.Titles.emotionBad {
-               show = true
-            }
-            else{
-                
-                chooseView = true
-            }
+            .offset(y: -55)
+            .padding(.top, 55.0)
+            .padding(.bottom, -55.0)
+            .frame(width:85, height: 100, alignment: .center)
+            .rotationEffect(.degrees(-90))
+            .listStyle(CarouselListStyle())
             
-        }, label: {
-            Text(Translations.Titles.finishTitle).font(.body)
-        }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
+            Text(emotion)
+                .font(.subheadline)
+            Button(action: {
+                
+                if emotion == Translations.Titles.emotionBad {
+                    show = true
+                } else {
+                    chooseView = true
+                }
+                
+            }, label: {
+                Text(Translations.Titles.finishTitle).font(.body)
+            }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
             .foregroundColor(.black)
-        .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
-            ModalFeed()
-        }//ve se ta certo
-
+            .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
+                ModalFeed()
+            }
         }
     }
-
-//struct Change: View {
-//
-//    var body: some View {
-// HomeView()
-//    }
-//}
+}
 
 struct FeelView: View {
     
     @State var imageEmotion: String
     @State var action: ()-> Void
+    @Binding var currentEmotion: String
     
     var body: some View {
         Button(action: action) {
-            Image(imageEmotion)
+            ZStack {
+                Image(imageEmotion)
+                    .rotationEffect(.degrees(90))
+//                if imageEmotion == currentEmotion {
+//                    Circle()
+//                        .stroke(lineWidth: 2)
+//                        .frame(width: 60, height: 60, alignment: .center)
+//                }
+            }
         }
-        .padding(5.0)
-        .clipShape(Circle(), style: FillStyle())
-        .background(Color.clear)
-    
     }
 }
 
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView( emotion: Translations.Titles.emotionHappy)
+        FeedbackView( emotion: Translations.Titles.emotionBad)
     }
 }

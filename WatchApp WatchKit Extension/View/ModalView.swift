@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct ModalView: View {
-    @Binding var audioPlayer: AVAudioPlayer?
+    @Binding var audioPlayer: BgMusic?
     @Binding var showModal: Bool
     
     var body: some View {
@@ -18,7 +18,6 @@ struct ModalView: View {
             VStack {
                 Text(Translations.Titles.titleDescription).font(.body).bold()
                     .padding(.bottom,10).accessibility(label: Text(Translations.Titles.titleDescription))
-                    
                 Text(Translations.Titles.description)
                     .font(.body)
                     .multilineTextAlignment(.center)
@@ -36,11 +35,8 @@ struct ModalView: View {
             }
         }
         .onDisappear {
-            if let sound = Bundle.main.url(forResource: "piano2", withExtension: "mp3") {
-                self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
-                self.audioPlayer?.numberOfLoops = -1
+            if self.showModal {
                 self.audioPlayer?.play()
-                self.audioPlayer?.volume = 0.1
             }
         }
     }

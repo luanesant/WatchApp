@@ -11,7 +11,8 @@ import AVFoundation
 struct FiveSensesView: View {
     
     @State var step: Int = 0
-    @State var audioPlayer: AVAudioPlayer?
+    @State var audioPlayer: BgMusic?
+//    @State var audioPlayer: AVAudioPlayer?
     @ObservedObject var modal: ModalViewState = .init()
     
     let tasksFiveSenses = [
@@ -73,8 +74,16 @@ struct FiveSensesView: View {
                 .navigationBarHidden(true)
                 .accessibility(label: Text(Translations.VoiceOver.modalOver))
         })
+        .onAppear {
+            if !modal.isShowModal {
+                self.audioPlayer = BgMusic("piano2")
+                self.audioPlayer?.play()
+            }
+        }
         .onDisappear {
-            self.audioPlayer?.stop()
+            if let player = self.audioPlayer {
+                player.stop()
+            }
         }
         
     }
