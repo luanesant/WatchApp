@@ -57,7 +57,7 @@
 "sensesOver" = "Say 4 things you feel";
 "hearOver" = "Say 3 things you hear";
 "touchOver" = "Say 2 things you touch";
-"visionOver" = "Say 1 things you eat";
+"visionOver" = "Say 1 thing you eat";
 "imageCandleOver" = "Animation of the candle in light blue color, extinguishes and the smoke rises";
 "visionImageOver" = "Progress circle, one out of five, with an image of an open eye in light blue";
 "sensesImageOver" = "Progress circle, two out of five, with image of a hand showing four light blue fingers";

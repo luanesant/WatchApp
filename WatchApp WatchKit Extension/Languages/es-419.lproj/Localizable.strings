@@ -19,7 +19,7 @@
 "things4" = "4 cosas que sientes";
 "things3" = "3 cosas que escuchas";
 "things2" = "2 cosas que tocan";
-"things1" = "1 cosas que comes";
+"things1" = "1 cosa que comes";
 "readyTitle" = "Listo";
 "closeTitle" = "Cerrar";
 "fiveSenses" = "5 sentidos";
@@ -56,7 +56,7 @@
 "sensesOver" = "Di 4 cosas que sientes";
 "hearOver" = "Di 3 cosas que escuchas";
 "touchOver" = "Di 2 cosas que tocas";
-"visionOver" = "Di 1 cosas que comes ";
+"visionOver" = "Di 1 cosa que comes ";
 "imageCandleOver" = "Animación de la vela en color celeste, se apaga y sube el humo";
 "visionImageOver" = "Círculo de progreso, uno de cada cinco, con una imagen de un ojo abierto en azul claro";
 "sensesImageOver" = "Círculo de progreso, dos de cada cinco, con la imagen de una mano que muestra cuatro dedos de color azul claro";

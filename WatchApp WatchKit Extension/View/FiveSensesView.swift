@@ -46,6 +46,8 @@ struct FiveSensesView: View {
             Progress5Senses(step: step).padding(.top,10)
             Text(tasksFiveSenses[step])
                 .padding(.top,10)
+                .frame(width: 200.0)
+                .offset(y: -8)
                 .font(.body)
                 .accessibility(label: Text(tasksFiveSenses[step]))
             
@@ -55,6 +57,7 @@ struct FiveSensesView: View {
                 })
                 .font(.body)
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .offset(y: -8)
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)
                 .foregroundColor(Color.black)
