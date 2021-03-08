@@ -20,7 +20,7 @@ struct HomeView: View {
 //                .padding(.bottom, 20)
 //                .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
             
-            HeartRateView()
+       //     HeartRateView()
 
             Button(action: {
                 changeView = true
@@ -34,10 +34,9 @@ struct HomeView: View {
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
 
-            NavigationLink(destination: FiveSensesView(showModalView: !UserDefaults.standard.bool(forKey: "hideModal"))) {
+            NavigationLink(destination: FiveSensesView()) {
                 HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
-//            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))           .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
                         
         }
         .navigationBarBackButtonHidden(true)

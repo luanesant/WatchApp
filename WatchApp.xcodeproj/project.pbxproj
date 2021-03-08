@@ -27,6 +27,8 @@
 		5E952C2125F1E41D00B4D888 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E952C2025F1E41D00B4D888 /* HeartRateView.swift */; };
 		5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */; };
 		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
+		C3317EE225F29FB500187F7D /* Progress5Senses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE125F29FB500187F7D /* Progress5Senses.swift */; };
+		C3317EE725F2A01C00187F7D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE625F2A01C00187F7D /* ModalView.swift */; };
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
@@ -103,6 +105,8 @@
 		5E952C2025F1E41D00B4D888 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMethods.swift; sourceTree = "<group>"; };
 		C30013DE25E885C2001F7A11 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		C3317EE125F29FB500187F7D /* Progress5Senses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress5Senses.swift; sourceTree = "<group>"; };
+		C3317EE625F2A01C00187F7D /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */,
 				5E952C2025F1E41D00B4D888 /* HeartRateView.swift */,
 				3149D63925F2706600923D8C /* ModalFeed.swift */,
+				C3317EE125F29FB500187F7D /* Progress5Senses.swift */,
+				C3317EE625F2A01C00187F7D /* ModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				5E72804A25DFFEE500667FC0 /* TimeToBreathView.swift in Sources */,
 				5E72802825DFF73A00667FC0 /* NotificationController.swift in Sources */,
 				5E72804F25E003B000667FC0 /* BreathingView.swift in Sources */,
+				C3317EE725F2A01C00187F7D /* ModalView.swift in Sources */,
 				5E952C2125F1E41D00B4D888 /* HeartRateView.swift in Sources */,
 				5E150AED25E800A200D31D5A /* Translations.swift in Sources */,
 				C3CCCD1425F09C4700135BDC /* FiveSensesView.swift in Sources */,
@@ -372,6 +379,7 @@
 				5E72802C25DFF73A00667FC0 /* ComplicationController.swift in Sources */,
 				5E72805425E007F100667FC0 /* HomeView.swift in Sources */,
 				5E72802425DFF73A00667FC0 /* WatchAppApp.swift in Sources */,
+				C3317EE225F29FB500187F7D /* Progress5Senses.swift in Sources */,
 				3149D63A25F2706600923D8C /* ModalFeed.swift in Sources */,
 				C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,

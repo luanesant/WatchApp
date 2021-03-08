@@ -11,8 +11,8 @@ import AVFoundation
 struct FiveSensesView: View {
     
     @State var step: Int = 0
-    @State var showModalView: Bool
     @State var audioPlayer: AVAudioPlayer?
+    @ObservedObject var modal: ModalViewState = .init()
     
     let tasksFiveSenses = [
         Translations.FiveSenesTexts.visionText,
@@ -68,8 +68,8 @@ struct FiveSensesView: View {
             }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
-        .sheet(isPresented: $showModalView, content: {
-            ModalView(audioPlayer: self.$audioPlayer, showModal: $showModalView)
+        .sheet(isPresented: $modal.isShowModal, content: {
+            ModalView(audioPlayer: self.$audioPlayer, showModal: $modal.isShowModal)
                 .navigationBarHidden(true)
                 .accessibility(label: Text(Translations.VoiceOver.modalOver))
         })
@@ -81,96 +81,13 @@ struct FiveSensesView: View {
     
 }
 
-struct Progress5Senses: View {
-    var step: Int
-    
-    let imageFiveSenses = [
-        "senseEye",
-        "senseHand",
-        "senseNote",
-        "senseInhale",
-        "senseApple"
-    ]
-    
-    private let gradient = AngularGradient(
-        gradient: Gradient(colors: [colorLinear3, mainColorBlue, mainColorBlue, colorLinear3]),
-        center: .center,
-        startAngle: .degrees(270),
-        endAngle: .degrees(0))
-    
-    
-    var body: some View {
-        ZStack{
-            Circle()
-                .stroke(bgProgress, lineWidth: 10)
-                .rotationEffect(.degrees(-90))
-                .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .frame(width: 200, height: 100, alignment: .center)
-            Circle()
-                .trim(from: 0.0, to: (CGFloat(step + 1) * 0.2))
-                .stroke(gradient, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
-                .rotationEffect(.degrees(-90))
-                .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .frame(width: 200, height: 100, alignment: .center)
-                .animation(.linear)
-            
-            VStack {
-                Text("\(step + 1) / 5")
-                    .font(.title3)
-                    .aspectRatio(contentMode: .fit)
-                    .font(.caption2)
-                Image(imageFiveSenses[step])
-                    .aspectRatio(contentMode: .fit)
-                    .accessibility(label: Text(Translations.VoiceOver.imageOver))
-            }
-        }
-        .frame(width: 200, height: 90, alignment: .topLeading)
-        
-    }
-    
-}
-
-struct ModalView: View {
-    @Binding var audioPlayer: AVAudioPlayer?
-    @Binding var showModal: Bool
-    
-    var body: some View {
-        
-        ScrollView(.vertical){
-            VStack {
-                Text(Translations.Titles.titleDescription).font(.body).bold()
-                    .padding(.bottom,10).accessibility(label: Text(Translations.Titles.titleDescription))
-                    
-                Text(Translations.Titles.description)
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 10).accessibility(label: Text(Translations.VoiceOver.modalOver))
-                Button(Translations.Titles.buttonDescription, action: {
-                    UserDefaults.standard.set(true, forKey: "hideModal")
-                    self.showModal = !UserDefaults.standard.bool(forKey: "hideModal")
-                }).accessibility(label: Text(Translations.Titles.buttonDescription)).accessibility(addTraits: .isButton)
-                .font(.body)
-                .foregroundColor(Color.red)
-                Button(Translations.Titles.buttonCancel, action: {
-                    self.showModal = false
-                }).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
-                .font(.body)
-            }
-        }
-        .onDisappear {
-            if let sound = Bundle.main.url(forResource: "piano2", withExtension: "mp3") {
-                self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
-                self.audioPlayer?.numberOfLoops = -1
-                self.audioPlayer?.play()
-                self.audioPlayer?.volume = 0.1
-            }
-        }
-    }
+class ModalViewState: ObservableObject {
+    @Published var isShowModal = !UserDefaults.standard.bool(forKey: "hideModal")
 }
 
 struct FiveSensesView_Previews: PreviewProvider {
     static var previews: some View {
-        FiveSensesView(step: 0, showModalView: false)
+        FiveSensesView(step: 0)
     }
 }
 
