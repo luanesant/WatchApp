@@ -30,17 +30,11 @@ struct FiveSensesView: View {
         Translations.VoiceOver.touchOver,
         Translations.VoiceOver.eatOver
     ]
-    
-    //let stepOverSenses = [
-    //Translations.VoiceOver.visionImageOver,
-    //    Translations.VoiceOver.sensesImageOver,
-    //    Translations.VoiceOver.hearImageOver,
-    //    Translations.VoiceOver.touchImageOver,
-    //    Translations.VoiceOver.eatImageOver
-    //]
+
     
     var body: some View {
-        
+        HStack{
+            RoundedRectangle(cornerRadius: 30).fill(Color.red).frame(width: 10, height: 100).padding(.leading, 40.0)
         VStack {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
@@ -67,6 +61,7 @@ struct FiveSensesView: View {
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(Color.black)
             }
+            }
         }
         .navigationBarTitle(Translations.Titles.fiveSenses)
         .sheet(isPresented: $modal.isShowModal, content: {
@@ -83,6 +78,7 @@ struct FiveSensesView: View {
         .onDisappear {
             if let player = self.audioPlayer {
                 player.stop()
+            
             }
         }
         

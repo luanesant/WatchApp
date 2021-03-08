@@ -1,21 +1,25 @@
 {
   "images" : [
     {
+      "filename" : "Frame 29 (13).png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
+      "filename" : "Frame 29 (15)-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
+      "filename" : "Frame 29 (15).png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
+      "filename" : "Frame 29 (14).png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"

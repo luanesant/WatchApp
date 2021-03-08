@@ -13,6 +13,7 @@ struct HomeView: View {
     @State var isActive: Bool = false
     @State var amount = 0.0
     @State var changeView = false
+    @State var changeView2 = false
     var body: some View {
         
         VStack{
@@ -20,7 +21,7 @@ struct HomeView: View {
 //                .padding(.bottom, 20)
 //                .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
             
-       //     HeartRateView()
+            HeartRateView()
 
             Button(action: {
                 changeView = true
@@ -33,11 +34,18 @@ struct HomeView: View {
                 }.accessibility(label: Text(Translations.VoiceOver.breathOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
-
-            NavigationLink(destination: FiveSensesView()) {
-                HomeButton(image: "eye", text: Translations.Titles.fiveSenses).foregroundColor(.white)
-            }.accessibility(label: Text(Translations.VoiceOver.sensesOver))           .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
-                        
+            
+            Button(action: {
+                changeView2 = true
+            }, label: {
+                HStack{
+                    Image("eye").padding(.leading,10)
+                    Text(Translations.Titles.fiveSenses).foregroundColor(.white)
+                    Spacer()
+                }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
+            }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: FiveSensesView(), isActive: $changeView2))
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(Translations.Titles.nameApp)
