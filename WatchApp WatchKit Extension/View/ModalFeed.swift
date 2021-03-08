@@ -16,6 +16,7 @@ struct ModalFeed: View {
             Image("modalrosto").padding([.top, .bottom],0)
      
             Text(Translations.Titles.textModalFeed).accessibility(label: Text(Translations.VoiceOver.textModalFeedOver))
+                .font(.system(.body, design: .rounded))
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
             

@@ -72,7 +72,7 @@ struct FiveSensesView: View {
                 .foregroundColor(Color.black)
             }
         }
-        .navigationBarTitle(Translations.Titles.fiveSenses)
+        .navigationBarTitle(Translations.Titles.fiveSenses).font(.system(.body, design: .rounded))
         .sheet(isPresented: $modal.isShowModal, content: {
             ModalView(audioPlayer: self.$audioPlayer, showModal: $modal.isShowModal)
                 .navigationBarHidden(true)

@@ -35,7 +35,7 @@ struct HomeView: View {
                         
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle(Translations.Titles.nameApp).font(.system(.body, design: .rounded))
+        .navigationBarTitle(Translations.Titles.nameApp).font(.system(.title, design: .rounded))
     }
 }
 
