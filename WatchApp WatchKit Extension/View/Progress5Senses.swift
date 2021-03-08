@@ -42,9 +42,8 @@ struct Progress5Senses: View {
             
             VStack {
                 Text("\(step + 1) / 5")
-                    .font(.title3)
+                    .font(.system(.caption2, design: .rounded))
                     .aspectRatio(contentMode: .fit)
-                    .font(.caption2)
                 Image(imageFiveSenses[step])
                     .aspectRatio(contentMode: .fit)
                     .accessibility(label: Text(Translations.VoiceOver.imageOver))

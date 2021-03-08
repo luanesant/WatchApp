@@ -15,6 +15,7 @@ struct BreathingView: View {
     @State var timeToBreath: Int
     @State var audioPlayer: AVAudioPlayer?
     @State var exhaleIsShowing: Bool = true
+    @State var controlTimeLabel = 9
 //    var timeToAnimate: Int
      
 //    init(timeToBreath: Int) {
@@ -42,6 +43,8 @@ struct BreathingView: View {
                     AnimationView()
                     
                     Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
+                        .font(.system(.body, design: .rounded))
+//                    Text("\(timeToBreath)").font(.caption2)
                 }
             }
             .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
@@ -56,15 +59,16 @@ struct BreathingView: View {
                     if timeToBreath > 0 {
                         timeToBreath -= 1
                         
-                        if exhaleIsShowing {
-                            WKInterfaceDevice.current().play(.directionUp)
-                        }
-                        else {
-                            WKInterfaceDevice.current().play(.directionDown)
-                        }
-                        
-                        if timeToBreath % 4 == 0 {
+//                        if exhaleIsShowing {
+//                            WKInterfaceDevice.current().play(.directionUp)
+//                        }
+//                        else {
+//                            WKInterfaceDevice.current().play(.directionDown)
+//                        }
+//
+                        if timeToBreath % controlTimeLabel == 0 {
                             exhaleIsShowing.toggle()
+                            controlTimeLabel = exhaleIsShowing ? 3 : 9
                         }
                     }
                 }
@@ -83,8 +87,6 @@ struct BreathingView_Previews: PreviewProvider {
 }
 
 struct AnimationView: View {
-//    @State var timeToBreath: Int
-    
     var scene: SKScene {
         let scene = AnimationScene()
         scene.scaleMode = .aspectFit
@@ -121,6 +123,7 @@ class AnimationScene: SKScene {
         
         var candleAssets: [SKTexture] = []
         
+        //inhale assets
         for i in 3...16 {
             candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
         }
@@ -130,6 +133,13 @@ class AnimationScene: SKScene {
         for i in 11...16 {
             candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
         }
+        for i in 11...16 {
+            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        for i in 11...16 {
+            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+        }
+        //exhale assets
         for i in 17...24 {
             candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
         }

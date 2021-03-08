@@ -22,7 +22,7 @@ struct ModalFeed: View {
             Button(action: {
              show = true
             }, label: {
-                Text(Translations.Titles.goTitle).font(.body)
+                Text(Translations.Titles.goTitle).font(.system(.body, design: .rounded))
             }).background(NavigationLink("", destination: TimeToBreathView(),isActive: $show)).accessibility(label: Text(Translations.VoiceOver.goTitleOver)).accessibility(addTraits: .isButton)
                 .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
                 .foregroundColor(.white)
@@ -30,7 +30,7 @@ struct ModalFeed: View {
         Button(action: {
             show2 = true
         }, label: {
-            Text(Translations.Titles.buttonCancel).font(.body)
+            Text(Translations.Titles.buttonCancel).font(.system(.body, design: .rounded))
         }).padding(.bottom,0).background(NavigationLink("", destination: HomeView(),isActive: $show2)).accessibility(label: Text(Translations.VoiceOver.buttonCancelOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200)))
             .foregroundColor(.red)

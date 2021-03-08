@@ -33,9 +33,10 @@ struct FeedbackView: View {
         
         VStack {
             Text(Translations.Titles.feelTitle)
-                .offset(y: 16)
+                .offset(y: 14)
+                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
-                .font(.headline)
+                .font(.system(.headline, design: .rounded))
             List {
                 ForEach((0...2), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], action: {
@@ -55,7 +56,11 @@ struct FeedbackView: View {
             .listStyle(CarouselListStyle())
             
             Text(emotion)
-                .font(.subheadline)
+                .padding(0.0)
+                .frame(width: 200.0)
+                .offset(y: -16)
+                .font(.system(.subheadline, design: .rounded))
+                
             Button(action: {
                 
                 if emotion == Translations.Titles.emotionBad {
@@ -65,9 +70,10 @@ struct FeedbackView: View {
                 }
                 
             }, label: {
-                Text(Translations.Titles.finishTitle).font(.body)
+                Text(Translations.Titles.finishTitle).font(.system(.body, design: .rounded))
             }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+            .offset(y: -10)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed()
@@ -87,6 +93,7 @@ struct FeelView: View {
             ZStack {
                 Image(imageEmotion)
                     .rotationEffect(.degrees(90))
+                    .padding(1)
 //                if imageEmotion == currentEmotion {
 //                    Circle()
 //                        .stroke(lineWidth: 2)

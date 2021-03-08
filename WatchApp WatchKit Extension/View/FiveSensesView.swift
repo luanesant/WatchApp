@@ -40,21 +40,25 @@ struct FiveSensesView: View {
             Progress5Senses(step: step).padding(.top,10)
             Text(tasksFiveSenses[step])
                 .padding(.top,10)
-                .font(.body)
+                .frame(width: 200.0)
+                .offset(y: -8)
+                .font(.system(.body, design: .rounded))
                 .accessibility(label: Text(tasksFiveSenses[step]))
             
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
                     self.step = self.step + 1
                 })
-                .font(.body)
+                .font(.system(.body, design: .rounded))
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+                .offset(y: -8)
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)
                 .foregroundColor(Color.black)
             } else {
                 NavigationLink(destination: FeedbackView()) {
                     Text(Translations.Titles.readyTitle)
+                        .font(.system(.body, design: .rounded))
                 }
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)

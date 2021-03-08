@@ -14,7 +14,7 @@ struct TimeToBreathView: View {
     var body: some View {
         VStack {
 
-            Text(Translations.Titles.timeTitle).padding(.all,0).font(.body)
+            Text(Translations.Titles.timeTitle).padding(.all,0).font(.system(.body, design: .rounded))
             .accessibility(label: Text(Translations.VoiceOver.timeOver))
             Picker("", selection: $timeToBreath ) {
                 Text(Translations.Titles.minute1).tag(1).font(.body)
@@ -33,7 +33,7 @@ struct TimeToBreathView: View {
                 secondScreenShown = true
             }).accessibility(label: Text(Translations.VoiceOver.initOver)).buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
                 .foregroundColor(.black).background(NavigationLink("", destination: BreathingView(timeToBreath: timeToBreath*60),
-                                                                   isActive: $secondScreenShown)).font(.body)
+                                                                   isActive: $secondScreenShown)).font(.system(.body, design: .rounded))
         }.padding(.all,0).navigationBarTitle(Translations.Titles.breath).padding(.bottom,0)
     }
 }
@@ -44,7 +44,7 @@ struct TimeButton: View {
     @State var text: String
     var body: some View {
         
-        Text(text).font(.body)
+        Text(text).font(.system(.body, design: .rounded))
     }
 }
 
