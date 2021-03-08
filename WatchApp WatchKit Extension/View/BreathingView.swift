@@ -44,6 +44,7 @@ struct BreathingView: View {
                     
                     Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
                         .font(.system(.body, design: .rounded))
+                        .bold()
 //                    Text("\(timeToBreath)").font(.caption2)
                 }
             }

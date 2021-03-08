@@ -17,11 +17,11 @@ struct TimeToBreathView: View {
             Text(Translations.Titles.timeTitle).padding(.all,0).font(.system(.body, design: .rounded))
             .accessibility(label: Text(Translations.VoiceOver.timeOver))
             Picker("", selection: $timeToBreath ) {
-                Text(Translations.Titles.minute1).tag(1).font(.body)
-                Text(Translations.Titles.minute2).tag(2).font(.body)
-                Text(Translations.Titles.minute3).tag(3).font(.body)
-                Text(Translations.Titles.minute4).tag(4).font(.body)
-                Text(Translations.Titles.minute5).tag(5).font(.body)
+                Text(Translations.Titles.minute1).tag(1).font(.system(.body, design: .rounded))
+                Text(Translations.Titles.minute2).tag(2).font(.system(.body, design: .rounded))
+                Text(Translations.Titles.minute3).tag(3).font(.system(.body, design: .rounded))
+                Text(Translations.Titles.minute4).tag(4).font(.system(.body, design: .rounded))
+                Text(Translations.Titles.minute5).tag(5).font(.system(.body, design: .rounded))
             }.accessibility(label:
             Text(Translations.VoiceOver.pickerOver)).pickerStyle(WheelPickerStyle()).focusable()
             
