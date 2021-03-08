@@ -33,7 +33,8 @@ struct FeedbackView: View {
         
         VStack {
             Text(Translations.Titles.feelTitle)
-                .offset(y: 16)
+                .offset(y: 14)
+                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.headline)
             List {
@@ -55,7 +56,11 @@ struct FeedbackView: View {
             .listStyle(CarouselListStyle())
             
             Text(emotion)
+                .padding(0.0)
+                .frame(width: 200.0)
+                .offset(y: -16)
                 .font(.subheadline)
+                
             Button(action: {
                 
                 if emotion == Translations.Titles.emotionBad {
@@ -68,6 +73,7 @@ struct FeedbackView: View {
                 Text(Translations.Titles.finishTitle).font(.body)
             }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
+            .offset(y: -10)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed()
@@ -87,6 +93,7 @@ struct FeelView: View {
             ZStack {
                 Image(imageEmotion)
                     .rotationEffect(.degrees(90))
+                    .padding(1)
 //                if imageEmotion == currentEmotion {
 //                    Circle()
 //                        .stroke(lineWidth: 2)
