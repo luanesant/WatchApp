@@ -41,10 +41,13 @@ struct FiveSensesView: View {
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
             Text(tasksFiveSenses[step])
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
                 .padding(.top,10)
-                .frame(width: 200.0)
+//                .frame(width: 180.0)
                 .offset(y: -8)
-                .font(.system(.body, design: .rounded))
+                .font(.system(.caption2, design: .rounded))
+
                 .accessibility(label: Text(tasksFiveSenses[step]))
           
 //            gire = Text("\(rotate)").focusable(true).digitalCrownRotation( $rotate, from: 0.0, through: 1.0, by: 0.1, isContinuous: false, isHapticFeedbackEnabled: true) as! String
@@ -64,6 +67,7 @@ struct FiveSensesView: View {
                     Text(Translations.Titles.readyTitle)
                         .font(.system(.body, design: .rounded))
                 }
+                .offset(y: -8)
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
@@ -104,3 +108,26 @@ struct FiveSensesView_Previews: PreviewProvider {
 }
 
 
+struct FiveSensesView_Previews_1: PreviewProvider {
+    static var previews: some View {
+        FiveSensesView(step: 1)
+    }
+}
+
+struct FiveSensesView_Previews_2: PreviewProvider {
+    static var previews: some View {
+        FiveSensesView(step: 2)
+    }
+}
+
+struct FiveSensesView_Previews_3: PreviewProvider {
+    static var previews: some View {
+        FiveSensesView(step: 3)
+    }
+}
+
+struct FiveSensesView_Previews_4: PreviewProvider {
+    static var previews: some View {
+        FiveSensesView(step: 4)
+    }
+}
