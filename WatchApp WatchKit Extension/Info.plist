@@ -35,9 +35,9 @@
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>NSHealthShareUsageDescription</key>
-	<string>We want to have acces to your health data</string>
+	<string></string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>We want to have acces to your health data</string>
+	<string></string>
 	<key>WKWatchOnly</key>
 	<true/>
 </dict>

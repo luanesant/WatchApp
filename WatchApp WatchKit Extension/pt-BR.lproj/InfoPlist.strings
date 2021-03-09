@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Harmon
+
+  Created by Vinícius de Oliveira on 09/03/21.
+  
+*/
+
+"NSHealthShareUsageDescription" = "Nós gostaríamos de ter acesso aos seus dados de batimentos cardíacos para poder verificar se a sua saúde está boa e fazer com que preste mais atenção a sua condição";
+"NSHealthUpdateUsageDescription" = "Nós gostaríamos de ter acesso aos seus dados de batimentos cardíacos para poder verificar se a sua saúde está boa e fazer com que preste mais atenção a sua condição";
+
