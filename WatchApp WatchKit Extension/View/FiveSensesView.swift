@@ -36,7 +36,8 @@ struct FiveSensesView: View {
     var body: some View {
     
         
-        VStack {
+        
+        VStack{
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
             Text(tasksFiveSenses[step])
