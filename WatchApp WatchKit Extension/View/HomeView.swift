@@ -17,9 +17,6 @@ struct HomeView: View {
     var body: some View {
         
         VStack{
-//            Image(systemName: "heart")
-//                .padding(.bottom, 20)
-//                .padding(.top,0).accessibility(label: Text(Translations.VoiceOver.heartOver))
             
             HeartRateView()
 

@@ -33,8 +33,8 @@ struct FeedbackView: View {
         
         VStack {
             Text(Translations.Titles.feelTitle)
-                .offset(y: 14)
-                .frame(width: 200.0)
+                .offset(y: 21)
+//                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.system(.headline, design: .rounded))
             List {
@@ -45,17 +45,20 @@ struct FeedbackView: View {
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
                 }
+                .offset(x: -9.0)
                 .listRowBackground(Color.clear)
                 .padding(.all, 10)
             }
+            .background(Color.clear)
             .offset(y: -55)
             .padding(.top, 55.0)
             .padding(.bottom, -55.0)
-            .frame(width:85, height: 100, alignment: .center)
+            .frame(width:70, height: 100, alignment: .center)
             .rotationEffect(.degrees(-90))
             .listStyle(CarouselListStyle())
             
             Text(emotion)
+                .lineLimit(0)
                 .padding(0.0)
                 .frame(width: 200.0)
                 .offset(y: -16)

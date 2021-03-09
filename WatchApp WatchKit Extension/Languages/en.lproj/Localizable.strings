@@ -18,7 +18,7 @@
 "things4" = "4 things you feel";
 "things3" = "3 things you hear";
 "things2" = "2 things you smell";
-"things1" = "1 thing you eat";
+"things1" = "1 thing you taste";
 "readyTitle" = "Ready";
 "closeTitle" = "Close";
 "fiveSenses" = "5 Senses";
@@ -53,11 +53,11 @@
 "inspireOver" = "Exhale for 4 seconds. Vent the lungs";
 "inhaleOver" = "Inhale for 4 seconds. Hold the air for 1 second";
 "timeOver" = "Breathing Screen";
-"visionOver" = "Say 5 things you imagine";
+"visionOver" = "Say 5 things that come to your mind";
 "sensesOver" = "Say 4 things you feel";
 "hearOver" = "Say 3 things you hear";
-"touchOver" = "Say 2 things you touch";
-"visionOver" = "Say 1 thing you eat";
+"touchOver" = "Say 2 things you smell";
+"visionOver" = "Say 1 thing that you taste";
 "imageCandleOver" = "Animation of the candle in light blue color, extinguishes and the smoke rises";
 "visionImageOver" = "Progress circle, one out of five, with an image of an open eye in light blue";
 "sensesImageOver" = "Progress circle, two out of five, with image of a hand showing four light blue fingers";

@@ -18,8 +18,8 @@
 "things5" = "5 coisas que você vê";
 "things4" = "4 coisas que você sente";
 "things3" = "3 coisas que você ouve";
-"things2" = "2 coisas que vocês tocar";
-"things1" = "1 coisa que você come";
+"things2" = "2 que sente o cheiro";
+"things1" = "1 que você saboreia";
 "readyTitle" = "Pronto";
 "closeTitle" = "Fechar";
 "fiveSenses" = "5 sentidos";
@@ -54,11 +54,11 @@ continuar com outra técnica?";
 "inspireOver" = "Expire por 4 segundos. Solte o ar dos pulmões";
 "inhaleOver" = "Inspire por 4 segundos. Segure o ar por 1 segundo";
 "timeOver" = "Tempo de Respiração";
-"visionOver" = "Diga 5 coisas que você imagina";
+"visionOver" = "Diga 5 coisas que você vem a sua mente"; //rever isso //validar com psicologo
 "sensesOver" = "Diga 4 coisas que você sente";
 "hearOver" = "Diga 3 coisas que você ouve";
-"touchOver" = "Diga 2 coisas que vocês tocar";
-"visionOver" = "Diga 1 coisa que você come";
+"touchOver" = "Diga 2 coisas que você sente o cheiro";
+"visionOver" = "Diga 1 coisa que você sente o sabor";
 "imageCandleOver" = "Animação da vela na cor azul clara, apaga e a fumaça sobe";
 "visionImageOver" = "Círculo com progresso, um de cinco, com imagem de um olho aberto na cor azul claro";
 "sensesImageOver" = "Círculo com progresso, dois de cinco, com imagem de uma mão mostrando quatro dedos na cor azul claro";
