@@ -14,7 +14,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         let descriptors = [
-            CLKComplicationDescriptor(identifier: "complication", displayName: "Harmon", supportedFamilies:CLKComplicationFamily.allCases)// [CLKComplicationFamily.graphicCircular, CLKComplicationFamily.extraLarge])
+            CLKComplicationDescriptor(identifier: "complication", displayName: "Harmon",  supportedFamilies: [CLKComplicationFamily.graphicCircular, CLKComplicationFamily.extraLarge,CLKComplicationFamily.extraLarge,CLKComplicationFamily.graphicExtraLarge,CLKComplicationFamily.circularSmall])
             // Multiple complication support can be added here with more descriptors
         ]
         
@@ -57,6 +57,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             return CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))
         case .circularSmall:
             return CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
+        case .extraLarge:
+            return CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Extra Large")!))
        
         default:
             return nil
