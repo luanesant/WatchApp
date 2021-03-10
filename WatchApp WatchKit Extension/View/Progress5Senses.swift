@@ -49,8 +49,7 @@ struct Progress5Senses: View {
                     .aspectRatio(contentMode: .fit)
                     .accessibility(label: Text(Translations.VoiceOver.imageOver))
             }
-            RoundedRectangle(cornerRadius: 30).fill(Color.red).frame(width: 10, height: 100).padding(.leading, 150.0)//.hidden()
-
+           
         }
         .frame(width: 200, height: 90, alignment: .topLeading)
         
