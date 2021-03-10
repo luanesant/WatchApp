@@ -143,7 +143,6 @@
 				5E72801625DFF73900667FC0 /* WatchApp WatchKit App */,
 				5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */,
 				5E72800F25DFF73900667FC0 /* Products */,
-				5E952C1A25F1E3BA00B4D888 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +183,7 @@
 				C30013DE25E885C2001F7A11 /* Shared.swift */,
 				5E72802D25DFF73B00667FC0 /* Assets.xcassets */,
 				5E72803225DFF73B00667FC0 /* Info.plist */,
+				5E952C1A25F1E3BA00B4D888 /* Frameworks */,
 				5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */,
 				5E72803325DFF73B00667FC0 /* PushNotificationPayload.apns */,
 				5E72802F25DFF73B00667FC0 /* Preview Content */,
@@ -228,6 +228,7 @@
 				5E952C1B25F1E3BA00B4D888 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,7 +563,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -588,7 +589,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -614,7 +615,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -641,7 +642,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -655,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSZ6N6FL5G;
@@ -666,6 +668,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon;
 				PRODUCT_NAME = Harmon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -675,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSZ6N6FL5G;
@@ -686,6 +690,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon;
 				PRODUCT_NAME = Harmon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
