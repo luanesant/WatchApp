@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WatchApp
+
+  Created by Luane dos Santos on 25/02/21.
+  
+*/
+
+"nameApp" = "Harmon";
+"breathTitle" = "Respiración";
+"senses" = "5 sentidos";
+"feelTitle" = "¿Cómo te sientes?";
+"emotionBad" = "Malo";
+
+"emotionGood" = "Bien";
+"emotionHappy" = "Contento";
+"finishTitle" = "Finalizar";
+"things5" = "5 cosas que ves";
+"things4" = "4 cosas que sientes";
+"things3" = "3 cosas que escuchas";
+"things2" = "2 cosas que hueles";
+"things1" = "1 cosa que saboreas";
+"readyTitle" = "Listo";
+"closeTitle" = "Cerrar";
+"fiveSenses" = "5 sentidos";
+"titleDescription" = "Orientación";
+"description" = "Esta técnica te ayudará a concentrarte en el ahora. Mire a su alrededor, respire profundamente y responda los pasos a continuación.";
+"buttonDescription" = "No vuelvas a aparecer";
+"buttonCancel" = "Cancelar";
+
+"timeTitle" = "Tiempo de respiración:";
+"minute1" = "1 minuto";
+"minute2" = "2 minutos";
+"minute3" = "3 minutos";
+"minute4" = "4 minutos";
+"minute5" = "5 minutos";
+"titleStart" = "Comienzo";
+"inspireTitle"= "Inhalar";
+"expireTitle"= "Exhalar";
+"goTitle" = "Vamos!";
+"textModalFeed" = "¿Quieres continuar con otra técnica?";
+
+"bpm" = "PPM";
+"heartImage" = "Corazón";
+"button1" = "Técnica de respiración, con la imagen del pulmón colocada a la izquierda centrada en el reloj.";
+"button2" = "Técnica de los 5 sentidos, con imagen de un ojo abierto colocado a la izquierda centrado en el reloj";
+"readyOver" = "Listo colocado en la parte inferior del reloj";
+"modalOver" = "Cancelar posicionado en la parte superior izquierda. La técnica de los cinco sentidos le ayudará a concentrarse en lo que está sucediendo ahora. Imagina algo que te brinde tranquilidad y respira hondo.";
+"pickerOver" = "Seleccione el tiempo: 1 minuto, 2 minutos o hasta 5 minutos, colocado en el medio del reloj para respirar.";
+"initOver" = "Comience colocado en la parte superior del reloj.";
+"contagemOver" = "Se inició el recuento del tiempo de respiración";
+"inspireOver" = "Exhala durante 4 segundos. Ventilar los pulmones";
+"inhaleOver" = "Inhala durante 4 segundos. Mantenga el aire durante 1 segundo";
+"timeOver" = "Pantalla de respiración";
+"visionOver" = "Di 5 cosas que te vengan a la mente";
+"sensesOver" = "Di 4 cosas que sientes";
+"hearOver" = "Di 3 cosas que escuchas";
+"touchOver" = "Di 2 cosas que hueles";
+"visionOver" = "Di 1 cosa que pruebes";
+"imageCandleOver" = "Animación de la vela en color celeste, se apaga y sube el humo";
+"visionImageOver" = "Círculo de progreso, uno de cada cinco, con una imagen de un ojo abierto en azul claro";
+"sensesImageOver" = "Círculo de progreso, dos de cada cinco, con la imagen de una mano que muestra cuatro dedos de color azul claro";
+"hearImageOver" = "Círculo de progreso, tres de cada cinco, con una imagen de un símbolo de nota musical en color azul claro";
+"touchImageOver" = "Círculo de progreso, cuatro de cada cinco, con la imagen de una cara vuelta hacia el lado derecho inhalando aire azul claro.";
+"visionImageOver" = "Círculo de progreso, cinco de cada cinco, con imagen de manzana azul claro";
+"timeBackOver" = "Pantalla de respiración trasera";
+"feelFeedBackOver" = "¿Cómo te sientes?";
+"goodOver" = "Emoción bien con imagen de un rostro con una sonrisa sin mostrar los dientes en color celeste.";
+"badOver" = "Emoción triste con imagen de un rostro con una amplia sonrisa en color celeste.";
+"betterOver" = "Emoción alegre con la imagen de un rostro con los ojos entrecerrados y una sonrisa hacia abajo en color celeste.";
+"finishOver" = "acabado escrito en color azul claro";
+"goTitleOver" = "Vamos!";
+"textModalFeedOver" = "¿Quieres continuar con otra técnica?";
+"buttonCancelOver"="Cancelar";
