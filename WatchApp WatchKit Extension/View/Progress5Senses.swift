@@ -31,13 +31,13 @@ struct Progress5Senses: View {
                 .stroke(bgProgress, lineWidth: 10)
                 .rotationEffect(.degrees(-90))
                 .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .frame(width: 200, height: 100, alignment: .center)
+              //  .frame(width: 200, height: 100, alignment: .center)
             Circle()
                 .trim(from: 0.0, to: (CGFloat(step + 1) * 0.2))
                 .stroke(gradient, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
                 .rotationEffect(.degrees(-90))
                 .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                .frame(width: 200, height: 100, alignment: .center)
+              //  .frame(width: 200, height: 100, alignment: .center)
                 .animation(.linear)
             
             VStack {

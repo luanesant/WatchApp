@@ -17,8 +17,7 @@ struct ModalFeed: View {
      
             Text(Translations.Titles.textModalFeed).accessibility(label: Text(Translations.VoiceOver.textModalFeedOver))
                 .font(.system(.body, design: .rounded))
-                .multilineTextAlignment(.center)
-                .lineLimit(3)
+                .multilineTextAlignment(.center).padding()
             
             Button(action: {
              show = true

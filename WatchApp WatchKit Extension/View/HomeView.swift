@@ -41,7 +41,7 @@ struct HomeView: View {
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: FiveSensesView(), isActive: $changeView2))
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.custom("body", size: 14.4))
             
         }
         .navigationBarBackButtonHidden(true)

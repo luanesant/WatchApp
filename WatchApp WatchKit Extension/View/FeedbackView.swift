@@ -61,7 +61,7 @@ struct FeedbackView: View {
                 .lineLimit(0)
                 .padding(0.0)
                 .frame(width: 200.0)
-                .offset(y: -16)
+                .offset(y: -18)
                 .font(.system(.subheadline, design: .rounded))
                 
             Button(action: {
@@ -76,7 +76,7 @@ struct FeedbackView: View {
                 Text(Translations.Titles.finishTitle).font(.system(.body, design: .rounded))
             }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-            .offset(y: -10)
+            .offset(y: -20)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed()
