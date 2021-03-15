@@ -15,48 +15,59 @@ struct FeedbackView: View {
     @State var chooseView = false
     @State var show = false
     @State var currentEmotion = "bad"
-    @State var emotions = [
-        "bad", "good", "happy"
+    @State var emotions = ["zero",
+        "bad", "good", "happy","zero"
     ]
     @State var emotionsLabel = [
         Translations.Titles.emotionBad,
+        Translations.Titles.emotionBad,
         Translations.Titles.emotionGood,
         Translations.Titles.emotionHappy
+,        Translations.Titles.emotionHappy
     ]
-    @State var emotionsVoice = [
+    @State var emotionsVoice = [Translations.VoiceOver.badOver,
         Translations.VoiceOver.badOver,
         Translations.VoiceOver.goodOver,
-        Translations.VoiceOver.betterOver
+        Translations.VoiceOver.betterOver,        Translations.VoiceOver.betterOver
     ]
     
     var body: some View {
-        
+  
+          
         VStack {
+           
+                
             Text(Translations.Titles.feelTitle)
                 .offset(y: 21)
 //                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.system(.headline, design: .rounded))
-            List {
-                ForEach((0...2), id: \.self) { i in
+            ZStack{
+                
+                List {
+                ForEach((0...3), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], action: {
                         currentEmotion = emotions[i]
                         emotion = emotionsLabel[i]
+                        
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
+                    
                 }
                 .offset(x: -9.0)
-                .listRowBackground(Color.clear)
-                .padding(.all, 10)
+                .listRowBackground((Color.clear.opacity(0)))
+                .padding(.vertical, 1).padding(.horizontal,10)
+                
             }
-            .background(Color.clear)
+            .background(Color.clear.opacity(0))
             .offset(y: -55)
             .padding(.top, 55.0)
             .padding(.bottom, -55.0)
             .frame(width:70, height: 100, alignment: .center)
             .rotationEffect(.degrees(-90))
             .listStyle(CarouselListStyle())
-            
+                Circle()
+                    .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1) }
             Text(emotion)
                 .lineLimit(0)
                 .padding(0.0)
@@ -81,6 +92,8 @@ struct FeedbackView: View {
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed()
             }
+            
+        
         }
     }
 }
@@ -102,8 +115,8 @@ struct FeelView: View {
 //                        .stroke(lineWidth: 2)
 //                        .frame(width: 60, height: 60, alignment: .center)
 //                }
-            }
-        }
+            }.background((Color.clear.opacity(0)))
+        }.background((Color.clear.opacity(0)))
     }
 }
 
