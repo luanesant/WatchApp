@@ -7,6 +7,7 @@
 */
 
 "nameApp" = "Harmon";
+"modalHome" = "The use of the Harmon app does not exclude the need for psychological or psychiatric follow-up with qualified professionals.";
 "breathTitle" = "Breath";
 "senses" = "5 senses";
 "feelTitle" = "How do you feel?";
@@ -26,7 +27,7 @@
 "titleDescription" = "Orientation";
 "description" = "This technique will help you focus on the now. Look around, take a deep breath and answer the steps below.";
 "buttonDescription" = "Don't show again";
-"buttonCancel" = "Cancel";
+"buttonCancel" = "Close";
 
 "timeTitle" = "Time to breath: ";
 "minute1" = "1 minute";

@@ -31,7 +31,11 @@
 		C3317EE725F2A01C00187F7D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE625F2A01C00187F7D /* ModalView.swift */; };
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
+		C379BD0825FFB5C100F8E52C /* ModalHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379BD0725FFB5C100F8E52C /* ModalHome.swift */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
+		C3BDDE6C25F982D3005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		C3BDDE7025F982D4005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		C3BDDE7425F982D5005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
 		C3CCCD1425F09C4700135BDC /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +116,9 @@
 		C3317EE625F2A01C00187F7D /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
+		C379BD0725FFB5C100F8E52C /* ModalHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHome.swift; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		C3BDDE7B25F9858B005C4EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSensesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +146,7 @@
 		5E72800725DFF73900667FC0 = {
 			isa = PBXGroup;
 			children = (
+				C3BDDE7B25F9858B005C4EE9 /* Info.plist */,
 				5E72801625DFF73900667FC0 /* WatchApp WatchKit App */,
 				5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */,
 				5E72800F25DFF73900667FC0 /* Products */,
@@ -218,6 +225,7 @@
 				3149D63925F2706600923D8C /* ModalFeed.swift */,
 				C3317EE125F29FB500187F7D /* Progress5Senses.swift */,
 				C3317EE625F2A01C00187F7D /* ModalView.swift */,
+				C379BD0725FFB5C100F8E52C /* ModalHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BDDE6C25F982D3005C4EE9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */,
+				C3BDDE7025F982D4005C4EE9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */,
+				C3BDDE7425F982D5005C4EE9 /* InfoPlist.strings in Resources */,
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
 				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
@@ -388,6 +399,7 @@
 				3149D63A25F2706600923D8C /* ModalFeed.swift in Sources */,
 				C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,
+				C379BD0825FFB5C100F8E52C /* ModalHome.swift in Sources */,
 				5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -538,6 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -554,9 +568,9 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,9 +595,9 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,8 +623,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,8 +651,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,8 +676,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -684,8 +699,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = 7RK4J66K54;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

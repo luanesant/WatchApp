@@ -90,7 +90,7 @@ struct FeedbackView: View {
             .offset(y: -20)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
-                ModalFeed()
+                ModalFeed().navigationBarHidden(true)
             }
             
         
