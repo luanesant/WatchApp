@@ -10,6 +10,7 @@ import Foundation
 class Translations {
     class Titles {
         static let nameApp = NSLocalizedString("nameApp", comment: "")
+        static let modalHome = NSLocalizedString("modalHome", comment: "")
         static let breath = NSLocalizedString("breathTitle", comment: "")
         static let feelTitle = NSLocalizedString("feelTitle", comment: "")
         static let finishTitle = NSLocalizedString("finishTitle", comment: "")

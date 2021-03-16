@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var amount = 0.0
     @State var changeView = false
     @State var changeView2 = false
+    @ObservedObject var modal: ModalViewHomeState = .init()
     var body: some View {
         
         VStack{
@@ -45,6 +46,17 @@ struct HomeView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(Translations.Titles.nameApp).font(.system(.title, design: .rounded))
+        .sheet(isPresented: $modal.isShowModal, content: {
+            ModalHome()
+                .toolbar(content: {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button(Translations.Titles.closeTitle) {
+                            UserDefaults.standard.set(true, forKey: "hideModalHome")
+                            modal.isShowModal = false
+                        }
+                    }
+                })
+        })
     }
 }
 
@@ -61,6 +73,10 @@ struct HomeButton: View {
             Spacer()
         }
     }
+}
+
+class ModalViewHomeState: ObservableObject {
+    @Published var isShowModal = !UserDefaults.standard.bool(forKey: "hideModalHome")
 }
 
 struct HomeView_Previews: PreviewProvider {

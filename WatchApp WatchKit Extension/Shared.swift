@@ -25,7 +25,7 @@ class BgMusic {
         let sound = Bundle.main.url(forResource: "piano2", withExtension: "mp3")
         self.audioPlayer = try! AVAudioPlayer(contentsOf: sound!)
         self.audioPlayer.numberOfLoops = -1
-        self.audioPlayer.volume = 0.1
+        self.audioPlayer.volume = 1
     }
     
     func play() {

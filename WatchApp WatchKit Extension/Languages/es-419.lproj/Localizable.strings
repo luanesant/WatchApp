@@ -7,6 +7,7 @@
 */
 
 "nameApp" = "Harmon";
+"modalHome" = "El uso de la aplicación Harmon no excluye la necesidad de seguimiento psicológico o psiquiátrico con profesionales calificados.";
 "breathTitle" = "Respiración";
 "senses" = "5 sentidos";
 "feelTitle" = "¿Cómo te sientes?";
@@ -26,7 +27,7 @@
 "titleDescription" = "Orientación";
 "description" = "Esta técnica te ayudará a concentrarte en el ahora. Mire a su alrededor, respire profundamente y responda los pasos a continuación.";
 "buttonDescription" = "No vuelvas a aparecer";
-"buttonCancel" = "Cancelar";
+"buttonCancel" = "Cerrar";
 
 "timeTitle" = "Tiempo de respiración:";
 "minute1" = "1 minuto";
