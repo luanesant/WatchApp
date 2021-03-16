@@ -34,7 +34,11 @@
 		C3317EE725F2A01C00187F7D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE625F2A01C00187F7D /* ModalView.swift */; };
 		C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351046E25EDE09100C9D93E /* piano1.mp3 */; };
 		C351047425EDE09C00C9D93E /* piano2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C351047325EDE09C00C9D93E /* piano2.mp3 */; };
+		C379BD0825FFB5C100F8E52C /* ModalHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379BD0725FFB5C100F8E52C /* ModalHome.swift */; };
 		C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */; };
+		C3BDDE6C25F982D3005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		C3BDDE7025F982D4005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		C3BDDE7425F982D5005C4EE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
 		C3CCCD1425F09C4700135BDC /* FiveSensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +119,9 @@
 		C3317EE625F2A01C00187F7D /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
+		C379BD0725FFB5C100F8E52C /* ModalHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHome.swift; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		C3BDDE7B25F9858B005C4EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSensesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +149,10 @@
 		5E72800725DFF73900667FC0 = {
 			isa = PBXGroup;
 			children = (
+				C3BDDE7B25F9858B005C4EE9 /* Info.plist */,
 				5E72801625DFF73900667FC0 /* WatchApp WatchKit App */,
 				5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */,
 				5E72800F25DFF73900667FC0 /* Products */,
-				5E952C1A25F1E3BA00B4D888 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +193,7 @@
 				C30013DE25E885C2001F7A11 /* Shared.swift */,
 				5E72802D25DFF73B00667FC0 /* Assets.xcassets */,
 				5E72803225DFF73B00667FC0 /* Info.plist */,
+				5E952C1A25F1E3BA00B4D888 /* Frameworks */,
 				5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */,
 				5E72803325DFF73B00667FC0 /* PushNotificationPayload.apns */,
 				5E72802F25DFF73B00667FC0 /* Preview Content */,
@@ -221,6 +228,7 @@
 				3149D63925F2706600923D8C /* ModalFeed.swift */,
 				C3317EE125F29FB500187F7D /* Progress5Senses.swift */,
 				C3317EE625F2A01C00187F7D /* ModalView.swift */,
+				C379BD0725FFB5C100F8E52C /* ModalHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				5E952C1B25F1E3BA00B4D888 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EDB7E0625F97AFF001A8E8C /* InfoPlist.strings in Resources */,
+				C3BDDE6C25F982D3005C4EE9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +364,7 @@
 			files = (
 				5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */,
 				5EDB7E0A25F97B9F001A8E8C /* InfoPlist.strings in Resources */,
+				C3BDDE7025F982D4005C4EE9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +374,7 @@
 			files = (
 				C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */,
 				5EDB7E0E25F97BA0001A8E8C /* InfoPlist.strings in Resources */,
+				C3BDDE7425F982D5005C4EE9 /* InfoPlist.strings in Resources */,
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
 				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
@@ -393,6 +405,7 @@
 				3149D63A25F2706600923D8C /* ModalFeed.swift in Sources */,
 				C39F7BD625E4CC5E00940AFE /* FeedbackView.swift in Sources */,
 				5E72802A25DFF73A00667FC0 /* NotificationView.swift in Sources */,
+				C379BD0825FFB5C100F8E52C /* ModalHome.swift in Sources */,
 				5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -543,6 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -559,6 +574,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
@@ -568,7 +584,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -585,6 +601,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
@@ -594,7 +611,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -613,6 +630,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
+				CURRENT_PROJECT_VERSION = 16;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -620,7 +638,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -640,6 +658,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
+				CURRENT_PROJECT_VERSION = 16;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,7 +666,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -661,9 +680,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
+				CURRENT_PROJECT_VERSION = 16;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,6 +693,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon;
 				PRODUCT_NAME = Harmon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -681,9 +703,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9WAUZV94CS;
+				CURRENT_PROJECT_VERSION = 16;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +716,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon;
 				PRODUCT_NAME = Harmon;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

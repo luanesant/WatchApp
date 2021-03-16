@@ -45,12 +45,11 @@ struct FiveSensesView: View {
                 .multilineTextAlignment(.center)
                 .padding(.top,10)
 //                .frame(width: 180.0)
-                .offset(y: -8)
+                .offset(y: -15)
                 .font(.system(.caption2, design: .rounded))
 
                 .accessibility(label: Text(tasksFiveSenses[step]))
           
-//            gire = Text("\(rotate)").focusable(true).digitalCrownRotation( $rotate, from: 0.0, through: 1.0, by: 0.1, isContinuous: false, isHapticFeedbackEnabled: true) as! String
             
             if tasksFiveSenses.count - 1 > step {
                 Button(Translations.Titles.readyTitle, action: {
@@ -58,7 +57,7 @@ struct FiveSensesView: View {
                 })
                 .font(.system(.body, design: .rounded))
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-                .offset(y: -8)
+                .offset(y: -15)
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)
                 .foregroundColor(Color.black)
@@ -67,7 +66,7 @@ struct FiveSensesView: View {
                     Text(Translations.Titles.readyTitle)
                         .font(.system(.body, design: .rounded))
                 }
-                .offset(y: -8)
+                .offset(y: -15)
                 .accessibility(label: Text(Translations.VoiceOver.readyOver))
                 .accessibility(addTraits: .isButton)
                 .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
