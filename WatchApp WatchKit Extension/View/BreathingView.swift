@@ -16,26 +16,9 @@ struct BreathingView: View {
     @State var audioPlayer: AVAudioPlayer?
     @State var exhaleIsShowing: Bool = true
     @State var controlTimeLabel = 9
-//    var timeToAnimate: Int
-     
-//    init(timeToBreath: Int) {
-//        self.timeToBreath = timeToBreath * 60
-//        self.timeToAnimate = timeToBreath
-//    }
     
     var body: some View {
             VStack {
-//                if timeToBreath > 0 {
-//                    Text(Translations.Titles.timeTitle).font(.title3)
-//                    Text("\(timeToBreath)").font(.caption2)
-//                    AnimationView(timeToBreath: timeToBreath)
-//                    Text(Translations.Titles.inspire)
-//                        .font(.caption2)
-//                        .bold()
-//                }
-//                else {
-//                    FeedbackView()
-//                }
                 if timeToBreath == 0 {
                     FeedbackView()
                 }
@@ -45,7 +28,6 @@ struct BreathingView: View {
                     Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
                         .font(.system(.body, design: .rounded))
                         .bold()
-//                    Text("\(timeToBreath)").font(.caption2)
                 }
             }
             .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
@@ -59,14 +41,7 @@ struct BreathingView: View {
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
                     if timeToBreath > 0 {
                         timeToBreath -= 1
-                        
-//                        if exhaleIsShowing {
-//                            WKInterfaceDevice.current().play(.directionUp)
-//                        }
-//                        else {
-//                            WKInterfaceDevice.current().play(.directionDown)
-//                        }
-//
+
                         if timeToBreath % controlTimeLabel == 0 {
                             exhaleIsShowing.toggle()
                             controlTimeLabel = exhaleIsShowing ? 3 : 9
@@ -122,40 +97,49 @@ class AnimationScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
+        let candleAtlas = SKTextureAtlas(named: "candleAtlas")
         var candleAssets: [SKTexture] = []
         
         //inhale assets
         for i in 3...16 {
-            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(SKTexture(imageNamed: "velaacessa\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         //exhale assets
         for i in 17...24 {
-            candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaapagada\(i)"))
         }
         for i in 17...30 {
-            candleAssets.append(SKTexture(imageNamed: "velaapagada\(i)"))
+            candleAssets.append(candleAtlas.textureNamed("velaapagada\(i)"))
         }
         
-        let candle = SKSpriteNode(imageNamed: "velaacessa1")
+        let candle = SKSpriteNode(texture: candleAssets[0])
         candle.scale(to: CGSize(width: 200, height: 280))
         self.addChild(candle)
         
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         
-        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.16))) {
-            candle.removeFromParent()
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.16, resize: false, restore: true)), withKey: "candleAnimationRunnning")
+    }
+}
+class Assets {
+    static let sharedInstance = Assets()
+    let sprites = SKTextureAtlas(named: "Sprites")
+
+    func preloadAssets() {
+        sprites.preload {
+            print("Sprites preloaded")
         }
     }
 }

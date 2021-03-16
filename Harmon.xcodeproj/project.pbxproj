@@ -26,6 +26,9 @@
 		5E952C1C25F1E3BA00B4D888 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E952C1B25F1E3BA00B4D888 /* HealthKit.framework */; };
 		5E952C2125F1E41D00B4D888 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E952C2025F1E41D00B4D888 /* HeartRateView.swift */; };
 		5ED9BD6C25F26B1700585C7D /* HealthKitMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED9BD6B25F26B1700585C7D /* HealthKitMethods.swift */; };
+		5EDB7E0625F97AFF001A8E8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		5EDB7E0A25F97B9F001A8E8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
+		5EDB7E0E25F97BA0001A8E8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCDEA725F7F1FB00B4BF5B /* InfoPlist.strings */; };
 		C30013DF25E885C2001F7A11 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30013DE25E885C2001F7A11 /* Shared.swift */; };
 		C3317EE225F29FB500187F7D /* Progress5Senses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE125F29FB500187F7D /* Progress5Senses.swift */; };
 		C3317EE725F2A01C00187F7D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3317EE625F2A01C00187F7D /* ModalView.swift */; };
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDB7E0625F97AFF001A8E8C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E72801825DFF73A00667FC0 /* Assets.xcassets in Resources */,
+				5EDB7E0A25F97B9F001A8E8C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C351046F25EDE09100C9D93E /* piano1.mp3 in Resources */,
+				5EDB7E0E25F97BA0001A8E8C /* InfoPlist.strings in Resources */,
 				5E72803125DFF73B00667FC0 /* Preview Assets.xcassets in Resources */,
 				313D6C6625E7E0C800D3F314 /* Localizable.strings in Resources */,
 				5E72802E25DFF73B00667FC0 /* Assets.xcassets in Resources */,
@@ -554,7 +560,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,7 +586,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchApp WatchKit Extension/WatchApp WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -606,7 +612,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -633,7 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,7 +663,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -677,7 +683,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YSZ6N6FL5G;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
