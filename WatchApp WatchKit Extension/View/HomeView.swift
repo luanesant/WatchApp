@@ -25,23 +25,22 @@ struct HomeView: View {
             }, label: {
                 HStack{
                     Image("lungs").padding(.leading, 10)
-                    Text(Translations.Titles.breath).foregroundColor(.white).font(.system(.body, design: .rounded)).padding(.leading, 14.0)
+                    Text(Translations.Titles.breath).foregroundColor(.white).font(.system(.body, design: .rounded)).padding(.leading, 10.0)
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.breathOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: TimeToBreathView(), isActive: $changeView))
             .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.system(.body, design: .rounded))
 
-            
             Button(action: {
                 changeView2 = true
             }, label: {
                 HStack{
                     Image("eye").padding(.leading,10)
-                    Text(Translations.Titles.fiveSenses).foregroundColor(.white).padding(.leading, 14.0)
+                    Text(Translations.Titles.fiveSenses).foregroundColor(.white).padding(.leading, 10.0)
                     Spacer()
                 }.accessibility(label: Text(Translations.VoiceOver.sensesOver))
             }).accessibility(addTraits: .isButton).buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).background(NavigationLink("", destination: FiveSensesView(), isActive: $changeView2))
-            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.custom("body", size: 14.4))
+            .buttonStyle(BorderedButtonStyle(tint: bgButton.opacity(200))).font(.body)
             
         }
         .navigationBarBackButtonHidden(true)

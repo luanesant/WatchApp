@@ -20,15 +20,12 @@ struct FeedbackView: View {
     ]
     @State var emotionsLabel = [
         Translations.Titles.emotionBad,
-        Translations.Titles.emotionBad,
         Translations.Titles.emotionGood,
         Translations.Titles.emotionHappy
-,        Translations.Titles.emotionHappy
     ]
     @State var emotionsVoice = [Translations.VoiceOver.badOver,
-        Translations.VoiceOver.badOver,
         Translations.VoiceOver.goodOver,
-        Translations.VoiceOver.betterOver,        Translations.VoiceOver.betterOver
+        Translations.VoiceOver.betterOver
     ]
     
     var body: some View {
@@ -45,7 +42,7 @@ struct FeedbackView: View {
             ZStack{
                 
                 List {
-                ForEach((0...3), id: \.self) { i in
+                ForEach((0...2), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], action: {
                         currentEmotion = emotions[i]
                         emotion = emotionsLabel[i]
@@ -66,8 +63,10 @@ struct FeedbackView: View {
             .frame(width:70, height: 100, alignment: .center)
             .rotationEffect(.degrees(-90))
             .listStyle(CarouselListStyle())
-                Circle()
-                    .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1) }
+              //  Circle()
+              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
+                
+            }
             Text(emotion)
                 .lineLimit(0)
                 .padding(0.0)
@@ -123,5 +122,6 @@ struct FeelView: View {
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
         FeedbackView( emotion: Translations.Titles.emotionBad)
+        }
     }
-}
+
