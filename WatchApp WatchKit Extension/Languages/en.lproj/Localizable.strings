@@ -41,13 +41,12 @@
 "goTitle" = "Lets Go";
 "textModalFeed" = "You want to continue with another Tecnique?";
 
-
 "bpm" = "BPM";
 "heartImage" = "heart";
 "button1" = "Breathing technique, with lung image positioned to the left centered on the Watch";
 "button2" = "5 senses technique, with image of an open eye positioned to the left centered on the Watch";
 "readyOver" = "Ready positioned at the bottom of the Clock";
-"modalOver" = "Cancel positioned to the upper left. The five senses technique will help you to focus on what is happening now. Imagine something that brings you tranquility and take a deep breath.";
+"modalOver" = "This technique will help you focus on now. Look around you, take a deep breath, and answer the steps below.";
 "pickerOver" = "Select the time: 1 minute, 2 minutes or up to 5 minutes, positioned in the middle of the clock for breathing.";
 "initOver" = "Start positioned at the top of the watch.";
 "contagemOver" = "Breath time count initiated";

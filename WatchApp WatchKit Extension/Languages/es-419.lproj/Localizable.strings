@@ -46,7 +46,7 @@
 "button1" = "Técnica de respiración, con la imagen del pulmón colocada a la izquierda centrada en el reloj.";
 "button2" = "Técnica de los 5 sentidos, con imagen de un ojo abierto colocado a la izquierda centrado en el reloj";
 "readyOver" = "Listo colocado en la parte inferior del reloj";
-"modalOver" = "Cancelar posicionado en la parte superior izquierda. La técnica de los cinco sentidos le ayudará a concentrarse en lo que está sucediendo ahora. Imagina algo que te brinde tranquilidad y respira hondo.";
+"modalOver" = "Esta técnica te ayudará a concentrarte en el ahora. Mire a su alrededor, respire profundamente y responda los pasos a continuación.";
 "pickerOver" = "Seleccione el tiempo: 1 minuto, 2 minutos o hasta 5 minutos, colocado en el medio del reloj para respirar.";
 "initOver" = "Comience colocado en la parte superior del reloj.";
 "contagemOver" = "Se inició el recuento del tiempo de respiración";
@@ -73,3 +73,4 @@
 "goTitleOver" = "Vamos!";
 "textModalFeedOver" = "¿Quieres continuar con otra técnica?";
 "buttonCancelOver"="Cancelar";
+
