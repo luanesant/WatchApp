@@ -15,7 +15,8 @@ struct BreathingView: View {
     @State var timeToBreath: Int
     @State var audioPlayer: AVAudioPlayer?
     @State var exhaleIsShowing: Bool = true
-    @State var controlTimeLabel = 9
+    @State var controlTimeLabel = 0
+    @State var controlTimeLabelToggle = false
     
     var body: some View {
             VStack {
@@ -38,13 +39,19 @@ struct BreathingView: View {
                 self.audioPlayer?.play()
                 self.audioPlayer?.volume = 1.0
                 
+                controlTimeLabel = timeToBreath - 6
+                
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
                     if timeToBreath > 0 {
                         timeToBreath -= 1
-
-                        if timeToBreath % controlTimeLabel == 0 {
-                            exhaleIsShowing.toggle()
-                            controlTimeLabel = exhaleIsShowing ? 3 : 9
+                        
+                        if timeToBreath > controlTimeLabel {
+                            exhaleIsShowing = controlTimeLabelToggle ? false : true
+                        } else {
+                            controlTimeLabelToggle.toggle()
+                            exhaleIsShowing = false
+                            controlTimeLabel -= controlTimeLabelToggle ? 3 : 6
+                            WKInterfaceDevice.current().play(controlTimeLabelToggle ? .directionUp : .directionDown)
                         }
                     }
                 }
@@ -117,7 +124,7 @@ class AnimationScene: SKScene {
             candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
         }
         //exhale assets
-        for i in 17...24 {
+        for i in 17...21 {
             candleAssets.append(candleAtlas.textureNamed("velaapagada\(i)"))
         }
         for i in 17...30 {
@@ -130,7 +137,7 @@ class AnimationScene: SKScene {
         
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         
-        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.16, resize: false, restore: true)), withKey: "candleAnimationRunnning")
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
     }
 }
 class Assets {
