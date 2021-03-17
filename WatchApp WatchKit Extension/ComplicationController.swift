@@ -14,7 +14,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         let descriptors = [
-            CLKComplicationDescriptor(identifier: "complication", displayName: "Harmon",  supportedFamilies: [CLKComplicationFamily.graphicCircular, CLKComplicationFamily.circularSmall])
+            CLKComplicationDescriptor(identifier: "complication", displayName: "Harmon",  supportedFamilies: [CLKComplicationFamily.graphicExtraLarge,CLKComplicationFamily.graphicCircular, CLKComplicationFamily.circularSmall,CLKComplicationFamily.extraLarge,CLKComplicationFamily.modularSmall,CLKComplicationFamily.utilitarianSmall])
             // Multiple complication support can be added here with more descriptors
         ]
         
@@ -51,15 +51,21 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     func getComplicationTemplate(for complication: CLKComplication, using date: Date) -> CLKComplicationTemplate? {
         switch complication.family {
-//        case .graphicExtraLarge:
-//            return CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Extra Large")!))
+        case .graphicExtraLarge:
+           return CLKComplicationTemplateGraphicExtraLargeCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Extra Large")!))
         case .graphicCircular:
             return CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))
         case .circularSmall:
             return CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
-//        case .extraLarge:
-//            return CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Extra Large")!))
-//
+        case .extraLarge:
+            return CLKComplicationTemplateExtraLargeSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Extra Large")!))
+        
+        case .modularSmall:
+            return CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!))
+        case .utilitarianSmall:
+            return CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
+        case .graphicCorner:
+            return CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Circular")!))
         default:
             return nil
         }
