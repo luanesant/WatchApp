@@ -24,6 +24,7 @@ struct BreathingView: View {
     var body: some View {
             VStack {
                 if timeToBreath == 0 {
+                    
                     FeedbackView()
                 }
                 else {
@@ -32,9 +33,10 @@ struct BreathingView: View {
                     Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
                         .font(.system(.body, design: .rounded))
                         .bold()
+                        .accessibility(label: exhaleIsShowing ? Text(Translations.Titles.expire) : Text(Translations.Titles.inspire))
                 }
             }
-            .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
+            .navigationBarTitle(Translations.Titles.timeTitle)
             .onAppear {
                 
                 guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
@@ -61,8 +63,6 @@ struct BreathingView: View {
                         }
                     } else if timeToBreath == 0 {
                         self.audioPlayer?.stop()
-                        timeToBreath = 0
-                        
                         if breathHasFinished == false {
                             WKInterfaceDevice.current().play(.stop)
                             breathHasFinished = true
@@ -70,6 +70,12 @@ struct BreathingView: View {
                         session.invalidate()
                     }
                 }
+            }
+            .onDisappear() {
+//                self.audioPlayer?.stop()
+                timeToBreath = 0
+                breathHasFinished = true
+                session.invalidate()
             }
     }
 }

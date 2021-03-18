@@ -24,10 +24,8 @@ struct TimeToBreathView: View {
                 Text(Translations.Titles.minute5).tag(5).font(.system(.body, design: .rounded))
             }.accessibility(label:
             Text(Translations.VoiceOver.pickerOver)).pickerStyle(WheelPickerStyle()).focusable()
-            
-//            Text(Translations.VoiceOver.pickerOver)).accessibility(addTraits: .isButton).pickerStyle(WheelPickerStyle()).focusable()
 
-            .padding(.all,0)
+            .padding(.all, 0)
             
             Button(Translations.Titles.titleStart,action:{
                 secondScreenShown = true
