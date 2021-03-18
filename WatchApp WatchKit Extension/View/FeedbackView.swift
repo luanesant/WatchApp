@@ -27,6 +27,8 @@ struct FeedbackView: View {
         Translations.VoiceOver.goodOver,
         Translations.VoiceOver.betterOver
     ]
+    @State var scroll = 0.0
+var j = 0
     
     var body: some View {
   
@@ -42,27 +44,31 @@ struct FeedbackView: View {
             ZStack{
                 
                 List {
+               
                 ForEach((0...2), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], action: {
                         currentEmotion = emotions[i]
-                        emotion = emotionsLabel[i]
+                        emotion = emotionsLabel[j]
                         
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
+                
                 }
                 .offset(x: -9.0, y: 0)
                 .listRowBackground((Color.clear.opacity(0)))
-                .padding(.vertical, 7).padding(.horizontal, 10)
-            }
+                .padding(.vertical, 10).padding(.horizontal,10)
+                
+                }
             .background(Color.clear.opacity(0))
             .offset(y: -55)
             .padding(.top, 55.0)
             .padding(.bottom, -55.0)
             .frame(width:70, height: 100, alignment: .center)
             .rotationEffect(.degrees(-90))
-            .listStyle(CarouselListStyle())
-//                Circle()
-//                    .stroke(Color.white, lineWidth: 3).frame(width: 60).offset(y: 1)
+                .listStyle(CarouselListStyle())
+               
+//              //  Circle()
+//              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
                 
             }
             Text(emotion)

@@ -35,6 +35,7 @@ class Translations {
         static let emotionHappy = NSLocalizedString("emotionHappy", comment: "")
         static let  goTitle = NSLocalizedString("goTitle", comment: "")
         static let  textModalFeed = NSLocalizedString("textModalFeed", comment: "")
+        static let  warningModal = NSLocalizedString("warningModal", comment: "")
 
 }
     
