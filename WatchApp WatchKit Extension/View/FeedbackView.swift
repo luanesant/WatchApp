@@ -31,11 +31,7 @@ struct FeedbackView: View {
 var j = 0
     
     var body: some View {
-  
-          
         VStack {
-           
-                
             Text(Translations.Titles.feelTitle)
                 .offset(y: 21)
 //                .frame(width: 200.0)
@@ -48,7 +44,7 @@ var j = 0
                 ForEach((0...2), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], action: {
                         currentEmotion = emotions[i]
-                        emotion = emotionsLabel[j]
+                        emotion = emotionsLabel[i]
                         
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
