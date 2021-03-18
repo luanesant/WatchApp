@@ -10,12 +10,11 @@ import AVFoundation
 
 struct FiveSensesView: View {
     
+    let session = WKExtendedRuntimeSession()
     @State var step: Int = 0
     @State var audioPlayer: BgMusic?
-//    @State var audioPlayer: AVAudioPlayer?
     @ObservedObject var modal: ModalViewState = .init()
-//    @State var rotate = 0.0
-//    var gire = ""
+    
     let tasksFiveSenses = [
         Translations.FiveSenesTexts.visionText,
         Translations.FiveSenesTexts.senseText,
@@ -34,9 +33,6 @@ struct FiveSensesView: View {
 
     
     var body: some View {
-    
-        
-        
         VStack{
             Spacer()
             Progress5Senses(step: step).padding(.top,10)
@@ -81,6 +77,7 @@ struct FiveSensesView: View {
         })
         .onAppear {
             if !modal.isShowModal {
+                session.start()
                 self.audioPlayer = BgMusic("piano2")
                 self.audioPlayer?.play()
             }
@@ -88,7 +85,7 @@ struct FiveSensesView: View {
         .onDisappear {
             if let player = self.audioPlayer {
                 player.stop()
-            
+                session.invalidate()
             }
         }
         

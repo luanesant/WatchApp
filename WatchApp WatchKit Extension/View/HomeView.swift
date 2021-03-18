@@ -15,6 +15,9 @@ struct HomeView: View {
     @State var changeView = false
     @State var changeView2 = false
     @ObservedObject var modal: ModalViewHomeState = .init()
+    
+    var session = WKExtendedRuntimeSession()
+    
     var body: some View {
         
         VStack{

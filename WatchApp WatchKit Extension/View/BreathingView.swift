@@ -17,6 +17,9 @@ struct BreathingView: View {
     @State var exhaleIsShowing: Bool = true
     @State var controlTimeLabel = 0
     @State var controlTimeLabelToggle = false
+    @State var breathHasFinished = false
+    
+    var session = WKExtendedRuntimeSession()
     
     var body: some View {
             VStack {
@@ -33,6 +36,7 @@ struct BreathingView: View {
             }
             .navigationBarTitle(Translations.Titles.timeTitle).accessibility(label: Text(Translations.VoiceOver.timeBackOver))
             .onAppear {
+                
                 guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
                 self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
             self.audioPlayer?.numberOfLoops = -1
@@ -42,6 +46,8 @@ struct BreathingView: View {
                 controlTimeLabel = timeToBreath - 6
                 
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {(timer) in
+                    session.start()
+                    
                     if timeToBreath > 0 {
                         timeToBreath -= 1
                         
@@ -53,19 +59,24 @@ struct BreathingView: View {
                             controlTimeLabel -= controlTimeLabelToggle ? 3 : 6
                             WKInterfaceDevice.current().play(controlTimeLabelToggle ? .directionUp : .directionDown)
                         }
+                    } else if timeToBreath == 0 {
+                        self.audioPlayer?.stop()
+                        timeToBreath = 0
+                        
+                        if breathHasFinished == false {
+                            WKInterfaceDevice.current().play(.stop)
+                            breathHasFinished = true
+                        }
+                        session.invalidate()
                     }
                 }
-            }
-            .onDisappear {
-                self.audioPlayer?.stop()
-                timeToBreath = 0
             }
     }
 }
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
-        BreathingView(timeToBreath: 1)
+        BreathingView(timeToBreath: 60)
     }
 }
 
@@ -78,7 +89,6 @@ struct AnimationView: View {
         return scene
     }
     
-    
     var body: some View {
         ZStack {
             SpriteView(scene: scene)
@@ -89,11 +99,7 @@ struct AnimationView: View {
 }
 
 class AnimationScene: SKScene {
-    
-//    var timeToBreath: Int
-
     override init() {
-//        self.timeToBreath = timeToBreath
         super.init(size: CGSize(width: 200, height: 300))
     }
 
@@ -138,15 +144,5 @@ class AnimationScene: SKScene {
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         
         candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
-    }
-}
-class Assets {
-    static let sharedInstance = Assets()
-    let sprites = SKTextureAtlas(named: "Sprites")
-
-    func preloadAssets() {
-        sprites.preload {
-            print("Sprites preloaded")
-        }
     }
 }

@@ -15,8 +15,8 @@ struct FeedbackView: View {
     @State var chooseView = false
     @State var show = false
     @State var currentEmotion = "bad"
-    @State var emotions = ["zero",
-        "bad", "good", "happy","zero"
+    @State var emotions = [
+        "bad", "good", "happy"
     ]
     @State var emotionsLabel = [
         Translations.Titles.emotionBad,
@@ -49,12 +49,10 @@ struct FeedbackView: View {
                         
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
-                    
                 }
-                .offset(x: -9.0)
+                .offset(x: -9.0, y: 0)
                 .listRowBackground((Color.clear.opacity(0)))
-                .padding(.vertical, 1).padding(.horizontal,10)
-                
+                .padding(.vertical, 7).padding(.horizontal, 10)
             }
             .background(Color.clear.opacity(0))
             .offset(y: -55)
@@ -63,8 +61,8 @@ struct FeedbackView: View {
             .frame(width:70, height: 100, alignment: .center)
             .rotationEffect(.degrees(-90))
             .listStyle(CarouselListStyle())
-              //  Circle()
-              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
+//                Circle()
+//                    .stroke(Color.white, lineWidth: 3).frame(width: 60).offset(y: 1)
                 
             }
             Text(emotion)
