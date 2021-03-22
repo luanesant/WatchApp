@@ -28,8 +28,7 @@ struct FeedbackView: View {
         Translations.VoiceOver.betterOver
     ]
     @State var scroll = 0.0
-var j = 0
-    
+
     var body: some View {
   
           
@@ -37,7 +36,7 @@ var j = 0
            
                 
             Text(Translations.Titles.feelTitle)
-                .offset(y: 21)
+                .offset(y: 11)
 //                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.system(.headline, design: .rounded))
@@ -46,15 +45,14 @@ var j = 0
                 List {
                
                 ForEach((0...2), id: \.self) { i in
-                    FeelView(imageEmotion: emotions[i], action: {
+                    FeelView(imageEmotion: emotions[i], textEmotion: emotionsLabel[i], action: {
                         currentEmotion = emotions[i]
-                        emotion = emotionsLabel[j]
-                        
+
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
                 
                 }
-                .offset(x: -9.0)
+                .offset(x: 3.0)
                 .listRowBackground((Color.clear.opacity(0)))
                 .padding(.vertical, 10).padding(.horizontal,10)
                 
@@ -71,13 +69,13 @@ var j = 0
 //              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
                 
             }
-            Text(emotion)
-                .lineLimit(0)
-                .padding(0.0)
-                .frame(width: 200.0)
-                .offset(y: -18)
-                .font(.system(.subheadline, design: .rounded))
-                
+//            Text(emotion)
+//                .lineLimit(0)
+//                .padding(0.0)
+//                .frame(width: 200.0)
+//                .offset(y: -18)
+//                .font(.system(.subheadline, design: .rounded))
+//
             Button(action: {
                 
                 if emotion == Translations.Titles.emotionBad {
@@ -90,7 +88,7 @@ var j = 0
                 Text(Translations.Titles.finishTitle).font(.system(.body, design: .rounded))
             }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-            .offset(y: -20)
+            .offset(y: -15)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed().navigationBarHidden(true)
@@ -104,15 +102,21 @@ var j = 0
 struct FeelView: View {
     
     @State var imageEmotion: String
+    @State var textEmotion: String
+
     @State var action: ()-> Void
     @Binding var currentEmotion: String
     
     var body: some View {
         Button(action: action) {
             ZStack {
+                
                 Image(imageEmotion)
                     .rotationEffect(.degrees(90))
                     .padding(1)
+                    Text(textEmotion).rotationEffect(.degrees(90)).offset(x: -35)
+                
+            
 //                if imageEmotion == currentEmotion {
 //                    Circle()
 //                        .stroke(lineWidth: 2)
