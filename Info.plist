@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>NSHealthShareUsageDescription</key>
-	<string>We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition</string>
+	<string> We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition</string>
+	<string> We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition.</string>
 </dict>
 </plist>
