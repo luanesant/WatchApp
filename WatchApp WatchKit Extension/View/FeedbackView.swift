@@ -14,7 +14,7 @@ struct FeedbackView: View {
     @State var emotion: String = Translations.Titles.emotionBad
     @State var chooseView = false
     @State var show = false
-    @State var currentEmotion = "good"
+    @State var currentEmotion = "bad"
     @State var emotions = [
         "bad", "good", "happy"
     ]
@@ -30,11 +30,7 @@ struct FeedbackView: View {
     @State var scroll = 0.0
 
     var body: some View {
-  
-          
         VStack {
-           
-                
             Text(Translations.Titles.feelTitle)
                 .offset(y: 11)
 //                .frame(width: 200.0)

@@ -36,6 +36,14 @@
 	<string>We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>We would like to have acces to your heart rate data to be able to verify if your health is ok and make you pay more atention for your condition</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>mindfulness</string>
+	</array>
 	<key>WKWatchOnly</key>
 	<true/>
 </dict>

@@ -120,6 +120,7 @@
 		C351046E25EDE09100C9D93E /* piano1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano1.mp3; sourceTree = "<group>"; };
 		C351047325EDE09C00C9D93E /* piano2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano2.mp3; sourceTree = "<group>"; };
 		C379BD0725FFB5C100F8E52C /* ModalHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHome.swift; sourceTree = "<group>"; };
+		C379BDA526037F3100F8E52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C39F7BD525E4CC5E00940AFE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		C3CCCD1325F09C4700135BDC /* FiveSensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSensesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +149,7 @@
 		5E72800725DFF73900667FC0 = {
 			isa = PBXGroup;
 			children = (
+				C379BDA526037F3100F8E52C /* Info.plist */,
 				5E72801625DFF73900667FC0 /* WatchApp WatchKit App */,
 				5E72802225DFF73A00667FC0 /* WatchApp WatchKit Extension */,
 				5E72800F25DFF73900667FC0 /* Products */,
@@ -582,7 +584,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension1;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -609,7 +611,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension1;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
