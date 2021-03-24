@@ -7,7 +7,6 @@
 
 import SwiftUI
 import WatchKit
-import UIKit
 import SpriteKit
 import AVFoundation
 
@@ -19,6 +18,8 @@ struct BreathingView: View {
     @State var controlTimeLabelToggle = false
     @State var breathHasFinished = false
     
+    @State var minutes: Double = 1
+    
     var session = WKExtendedRuntimeSession()
     
     var body: some View {
@@ -28,7 +29,7 @@ struct BreathingView: View {
                     FeedbackView()
                 }
                 else {
-                    AnimationView()
+                    AnimationView(minutes: minutes)
                     
                     Text(exhaleIsShowing ? Translations.Titles.expire : Translations.Titles.inspire)
                         .font(.system(.body, design: .rounded))
@@ -38,6 +39,7 @@ struct BreathingView: View {
             }
             .navigationBarTitle(Translations.Titles.timeTitle)
             .onAppear {
+                minutes = Double(timeToBreath/60)
                 
                 guard let sound = Bundle.main.url(forResource: "piano1", withExtension: "mp3") else{ return }
                 self.audioPlayer = try! AVAudioPlayer (contentsOf: sound)
@@ -87,8 +89,10 @@ struct BreathingView_Previews: PreviewProvider {
 }
 
 struct AnimationView: View {
+    var minutes: Double
+    
     var scene: SKScene {
-        let scene = AnimationScene()
+        let scene = AnimationScene(minutes: minutes)
         scene.scaleMode = .aspectFit
         scene.backgroundColor = .clear
         
@@ -105,7 +109,14 @@ struct AnimationView: View {
 }
 
 class AnimationScene: SKScene {
-    override init() {
+    
+    var minutes: Double
+    
+    let candle = SKSpriteNode(texture: SKTexture(imageNamed: "velaPequena"))
+    let flame = SKSpriteNode(texture: SKTexture(imageNamed: "chama3"))
+    
+    init(minutes: Double) {
+        self.minutes = minutes
         super.init(size: CGSize(width: 200, height: 300))
     }
 
@@ -119,10 +130,7 @@ class AnimationScene: SKScene {
         let flameAtlas = SKTextureAtlas(named: "flameAtlas")
         var flameAssets: [SKTexture] = []
         
-        let candleAssets = [
-            SKTexture(imageNamed: "velaPequena"),
-            SKTexture(imageNamed: "velaPequena2")
-        ]
+        var candleAssets: [SKTexture] = []
         
         //inhale assets
         for i in 3...16 {
@@ -149,21 +157,38 @@ class AnimationScene: SKScene {
         }
         flameAssets.append(flameAtlas.textureNamed("chama0"))
         
-        let flame = SKSpriteNode(texture: flameAssets[0])
-        flame.size = CGSize(width: 150, height: 150)
+        //Candle assets
+        for i in 0...586 {
+            if i < 10 {
+                candleAssets.append(SKTexture(imageNamed: "Vela_00\(i)"))
+            } else if i < 100 {
+                candleAssets.append(SKTexture(imageNamed: "Vela_0\(i)"))
+            } else if i >= 100 {
+                candleAssets.append(SKTexture(imageNamed: "Vela_\(i)"))
+            }
+        }
         
-        let candle = SKSpriteNode(texture: candleAssets[0])
-        candle.size = CGSize(width: 121.5, height: 125.5)
+        candle.size = CGSize(width: 137.5, height: 200)
+        
+        flame.size = CGSize(width: 125.5, height: 125.5)
+        flame.position = CGPoint(x: 4, y: candle.size.height + 30)
+        
+        self.anchorPoint = .init(x: 0.5, y: 0)
+        candle.anchorPoint = .init(x: 0.5, y: 0)
         
         self.addChild(candle)
-        
         candle.addChild(flame)
         
-        self.anchorPoint = .init(x: 0.5, y: 0.5)
-        candle.anchorPoint = .init(x: 0.5, y: 1)
-        flame.anchorPoint = .init(x: 0.46, y: 0.2)
+//        flame.run(.repeatForever(.sequene([
+//            .repeat(animate(with: "inhale", timePerFrame: 0.1), count: 3),
+//            .animate(with: "ëxhale", timePerFrame: 0.1)
+//        ])))
         
         flame.run(.repeatForever(.animate(with: flameAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
-        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 1)))
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.10238908 * minutes)))
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        flame.position.y -= CGFloat(0.02 / minutes)
     }
 }

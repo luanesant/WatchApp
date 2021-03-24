@@ -576,7 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,7 +584,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension1;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -603,7 +603,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchApp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "WatchApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -611,7 +611,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinicius.Harmon.watcahkitapp.watchkitextension1;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -630,7 +630,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,7 +658,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -683,7 +683,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -706,7 +706,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 7RK4J66K54;
+				DEVELOPMENT_TEAM = 9WAUZV94CS;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
