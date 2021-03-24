@@ -32,7 +32,7 @@ struct FeedbackView: View {
     var body: some View {
         VStack {
             Text(Translations.Titles.feelTitle)
-                .offset(y: 3)
+                .offset(y: 10)
 //                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.system(.headline, design: .rounded))
@@ -48,7 +48,7 @@ struct FeedbackView: View {
                     .accessibility(label: Text(emotionsVoice[i]))
 
                 }
-                .offset(x: 3.0)
+                .offset(x: 0.0)
                 .listRowBackground((Color.clear.opacity(0)))
                 .padding(.vertical, 10).padding(.horizontal,10)
                    
@@ -65,14 +65,9 @@ struct FeedbackView: View {
 //              //  Circle()
 //              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
                 
-            }.offset(y: -13)
-//            Text(emotion)
-//                .lineLimit(0)
-//                .padding(0.0)
-//                .frame(width: 200.0)
-//                .offset(y: -18)
-//                .font(.system(.subheadline, design: .rounded))
-//
+            }.offset(y: -8)
+
+
             Button(action: {
                 
                 if emotion == Translations.Titles.emotionBad {
@@ -85,7 +80,7 @@ struct FeedbackView: View {
                 Text(Translations.Titles.finishTitle).font(.system(.body, design: .rounded))
             }).background(NavigationLink("", destination: destine, isActive: $chooseView )).accessibility(label: Text(Translations.VoiceOver.finishOver)).accessibility(addTraits: .isButton)
             .buttonStyle(BorderedButtonStyle(tint: mainColorBlue.opacity(200)))
-            .offset(y: -15)
+            .offset(y: -12)
             .foregroundColor(.black)
             .navigationBarBackButtonHidden(true).sheet(isPresented: $show){
                 ModalFeed().navigationBarHidden(true)
