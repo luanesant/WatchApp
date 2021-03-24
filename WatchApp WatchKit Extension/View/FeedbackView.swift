@@ -32,7 +32,7 @@ struct FeedbackView: View {
     var body: some View {
         VStack {
             Text(Translations.Titles.feelTitle)
-                .offset(y: 11)
+                .offset(y: 3)
 //                .frame(width: 200.0)
                 .accessibility(label: Text(Translations.VoiceOver.feelFeedBackOver))
                 .font(.system(.headline, design: .rounded))
@@ -43,15 +43,16 @@ struct FeedbackView: View {
                 ForEach((0...2), id: \.self) { i in
                     FeelView(imageEmotion: emotions[i], textEmotion: emotionsLabel[i], action: {
                         currentEmotion = emotions[i]
-
+                        
                     }, currentEmotion: $currentEmotion)
                     .accessibility(label: Text(emotionsVoice[i]))
-                
+
                 }
                 .offset(x: 3.0)
                 .listRowBackground((Color.clear.opacity(0)))
                 .padding(.vertical, 10).padding(.horizontal,10)
-                
+                   
+
                 }
             .background(Color.clear.opacity(0))
             .offset(y: -55)
@@ -64,7 +65,7 @@ struct FeedbackView: View {
 //              //  Circle()
 //              //      .stroke(Color.white, lineWidth: 5).frame(width: 60).offset(y: 1)
                 
-            }
+            }.offset(y: -13)
 //            Text(emotion)
 //                .lineLimit(0)
 //                .padding(0.0)
@@ -111,13 +112,6 @@ struct FeelView: View {
                     .rotationEffect(.degrees(90))
                     .padding(1)
                     Text(textEmotion).rotationEffect(.degrees(90)).offset(x: -35)
-                
-            
-//                if imageEmotion == currentEmotion {
-//                    Circle()
-//                        .stroke(lineWidth: 2)
-//                        .frame(width: 60, height: 60, alignment: .center)
-//                }
             }.background((Color.clear.opacity(0)))
         }.background((Color.clear.opacity(0)))
     }
