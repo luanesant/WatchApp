@@ -19,23 +19,14 @@ import SwiftUI
 @main
 struct WatchAppApp: App {
 //    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @Environment(\.scenePhase) var scenePhase
+//    @Environment(\.scenePhase) var scenePhase
     
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
             }
-        }.onChange(of: scenePhase) { newScenePhase in
-            switch newScenePhase{
-            case .active: print("Tela Ativa")
-            case .inactive: print("Tela Apagada")
-            case .background: print("Background")
-            @unknown default: print("Default")
-            }
-      
-  }
-  
+        }
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
