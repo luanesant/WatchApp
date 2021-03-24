@@ -98,7 +98,7 @@ struct AnimationView: View {
     var body: some View {
         ZStack {
             SpriteView(scene: scene)
-                .frame(width: 200, height: 140)
+                .frame(width: 200, height: 130)
                 .aspectRatio(contentMode: .fit)
         }
     }
@@ -116,39 +116,54 @@ class AnimationScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
-        let candleAtlas = SKTextureAtlas(named: "candleAtlas")
-        var candleAssets: [SKTexture] = []
+        let flameAtlas = SKTextureAtlas(named: "flameAtlas")
+        var flameAssets: [SKTexture] = []
+        
+        let candleAssets = [
+            SKTexture(imageNamed: "velaPequena"),
+            SKTexture(imageNamed: "velaPequena2")
+        ]
         
         //inhale assets
         for i in 3...16 {
-            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
         for i in 11...16 {
-            candleAssets.append(candleAtlas.textureNamed("velaacessa\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
         //exhale assets
         for i in 17...21 {
-            candleAssets.append(candleAtlas.textureNamed("velaapagada\(i)"))
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
-        for i in 17...30 {
-            candleAssets.append(candleAtlas.textureNamed("velaapagada\(i)"))
+        for i in 17...29 {
+            flameAssets.append(flameAtlas.textureNamed("chama\(i)"))
         }
+        flameAssets.append(flameAtlas.textureNamed("chama0"))
+        
+        let flame = SKSpriteNode(texture: flameAssets[0])
+        flame.size = CGSize(width: 150, height: 150)
         
         let candle = SKSpriteNode(texture: candleAssets[0])
-        candle.scale(to: CGSize(width: 200, height: 280))
+        candle.size = CGSize(width: 121.5, height: 125.5)
+        
         self.addChild(candle)
         
-        self.anchorPoint = .init(x: 0.5, y: 0.5)
+        candle.addChild(flame)
         
-        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
+        self.anchorPoint = .init(x: 0.5, y: 0.5)
+        candle.anchorPoint = .init(x: 0.5, y: 1)
+        flame.anchorPoint = .init(x: 0.46, y: 0.2)
+        
+        flame.run(.repeatForever(.animate(with: flameAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 1)))
     }
 }
