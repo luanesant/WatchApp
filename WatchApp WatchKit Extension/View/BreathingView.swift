@@ -158,13 +158,13 @@ class AnimationScene: SKScene {
         flameAssets.append(flameAtlas.textureNamed("chama0"))
         
         //Candle assets
-        for i in 0...586 {
+        for i in 0...140 {
             if i < 10 {
-                candleAssets.append(SKTexture(imageNamed: "Vela_00\(i)"))
+                candleAssets.append(SKTexture(imageNamed: "Velabase 2_00\(i)"))
             } else if i < 100 {
-                candleAssets.append(SKTexture(imageNamed: "Vela_0\(i)"))
+                candleAssets.append(SKTexture(imageNamed: "Velabase 2_0\(i)"))
             } else if i >= 100 {
-                candleAssets.append(SKTexture(imageNamed: "Vela_\(i)"))
+                candleAssets.append(SKTexture(imageNamed: "Velabase 2_\(i)"))
             }
         }
         
@@ -185,10 +185,10 @@ class AnimationScene: SKScene {
 //        ])))
         
         flame.run(.repeatForever(.animate(with: flameAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
-        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.10238908 * minutes)))
+        candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.42553191 * minutes)))
     }
     
     override func update(_ currentTime: TimeInterval) {
-        flame.position.y -= CGFloat(0.02 / minutes)
+        flame.position.y -= CGFloat(0.023 / minutes)
     }
 }
