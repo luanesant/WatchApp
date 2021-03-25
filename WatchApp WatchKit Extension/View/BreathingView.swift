@@ -179,11 +179,6 @@ class AnimationScene: SKScene {
         self.addChild(candle)
         candle.addChild(flame)
         
-//        flame.run(.repeatForever(.sequene([
-//            .repeat(animate(with: "inhale", timePerFrame: 0.1), count: 3),
-//            .animate(with: "ëxhale", timePerFrame: 0.1)
-//        ])))
-        
         flame.run(.repeatForever(.animate(with: flameAssets, timePerFrame: 0.157895, resize: false, restore: true)), withKey: "candleAnimationRunnning")
         candle.run(.repeatForever(.animate(with: candleAssets, timePerFrame: 0.42553191 * minutes)))
     }
